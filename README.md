@@ -4,7 +4,10 @@
 
 ## Integrantes
 
-- Cristian Godoy: Cristian Godoy: ¡Hola a todos! Soy Cristian, un placer conoceros. Formo parte del "Team Dinamita" 🧨. Mi objetivo es sorprenderos con el mejor proyecto que habéis visto en vuestras vidas 🤯. ¡No es cierto! En realidad, estoy aquí para seguir al pie de la letra las indicaciones de Dante 😌. Estoy convencido de que el mejor helado del mundo es el de dulce de leche, y no toleraré ninguna objeción al respecto. Mi contribución al equipo Dinamita fue la creación de los wireframes para las secciones "Login" y "Caja de Herramientas". Me identifico con el minimalismo, la simpleza y la funcionalidad.
+- Cristian Godoy: Cristian Godoy: integrante del "Team Dinamita" 🧨  el mejor team de los ultimos 50 años. Mi proposito es hacerles explotar la cabeza con el mejor proyecto que verán en sus vidas 🤯  Es broma, mi propósito es hacer todo lo que dice Dante 😌.
+Creo firmemente que el mejor helado es el de dulce de leche. Y no voy a tolerar que me digan lo contrario.
+Soy el responsable de los wireframe de "login" y "caja de herramientas".
+Me representa el minimalismo, la simpleza y funcionalidad.
 - Florencia Tula: ¡Hola a todos! Soy Flor, la novata y una de las integrantes junior del "Team Dinamita". Mi aportación al equipo incluyó los wireframes de las secciones "Novedades" y "Formulario de Registro". ¡Un saludo a todos! 👋🏻.
 - Gustavo Daniel Moya: Buenas tardes, mi nombre es Gustavo, aunque todos me llaman Gus. Soy de Santa María, Catamarca. Me encargué de diseñar los wireframes para el Encabezado de la página y la Barra de Navegación, así como para la sección "About Us" 🙍‍♂️🙍‍♂️🙍‍♂️.
 - Raúl Manuel Calvimonte: ¡Hola a todos! Soy Raúl, el más joven del grupo y el creador del nombre del Equipo Dinamita 🧨. Además, colaboré en la creación de los wireframes para las secciones "Destacados" y "Detalles del Producto". Tengo 18 años y me encantan los videojuegos 👾.
