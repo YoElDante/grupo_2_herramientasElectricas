@@ -48,7 +48,7 @@ solo por dar un ejemplo.
 
 ![Logo Completo Amarillo](./public/img/identidad/LogoCompletoAmarillo-removebg.png)
 ![Esquema de Colores](./public/img/concepto/esquema%20de%20colores.png)
-![Icono](./public/img/concepto/Icono.png)
+![Icono](./public/img/concepto/Icono.jpg)
 ![Tipografá](./public/img/concepto/typografia.jpg)
 
 ### Merchandising
