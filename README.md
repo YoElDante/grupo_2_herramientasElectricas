@@ -38,12 +38,12 @@ solo por dar un ejemplo.
 
 ## Wireframes
 
-- [Home](./public/views/Home---Desktop.pdf)
-- [Login](./public/views/Login.pdf)
-- [Registro](./public/views/Formulario-de-Registro.pdf)
-- [About Us](./public/views/AboutUs.pdf)
-- [Detalle del Producto](./public/views/Detalles-del-Producto---Desktop.pdf)
-- [Detalle del Producto - Mobile](./public/views/Detalles-del-Producto---Mobile.pdf)
+- [Home](./public/wireframes/Home---Desktop.pdf)
+- [Login](./public/wireframes/Login.pdf)
+- [Registro](./public/wireframes/Formulario-de-Registro.pdf)
+- [About Us](./public/wireframes/AboutUs.pdf)
+- [Detalle del Producto](./public/wireframes/Detalles-del-Producto---Desktop.pdf)
+- [Detalle del Producto - Mobile](./public/wireframes/Detalles-del-Producto---Mobile.pdf)
 
 ## Soporte Gráfico
 
