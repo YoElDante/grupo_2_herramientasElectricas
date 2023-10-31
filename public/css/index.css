@@ -10,7 +10,62 @@ h1{
 /* ----------------- */
 /*      HEADER       */
 /* ----------------- */
+/* Clases agregadas por Cristian */
 
+header{
+    background-color: rgb(18, 17, 31);
+    color: white;
+}
+
+/* Top-Header: Logo - barra de busqueda - whatsapp */
+
+header section.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+    flex-wrap: wrap;
+}
+
+header section div.caja-del-logo{
+    border: solid px red;
+    width: 30vw;
+}
+.logo{
+    width: 100%;
+}
+
+header section div.caja-de-barra-de-busqueda{
+    border: solid px red;
+    margin: 10px;
+    flex-grow: 1;
+}
+.barra-de-busqueda{
+    width: 100%;
+}
+
+header section div.caja-de-whatsapp{
+    border: solid px red;
+    margin: 10px;
+    margin-right: 50px;
+}
+
+/* Barra de navegacion */
+
+header nav.caja-de-barra-de-navegacion{
+    border-top: solid 5px white;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+}
+
+header nav ul li{
+    border: solid px red;
+}
+/* Hasta aqui agrego Cristian */
 
 
 /* ----------------- */
