@@ -17,22 +17,22 @@ En cuanto a los wireframe hice el "pie de página", y unirlos todos en un solo "
 ## Concepto del Proyecto
 
 Nosotros hemos elegido como proyecto desarrollar una pág. de venta de Herramientas Eléctricas.
-La idea es verse lo más profesional y confiable posible, pero sin perder la sensación de amistad y proximidad con el cliente. 
+La idea es verse lo más profesional y confiable posible, pero sin perder la sensación de amistad y próximidad con el cliente. 
 
-Nuestro público objetivo son ferreterias y pequeñas/medianas empresas, como asi tambien particulaes y profesionista. Vislumbramos una franja etaria de 25 a 60 años, principalmente masculinos, tanto para compras al por mayor y menor.
+Nuestro público objetivo son ferreterias, pequeñas/medianas empresas, particulares y profesionistas. Vislumbramos una franja etaria de 25 a 60 años, principalmente masculinos, tanto para compras al por mayor y al por menor.
 
 ![Imagen del Concepto](./public/img/concepto/Concepto.jpg)
 
 ## Pág. Wev de Referencia:
 
-Nuestas paginas de inspiracion fueron:
+Nuestras páginas de inspiración fueron:
 https://ar.dewalt.global/
 https://www.brementools.com/
 https://www.ar.boschherramientasinalambricas.com/
 https://www.bulfer.com.ar/
 https://ar.stanleytools.global/
 
-y no descartamos el recurso de copiar estructuras pensadas especificamente para esta insdustria, como las sujeridas en:
+y no descartamos la posibilidad de copiar estructuras pensadas específicamente para esta industria, como las sugeridas en:
 https://nicepage.com/st/14131/factory-works-industrial-website-template
 solo por dar un ejemplo.
 
