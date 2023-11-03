@@ -42,6 +42,8 @@ solo por dar un ejemplo.
 - [Login](./public/wireframes/Login.pdf)
 - [Registro](./public/wireframes/Formulario-de-Registro.pdf)
 - [About Us](./public/wireframes/AboutUs.pdf)
+- [Carrito] (./public/wireframes/Carrito-Version-Desktop---Wireframe.pdf)
+- [Carrito - Mobile](./public/wireframes/Carrito-Version-Mobile---Wireframe.pdf)
 - [Detalle del Producto](./public/wireframes/Detalles-del-Producto---Desktop.pdf)
 - [Detalle del Producto - Mobile](./public/wireframes/Detalles-del-Producto---Mobile.pdf)
 
@@ -51,8 +53,11 @@ solo por dar un ejemplo.
 
 ![Logo Completo Amarillo](./public/img/identidad/LogoCompletoAmarillo-removebg.png)
 ![Esquema de Colores](./public/img/concepto/esquema%20de%20colores.png)
+-Color Amarillo #ffb81c
+-Color Negro Azulado #11111f
 ![Icono](./public/img/concepto/Icono.jpg)
 ![Tipografá](./public/img/concepto/typografia.jpg)
+-Font : Sans serif
 
 ### Merchandising
 
