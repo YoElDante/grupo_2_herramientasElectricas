@@ -55,9 +55,19 @@ solo por dar un ejemplo.
 ![Esquema de Colores](./public/img/concepto/esquema%20de%20colores.png)
 -Color Amarillo #ffb81c
 -Color Negro Azulado #11111f
+-Color Gris #dcdcdc (fondos)
+-Color Rojo de icono #cb483a (iconos)
 ![Icono](./public/img/concepto/Icono.jpg)
 ![Tipografá](./public/img/concepto/typografia.jpg)
 -Font : Sans serif
+
+### Iconos que se utilizan en la pág.
+
+Extraidos de la pág. FontAwesome
+-Flecha hacia atras del header: <i class="fa-solid fa-arrow-left">
+-Flecha hacia adelante, botones nexts: <i class="fa-solid fa-arrow-right"></i>
+-Circulo con cruz: <i class="fa-solid fa-circle-xmark"></i>
+-Etiquetas para indicar descuento:<i class="fa-solid fa-tags"></i>
 
 ### Merchandising
 
