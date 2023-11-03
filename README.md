@@ -1,6 +1,6 @@
 # Proyecto ElectroTools - Herramientas Eléctricas
 
-![Banner del Proyecto](./public/img/identidad/Banner%20Logo%20Amarillo%20Negro.jpg)
+![Banner del Proyecto](./public/img/electroTools/identidad/Banner%20Logo%20Amarillo%20Negro.jpg)
 
 ## Integrantes
 
@@ -21,19 +21,19 @@ La idea es verse lo más profesional y confiable posible, pero sin perder la sen
 
 Nuestro público objetivo son ferreterias, pequeñas/medianas empresas, particulares y profesionistas. Vislumbramos una franja etaria de 25 a 60 años, principalmente masculinos, tanto para compras al por mayor y al por menor.
 
-![Imagen del Concepto](./public/img/concepto/Concepto.jpg)
+![Imagen del Concepto](./public/img/electroTools/concepto/Concepto.jpg)
 
 ## Pág. Wev de Referencia:
 
-Nuestras páginas de inspiración fueron:
-https://ar.dewalt.global/
-https://www.brementools.com/
-https://www.ar.boschherramientasinalambricas.com/
-https://www.bulfer.com.ar/
-https://ar.stanleytools.global/
+- Nuestras páginas de inspiración fueron:
+- https://ar.dewalt.global/
+- https://www.brementools.com/
+- https://www.ar.boschherramientasinalambricas.com/
+- https://www.bulfer.com.ar/
+- https://ar.stanleytools.global/
 
 y no descartamos la posibilidad de copiar estructuras pensadas específicamente para esta industria, como las sugeridas en:
-https://nicepage.com/st/14131/factory-works-industrial-website-template
+- https://nicepage.com/st/14131/factory-works-industrial-website-template
 solo por dar un ejemplo.
 
 ## Wireframes
@@ -51,25 +51,25 @@ solo por dar un ejemplo.
 
 ### Identidad
 
-![Logo Completo Amarillo](./public/img/identidad/LogoCompletoAmarillo-removebg.png)
-![Esquema de Colores](./public/img/concepto/esquema%20de%20colores.png)
--Color Amarillo #ffb81c
--Color Negro Azulado #11111f
--Color Gris #dcdcdc (fondos)
--Color Rojo de icono #cb483a (iconos)
-![Icono](./public/img/concepto/Icono.jpg)
-![Tipografá](./public/img/concepto/typografia.jpg)
+![Logo Completo Amarillo](./public/img/electroTools/identidad/LogoCompletoAmarillo-removebg.png)
+![Esquema de Colores](./public/img/electroTools/concepto/esquema%20de%20colores.png)
+- Color Amarillo #ffb81c
+- Color Negro Azulado #11111f
+- Color Gris #dcdcdc (fondos)
+- Color Rojo de icono #cb483a (iconos)
+![Icono](./public/img/electroTools/concepto/Icono.jpg)
+![Tipografá](./public/img/electroTools/concepto/typografia.jpg)
 -Font : Sans serif
 
 ### Iconos que se utilizan en la pág.
 
 Extraidos de la pág. FontAwesome
--Flecha hacia atras del header: <i class="fa-solid fa-arrow-left">
--Flecha hacia adelante, botones nexts: <i class="fa-solid fa-arrow-right"></i>
--Circulo con cruz: <i class="fa-solid fa-circle-xmark"></i>
--Etiquetas para indicar descuento:<i class="fa-solid fa-tags"></i>
+- Flecha hacia atras del header: <i class="fa-solid fa-arrow-left">
+- Flecha hacia adelante, botones nexts: <i class="fa-solid fa-arrow-right"></i>
+- Circulo con cruz: <i class="fa-solid fa-circle-xmark"></i>
+- Etiquetas para indicar descuento:<i class="fa-solid fa-tags"></i>
 
 ### Merchandising
 
-![Tarjetas](./public/img/concepto/Logos.jpg)
-![merchandising](./public/img/merchandising/merchandising.jpg)
+![Tarjetas](./public/img/electroTools/concepto/Logos.jpg)./
+![merchandising](./public/img/electroTools/merchandising/merchandising.jpg)
