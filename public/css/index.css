@@ -16,54 +16,67 @@ header{
     background-color: rgb(18, 17, 31);
     color: white;
 }
-
-/* Top-Header: Logo - barra de busqueda - whatsapp */
-
-header section.top-header{
+header section{
     display: flex;
-    justify-content: space-between;
-    align-items: self-end;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-header section div.caja-del-logo{
-    border: solid px red;
-    width: 30vw;
+header section img{/* logo */
+    width: 50vw;
 }
-.logo{
-    width: 100%;
+header section input{/* barra de busqueda*/
+    width: 50vw;
+    border: solid 1px yellow;
+    border-radius: 4px;
 }
-
-header section div.caja-de-barra-de-busqueda{
-    border: solid px red;
-    margin: 10px;
-    flex-grow: 1;
+header section div{/*Registrate - Tu carrito*/
+    margin-top: 10px;
+    font-size: 12px;
 }
-.barra-de-busqueda{
-    width: 100%;
+header section div i{
+    margin: 0px 25px;
 }
-
-header section div.caja-de-whatsapp{
-    border: solid px red;
-    margin: 10px;
-    margin-right: 50px;
+header nav{
 }
-
-/* Barra de navegacion */
-
-header nav.caja-de-barra-de-navegacion{
-    border-top: solid 5px white;
-}
-
 header nav ul{
-    display: flex;
-    justify-content: space-around;
-    padding: 0px;
-    margin: 0px;
 }
 
-header nav ul li{
-    border: solid px red;
+@media (min-width: 769px){
+    header{
+    }
+    header section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header section img{
+        width: 30vw;
+    }
+    header section input{
+        width: 50vw;
+        border: solid 1px #feb81c;
+        border-radius: 4px;
+    }
+    header section div{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    header section div i{
+        margin: 10px;
+    }
+    header nav{
+        border-top: solid 5px white;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+        margin: 0px;
+    }
+    header nav ul li{
+    }
 }
 /* Hasta aqui agrego Cristian */
 
