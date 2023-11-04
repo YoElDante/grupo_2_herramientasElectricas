@@ -49,21 +49,8 @@ main {
 
 /* Detalles de la compra */
 
-.compra {
-    width: 95vw;
-    margin: auto;
-    margin-top: 1rem;
-    background-color: #fff;
-    border: 0.0625px solid #dcdcdc;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-    border-radius: 8px;
-}
 
-.compra h2 {
+.seccion h2 {
     font-size: 1rem;
     margin-left: 1rem;
 }
