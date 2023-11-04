@@ -2,18 +2,13 @@
 /* ESTILOS GENERALES */
 /* ----------------- */
 
-h1{
-    color:red;
-}
-
-
 /* ----------------- */
 /*      HEADER       */
 /* ----------------- */
 /* Clases agregadas por Cristian */
 
 header{
-    background-color: rgb(18, 17, 31);
+    background-color: #11111f;
     color: white;
 }
 header section{
@@ -27,7 +22,7 @@ header section img{/* logo */
 }
 header section input{/* barra de busqueda*/
     width: 50vw;
-    border: solid 1px yellow;
+    border: solid 1px #ffb81c;
     border-radius: 4px;
 }
 header section div{/*Registrate - Tu carrito*/
@@ -85,7 +80,46 @@ header nav ul{
 /*       MAIN        */
 /* ----------------- */
 
+/* Manteneme Actualizado */
+.suscripcion{
+    background-color: #11111f;
+    color: #feb81c;
+    text-align: center;
+    padding: 0.625rem 1rem;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.letter{
+    text-decoration: none;
+    color: #ffb81c;
+    font-size: 1.5rem;
+    text-align: center;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+
+    width: 3.5rem;
+    height: 3.5rem;
+
+    border: 0.1875rem #ffb81c solid;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.ahora {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
 /* ----------------- */
 /*      FOOTER       */
