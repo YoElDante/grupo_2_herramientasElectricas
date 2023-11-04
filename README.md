@@ -42,7 +42,7 @@ solo por dar un ejemplo.
 - [Login](./public/wireframes/Login.pdf)
 - [Registro](./public/wireframes/Formulario-de-Registro.pdf)
 - [About Us](./public/wireframes/AboutUs.pdf)
-- [Carrito] (./public/wireframes/Carrito-Version-Desktop---Wireframe.pdf)
+- [Carrito - Desktop](./public/wireframes/Carrito-Version-Desktop---Wireframe.pdf)
 - [Carrito - Mobile](./public/wireframes/Carrito-Version-Mobile---Wireframe.pdf)
 - [Detalle del Producto](./public/wireframes/Detalles-del-Producto---Desktop.pdf)
 - [Detalle del Producto - Mobile](./public/wireframes/Detalles-del-Producto---Mobile.pdf)
@@ -59,17 +59,17 @@ solo por dar un ejemplo.
 - Color Rojo de icono #cb483a (iconos)
 ![Icono](./public/img/electroTools/concepto/Icono.jpg)
 ![Tipografá](./public/img/electroTools/concepto/typografia.jpg)
--Font : Sans serif
+- Font : Sans serif
 
 ### Iconos que se utilizan en la pág.
 
 Extraidos de la pág. FontAwesome
-- Flecha hacia atras del header: <i class="fa-solid fa-arrow-left">
-- Flecha hacia adelante, botones nexts: <i class="fa-solid fa-arrow-right"></i>
-- Circulo con cruz: <i class="fa-solid fa-circle-xmark"></i>
-- Etiquetas para indicar descuento:<i class="fa-solid fa-tags"></i>
+- Flecha hacia atras del header: `<i class="fa-solid fa-arrow-left">`
+- Flecha hacia adelante, botones nexts: `<i class="fa-solid fa-arrow-right"></i>`
+- Circulo con cruz: `<i class="fa-solid fa-circle-xmark"></i>`
+- Etiquetas para indicar descuento: `<i class="fa-solid fa-tags"></i>`
 
 ### Merchandising
 
-![Tarjetas](./public/img/electroTools/concepto/Logos.jpg)./
+![Tarjetas](./public/img/electroTools/concepto/Logos.jpg)
 ![merchandising](./public/img/electroTools/merchandising/merchandising.jpg)
