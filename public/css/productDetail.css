@@ -2,13 +2,40 @@
 /* ESTILOS GENERALES */
 /* ----------------- */
 
-h1{
-    color: red;
-}
 
 /* ----------------- */
 /*      HEADER       */
 /* ----------------- */
+header {
+    background: #11111f;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-size: 1rem;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+
+    margin-bottom: 0.625rem;
+}
+
+header i {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+header h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-left: -0.5rem;
+}
+
+.logo {
+    width: 12rem;
+    margin-left: -0.5rem;
+}
 
 
 
@@ -16,7 +43,174 @@ h1{
 /*       MAIN        */
 /* ----------------- */
 
+main {
+    margin-top: 0.4rem;
+    color: #11111f;
+}
 
+.seccion{
+    width: 95vw;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: #fff;
+    border: 0.0625px solid #dcdcdc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* titulo */
+.titulo{
+    position: relative;
+}
+
+.titulo h2{
+    font-size: 1.5rem;
+}
+.titulo h3{
+    font-size: 1.125rem;
+}
+
+.titulo h4{
+    font-size: 1rem;
+}
+
+
+
+.titulo img{
+    position:absolute;
+    width: 6rem;
+    right:0;
+    bottom: 0;
+}
+
+/* galeria */
+
+.galeria {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    height: 60vw;
+    max-height: 60vh;
+    border: 0.0625px solid #dcdcdc;
+    align-items: flex-start;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+
+
+.vistasmini {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    flex: 0 0 20%;
+    height: 100%;
+    width: 100%;
+
+    border-right: 0.0625px solid #dcdcdc;
+    
+}
+
+.vistasmini img {
+    width: 80%;
+    height: calc(100% / 4 - 10px); /* Distribuir uniformemente en 4 columnas con espacio de 10px */
+    object-fit: contain;
+}
+
+.vistagrande {
+    flex: 0 0 80%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.vistagrande img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* Main Precios */
+
+.fullname{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.main-precios div{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-grow: 1;
+    line-height: 0rem;
+}
+
+.precio{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.cuotas{
+    font-size: 1rem;
+}
+
+.envio{
+    font-size: 2rem;
+}
+
+.opciones{
+    justify-content: space-between;
+}
+
+.opciones a{
+    align-self: center;
+}
+
+.logosTC{
+    display: flex!important;
+    justify-content: end!important;
+    align-items: center!important;
+}
+
+.logosTC img{
+    width: 1.5rem;
+    margin-left: 0.1875rem;
+}
+
+.seccion button{
+    display: block;
+    margin: auto;
+    margin-top: 1.2rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    width: 95%;
+    height: 3rem;
+    background-color: #11111f;
+    color: #ffb81c;
+    font-weight: bold;
+    box-shadow: #11111f 0.1875rem 0.125rem 0.3125rem;
+}
+
+.detalles h4{
+    font-size: 1.5rem;
+}
 
 /* ----------------- */
 /*      FOOTER       */

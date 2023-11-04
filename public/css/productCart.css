@@ -52,6 +52,7 @@ main {
 .compra {
     width: 95vw;
     margin: auto;
+    margin-top: 1rem;
     background-color: #fff;
     border: 0.0625px solid #dcdcdc;
     -webkit-border-radius: 8px;
