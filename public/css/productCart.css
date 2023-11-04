@@ -196,23 +196,6 @@ main {
     border-top: 0.0625rem solid #dcdcdc;
 }
 
-
-.totales button{
-    display: block;
-    margin: auto;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    border-radius: 8px;
-    width: 95%;
-    height: 3rem;
-    background-color: #11111f;
-    color: #ffb81c;
-    font-weight: bold;
-    box-shadow: #11111f 0.1875rem 0.125rem 0.3125rem;
-}
-
 /* Promocion de Productos */
 
 .productos {

@@ -64,8 +64,6 @@ main {
     font-size: 1rem;
 }
 
-
-
 .titulo img{
     position:absolute;
     width: 6rem;
@@ -90,21 +88,17 @@ main {
     -o-border-radius: 8px;
 }
 
-
-
 .vistasmini {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     
-    
     flex: 0 0 20%;
     height: 100%;
     width: 100%;
 
     border-right: 0.0625px solid #dcdcdc;
-    
 }
 
 .vistasmini img {
@@ -118,7 +112,6 @@ main {
     height: 100%;
     overflow: hidden;
 }
-
 
 .vistagrande img{
     width: 100%;
@@ -176,25 +169,146 @@ main {
     margin-left: 0.1875rem;
 }
 
-.seccion button{
-    display: block;
-    margin: auto;
-    margin-top: 1.2rem;
+/* Caracteristicas */
+
+.saber h4{
+    font-size: 1.5rem;
+}
+
+.detalles li{
+    margin-bottom: 0.3125rem;
+}
+
+/* Promocion de Productos */
+
+.imgProducto {
+    border: #dcdcdc 0.0625rem solid;
+    width: 4.6875rem;
+    height: 4.6875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3125rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.imgProducto img {
+    width: 4.375rem;
+    max-height: 4.375rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.productos {
+    margin:0.625rem;
+}
+
+.recomendaciones{
+    margin-bottom: 2rem;
+}
+
+.titulo{
+    margin: 1.5625rem;
+    text-align: left;
+    margin-bottom: 0.625rem;
+}
+
+.tarjetas{
+    display: flex;
+}
+
+.tarjeta{
+    position: relative;
+    background-color: #fff;
+    border: 0.0625rem solid #dcdcdc;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     border-radius: 8px;
-    width: 95%;
-    height: 3rem;
-    background-color: #11111f;
-    color: #ffb81c;
-    font-weight: bold;
-    box-shadow: #11111f 0.1875rem 0.125rem 0.3125rem;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+    margin: 0.625rem 0.3125rem;
+    width: 35%;
+    padding: 0.1875rem 0.625rem;
+
+    font-size: small;
+    text-align: center;
 }
 
-.detalles h4{
-    font-size: 1.5rem;
+.tarjeta *{
+    margin: 0.1875rem 0px;
+}
+.tarjeta h4{
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.tarjeta .imgProducto{
+    margin: auto;
+}
+
+.tarjeta .detalles{
+    font-size: 1rem;
+    text-align: left;
+}
+
+.tarjeta i{
+    position: absolute;
+    left: 0.625rem;
+    bottom: 0.625rem;
+    font-size: 1.25rem;
+    visibility: hidden;
+}
+
+.oferta i{
+    visibility: visible;
+}
+
+.tarjeta .precios{
+    margin-top: 0.3125rem;
+    text-align: right;
+}
+
+.precioAnterior{
+    font-size: 0.6rem;
+    text-decoration: red line-through;
+    visibility: hidden;
+}
+
+.oferta .precioAnterior{
+    visibility: visible;
+}
+
+.precioActual{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.next{
+    display: flex;
+    margin: auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #11111f;
+    color: #ffb81c;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: #11111f 0.1875rem 0.125rem 0.3125rem;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ----------------- */

@@ -68,6 +68,23 @@ i{
     padding: 1rem;
 }
 
+.boton-accion{
+    display: block;
+    margin: auto;
+    margin-top: 1.2rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    width: 95%;
+    height: 3rem;
+    background-color: #11111f;
+    color: #ffb81c;
+    font-weight: bold;
+    box-shadow: #11111f 0.1875rem 0.125rem 0.3125rem;
+}
+
 
 /* ----------------- */
 /*      FOOTER       */
