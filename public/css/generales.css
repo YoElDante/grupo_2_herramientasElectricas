@@ -92,6 +92,11 @@ i{
 
 /* Promocion de Productos */
 
+.ofertas a,
+.recomendaciones a{
+    text-decoration: none;
+    color: #11111f;
+}
 
 /* imagenes cuadraditas con marco gris */
 
