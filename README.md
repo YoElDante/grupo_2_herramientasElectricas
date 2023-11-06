@@ -73,3 +73,7 @@ Extraidos de la pág. FontAwesome
 
 ![Tarjetas](./public/img/electroTools/concepto/Logos.jpg)
 ![merchandising](./public/img/electroTools/merchandising/merchandising.jpg)
+
+
+### Tablero de Trello del equipo:
+https://trello.com/b/rryHy42Q/proyecto-integrador
