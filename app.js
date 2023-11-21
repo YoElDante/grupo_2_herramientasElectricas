@@ -17,13 +17,13 @@ app.listen(3000, ()=> {
     console.log("Servidor online en puerto 3000");
 });
 
-app.get('/', homeRouter.index);
+app.use('/', homeRouter.index);
 
-app.get('/login', loginRouter.index);
+app.use('/login', loginRouter.index);
 
-app.get('/register', registerRouter.index );
+app.use('/register', registerRouter.index );
 
-app.get('/productCart', productCartRouter.index );
+app.use('/productCart', productCartRouter.index );
 
-app.get('/productDetail', productDetailRouter.index);
+app.use('/productDetail', productDetailRouter.index);
 
