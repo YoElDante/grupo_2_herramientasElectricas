@@ -3,12 +3,7 @@
 
 <head>
   <!-- Metadatos -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="keywords" content="HerramientasElectricas, ElectroTools" />
-  <meta name="author" content="Nombre del integrante que corresponda" />
-  <meta name="description" content="Trabajo Integrador del curso de Desarrollador Web Fullstack de DH" />
+  <%- include('./partials/meta.ejs')%>
 
   <!-- links -->
   <!-- links agregados por Cristian-->
@@ -36,43 +31,8 @@
 
   <header>
     <!-- Encabezado -->
-    <section>
-
-      <img src="img/electroTools/fondos/LogoCristian.jpg" alt="Logo de la Página">
-
-
-      <input type="text" placeholder="¿Que estas buscando?">
-      <button>Buscar</button>
-
-      <div class="top-header-rigth">
-
-        <div class="sesion-registrate">
-          <a href="/login" title="Iniciar sesion">Logueate<i class="fa-solid fa-right-to-bracket"></i></a>
-          <a href="/register" title="Registrate">Registrate<i class="fa-solid fa-user"></i></a>
-        </div>
-
-        <div class="carrito">
-          <a href="/productcart" title="Tu carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-
-      </div>
-
-    </section>
-
-    <nav>
-      <a href="#" title="Menu" class="burger"><i class="fa-solid fa-bars"></i></a>
-    </nav>
-    <nav class="navbar">
-      <ul type="none">
-        <li><a href="#cajaherramientas">Herramientas</a></li>
-        <li><a href="#ofertas">OFERTAS</a></li>
-        <li><a href="#novedades">Novedades</a></li>
-        <li><a href="#institucional">Institucional</a></li>
-        <li><a href="#contacto">Contactanos</a></li>
-      </ul>
-    </nav>
-
-  </header><!-- Hasta aqui trabaja Cristian -->
+    <%- include('./partials/header.ejs')%>
+  </header>
 
   <main>
     <!-- principal -->
@@ -289,67 +249,7 @@
   </main>
 
   <footer>
-    <!-- Pie de Pagina -->
-    <section class="main-footer">
-
-      <!-- Identidad -->
-      <article class="identidad">
-        <a href="#" title="Ir a la pág. principal">
-          <img class="logo" src="/img/electroTools/identidad/LogoAmarillo-LetrasBlancas-FondoTransparente.png"
-            alt="logo ElectroTools">
-        </a>
-        <div class="redesSociales">
-          <a href="#" title="Siguenos en Instagram!"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" title="Siguenos en Facebook!"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" title="Siguenos en Youtube!"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-      </article>
-
-      <!-- Medios de Contacto -->
-      <article class="contacto" id="contacto">
-        <h4>Atención al Cliente</h4>
-
-        <div class="horario">
-          <h5>Horario de Atención</h5>
-          <p class="dias">Lunes - Jueves</p>
-          <p class="horario">09:00 am a 19:00 pm</p>
-        </div>
-
-        <div class="email">
-          <h5>Correo Electrónico</h5>
-          <a href="mailto:atencion-clientes@electrotools.com" title="enviar mail">atencion-clientes@electrotools.com</a>
-        </div>
-
-        <div class="telefono">
-          <h5>Teléfono</h5>
-          <p>0810-555-1234</p>
-        </div>
-      </article>
-
-      <!-- Institucional -->
-      <article class="institucional" id="institucional">
-        <h4>Institucional</h4>
-        <ul>
-          <li>Proveedores</li>
-          <li>Política de Privacidad</li>
-          <li>Acerca de ElectroTools</li>
-          <li>Blog y Tutoriales</li>
-          <li>Trabaja con Nosotros</li>
-        </ul>
-      </article>
-
-    </section>
-
-    <!-- Terceras Marcas -->
-    <article class="marcas">
-      <img src="img/logos Empresas/herramientas/makita-logo.png" alt="logo makita"></img>
-      <img src="img/logos Empresas/herramientas/dewalt-logo.png" alt="logo dewalt"></img>
-      <img src="img/logos Empresas/herramientas/stanley-logo.png" alt="logo stanley"></img>
-      <img src="img/logos Empresas/herramientas/black+decker-logo.png" alt="black+decker-logo"></img>
-    </article>
-
-    <a href="#" class="copyright" title="Ir al sitio web del Team Dinamita Arg"> Team Dinamita Arg ©</a>
-
+      <%- include('./partials/footer.ejs') %>
   </footer>
 
   <!-- Scrips -->

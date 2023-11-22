@@ -5,7 +5,7 @@ const path = require('node:path');
 const controller = {
     
     index: (req, res) => {
-        res.sendFile(path.resolve(__dirname, '../views/home.html'));
+        res.render(path.resolve(__dirname, '../views/home.ejs'));
     },
 
 };

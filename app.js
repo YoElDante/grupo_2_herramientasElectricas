@@ -1,12 +1,18 @@
 const express = require('express');
 const path = require("node:path");
-const homeRouter = require('./src/controllers/homeController.js')
-const loginRouter = require('./src/controllers/loginController.js')
-const registerRouter = require('./src/controllers/registerController.js')
-const productCartRouter = require('./src/controllers/productCartController.js')
-const productDetailRouter = require('./src/controllers/productDetailController.js')
+
+// Routers
+const homeRouter = require('./src/routers/home.js')
+const loginRouter = require('./src/routers/login.js')
+const registerRouter = require('./src/routers/register.js')
+const productCartRouter = require('./src/routers/productCart.js')
+const productDetailRouter = require('./src/routers/productDetail.js')
 
 const app = express();
+
+// Indicamos que vamos a trabajar con un motor de plantillas
+app.set('view engine','ejs');
+// app.set('views', path.resolve(__dirname,'./src/views')); 
 
 // Habilitar la capeta Public
 const publicFolderPath = path.resolve(__dirname, './public');
@@ -17,13 +23,13 @@ app.listen(3000, ()=> {
     console.log("Servidor online en puerto 3000");
 });
 
-app.use('/', homeRouter.index);
+app.use('/', homeRouter);
 
-app.use('/login', loginRouter.index);
+app.use('/login', loginRouter);
 
-app.use('/register', registerRouter.index );
+app.use('/register', registerRouter);
 
-app.use('/productCart', productCartRouter.index );
+app.use('/productCart', productCartRouter);
 
-app.use('/productDetail', productDetailRouter.index);
+app.use('/productDetail', productDetailRouter);
 

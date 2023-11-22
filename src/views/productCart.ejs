@@ -3,12 +3,7 @@
 
 <head>
   <!-- Metadatos -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="keywords" content="HerramientasElectricas, ElectroTools" />
-  <meta name="author" content="Nombre del integrante que corresponda" />
-  <meta name="description" content="Trabajo Integrador del curso de Desarrollador Web Fullstack de DH" />
+  <%- include('./partials/meta.ejs')%>
 
   <!-- links -->
 
@@ -33,17 +28,20 @@
   <!-- Cuerpo -->
 
   <header>
-    <!--Encabezados-->
-    <a href="#" title="Volver">
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
 
-    <h1>Carrito de <br>Compras</h1>
+    <%- include('./partials/header.ejs')%>
 
-
-    <a href="#" title="Ir a la pág. principal">
-      <img class="logo" src="/img/electroTools/identidad/LogoAmarillo-LetrasBlancas-FondoTransparente.png" alt="">
-    </a>
+    
+    <!--Encabezados viejo-->
+    <!--
+      <a href="#" title="Volver">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h1>Carrito de <br>Compras</h1>
+      <a href="#" title="Ir a la pág. principal">
+        <img class="logo" src="/img/electroTools/identidad/LogoAmarillo-LetrasBlancas-FondoTransparente.png" alt="">
+      </a>
+    -->
 
   </header>
 
@@ -255,67 +253,7 @@
   </main>
 
   <footer>
-    <!-- Pie de Pagina -->
-    <section class="main-footer">
-
-      <!-- Identidad -->
-      <article class="identidad">
-        <a href="#" title="Ir a la pág. principal">
-          <img class="logo" src="/img/electroTools/identidad/LogoAmarillo-LetrasBlancas-FondoTransparente.png"
-            alt="logo ElectroTools">
-        </a>
-        <div class="redesSociales">
-          <a href="#" title="Siguenos en Instagram!"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" title="Siguenos en Facebook!"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" title="Siguenos en Youtube!"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-      </article>
-
-      <!-- Medios de Contacto -->
-      <article class="contacto">
-        <h4>Atención al Cliente</h4>
-
-        <div class="horario">
-          <h5>Horario de Atención</h5>
-          <p class="dias">Lunes - Jueves</p>
-          <p class="horario">09:00 am a 19:00 pm</p>
-        </div>
-
-        <div class="email">
-          <h5>Correo Electrónico</h5>
-          <a href="mailto:atencion-clientes@electrotools.com" title="enviar mail">atencion-clientes@electrotools.com</a>
-        </div>
-
-        <div class="telefono">
-          <h5>Teléfono</h5>
-          <p>0810-555-1234</p>
-        </div>
-      </article>
-
-      <!-- Institucional -->
-      <article class="institucional">
-        <h4>Institucional</h4>
-        <ul>
-          <li>Proveedores</li>
-          <li>Política de Privacidad</li>
-          <li>Acerca de ElectroTools</li>
-          <li>Blog y Tutoriales</li>
-          <li>Trabaja con Nosotros</li>
-        </ul>
-      </article>
-
-    </section>
-
-    <!-- Terceras Marcas -->
-    <article class="marcas">
-      <img src="img/logos Empresas/herramientas/makita-logo.png" alt="logo makita"></img>
-      <img src="img/logos Empresas/herramientas/dewalt-logo.png" alt="logo dewalt"></img>
-      <img src="img/logos Empresas/herramientas/stanley-logo.png" alt="logo stanley"></img>
-      <img src="img/logos Empresas/herramientas/black+decker-logo.png" alt="black+decker-logo"></img>
-    </article>
-
-    <a href="#" class="copyright" title="Ir al sitio web del Team Dinamita Arg"> Team Dinamita Arg ©</a>
-
+    <%- include('./partials/footer.ejs') %>
   </footer>
 
   <!-- Scrips -->
