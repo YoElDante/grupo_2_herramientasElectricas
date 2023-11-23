@@ -5,7 +5,7 @@ const path = require('node:path');
 const controller = {
     
     index: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/register.ejs'));
+        res.render(path.resolve(__dirname, '../views/users/register.ejs'));
     },
 
 };
