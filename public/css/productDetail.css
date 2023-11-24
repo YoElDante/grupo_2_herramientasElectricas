@@ -33,8 +33,13 @@ header h1 {
 }
 
 .logo {
-    width: 12rem;
+    width: 10rem;
     margin-left: -0.5rem;
+}
+header section input{/* barra de busqueda*/
+    border: solid 1px #ffb81c;
+    border-radius: 25px;
+    color: #11111f;
 }
 
 
@@ -188,5 +193,113 @@ main {
 /* ----------------- */
 /*   MEDIA QUERIES   */
 /* ----------------- */
+@media (min-width: 720px) {
+    html {
+        font-size: 16px; 
+      }
+      .logo{
+        width: 5rem;
+      }
+      /* Main */
+      main {
+        margin-top: 1rem; 
+        color: #11111f;
+      }
+      
+      /* Títulos */
+      .tituloPrincipal h2 {
+        font-size: rem; 
+      }
+      
+      .tituloPrincipal h3 {
+        font-size: 1.5rem; 
+      }
+      
+      .tituloPrincipal h4 {
+        font-size: 1.25rem; 
+      }
+      
+      .tituloPrincipal img {
+        width: 8rem; 
+      }
+      
+      /* Galería */
+      .galeria {
+        max-width: 1200px; 
+        height: 50vh; 
+      }
+      
+      .vistasmini {
+        flex: 0 0 15%; 
+      }
+      
+      .vistasmini img {
+        height: calc(100% / 4 - 20px); 
+      }
+      
+      /* Main Precios */
+      .fullname {
+        font-size: 1.2rem;
+        text-align: justify;
+        margin: 1.5rem 0; 
+      }
+      
+      .precio {
+        font-size: 50px; 
+      }
+      
+      .envio {
+        font-size: 2.2rem; 
+      }
+      
+      /* Opciones */
+      .opciones a {
+        align-self: flex-start;
+      }
+      
+      .logosTC {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+      .logosTC img {
+        width: 2rem; 
+      }
+      
+      /* Características */
+      .saber h4 {
+        font-size: 1.0rem; 
+      }
+      .seccion ul{
+        font-size: 30px;
+
+      }
+      
+      /* Promoción de Productos */
+      .titulo {
+        margin: 2rem 0; 
+      }
+      
+      .tarjeta {
+        width: 20%; 
+      }
+      
+      .tarjeta h4 {
+        font-size: 1rem; 
+          }
+      
+      .tarjeta .precios {
+        margin-top: 1rem; 
+      }
+      
+      .next {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.5rem; 
+      }
+      
+  }
+  
 
 
