@@ -98,21 +98,25 @@ input::placeholder {
     color: #ffb81c;
 
 }
+#buttom-imput{
 
-.buttom-register {
+    justify-content: center;
+}
+.buttom-save {
     display: flex;
     align-items: center;
     background-color: #d19617;
     justify-content: center;
     width: 100%;
     border-radius: 25px;
-    margin: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 3rem;
     border: #11111f solid 2px;
     font-size: 1.5rem;
     cursor: pointer;
     position: relative;
-    top: -10px;
+    top: -2px;
 }
 
 
@@ -187,6 +191,7 @@ input::placeholder {
         margin-bottom: 5%;
         margin: auto;
     }
+    
 
 }
 
