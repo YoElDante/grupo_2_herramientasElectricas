@@ -1,0 +1,178 @@
+
+header{
+    background-color: #11111f;
+    color: white;
+}
+header section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header section img{/* logo */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 50vw;
+}
+header section input{/* barra de busqueda*/
+    width: 75vw;
+    border: solid 1px #ffb81c;
+    border-radius: 25px;
+    color: #11111f;
+}
+header section input::placeholder{
+    color: #11111f;
+    font-size: 0.8rem;
+}
+header section button{/* boton de buscar */
+    background-color: white;
+    border-radius: 25px;
+    border: solid 1px #ffb81c;
+    font-size: 0.8rem;
+    margin: 10px;
+}
+header section button:hover{
+    background-color: #ffb81c;
+}
+header section div div.sesion-registrate{/*Log-in - Registrate */
+    display: none;
+}
+header section div i{
+    padding: 5px;
+}
+header section div .carrito{
+    background-color: #11111f;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: solid 1px #ffb81c;
+    border-radius: 25px;
+    padding: 5;
+    margin: 0px;
+    z-index: 9999;
+}
+header section div .carrito i{
+    font-size: 1rem;
+    padding: 10px;
+}
+.burger{/* Menu hamburguesa */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+}
+.navbar a{
+    display:none;
+    text-decoration: none;
+    color:#11111f
+}
+
+
+
+
+/* ----------------- */
+/*   MEDIA QUERIES   */
+/* ----------------- */
+
+@media (min-width:445px){
+
+    html{
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width:580px){
+
+    html{
+        font-size: 26px;
+    }
+
+}
+
+@media (min-width: 769px){
+
+    /* --- HEADER --- */
+
+    header section{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    header section img{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 30vw;
+    }
+    header section input{
+        border-radius: 25px;
+        font-size: 20px;
+        width: 30vw;
+    }
+    header section input::placeholder{
+        font-size: 20px;
+    }
+    header section button{
+        border-radius: 25px;
+        font-size: 20px;
+    }
+    header section div.top-header-rigth{
+        width: 20vw;
+        align-self: flex-end;
+    }
+    header section div div.sesion-registrate{
+        display: flex;
+        justify-content: flex-end;
+        color: #ffffff;
+    }
+    header section div div.sesion-registrate a{
+        color: white;
+        font-size: 0.5rem;
+        text-decoration: none;
+    }
+    header section div .carrito i{
+        font-size: 0.65rem;
+    }
+    header nav{
+        border-top: solid 5px white;
+        background-color: #11111f;
+        width: 100vw;
+    }
+    .burger{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+        margin: 0px;
+    }
+    header nav ul li{
+        border: solid 1px #ffb81c;
+        background-color: white;
+        border-radius: 25px;
+        color: #11111f;
+        margin: 10px 0px;
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+    header nav ul li:hover{
+        background-color: #ffb81c;
+    }
+
+    .navbar a{
+        display: contents;
+    }
+
+    /* --- FIN HEADER --- */
+
+}
+
+@media (min-width:1200px){
+
+    html{
+        font-size: 42px;
+    }
+
+}
