@@ -7,6 +7,7 @@ const loginRouter = require('./src/routers/login.js')
 const registerRouter = require('./src/routers/register.js')
 const productCartRouter = require('./src/routers/productCart.js')
 const productDetailRouter = require('./src/routers/productDetail.js')
+const registerEditionRouter = require('./src/routers/registerEditionRouter.js')
 
 const app = express();
 
@@ -29,7 +30,11 @@ app.use('/login', loginRouter);
 
 app.use('/register', registerRouter);
 
+app.use('/edicionRegistro', registerEditionRouter);
+
 app.use('/productCart', productCartRouter);
 
 app.use('/productDetail', productDetailRouter);
+
+
 
