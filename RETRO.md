@@ -62,4 +62,56 @@ He disfrutado mucho haciendo el trabajo que me tocó. Me gusta organizar y gener
 > - Solo el dueño de la tarea puede moverla hacia la derecha y solo los compañeros pueden moverla a "completada".
 
 
-## RETRO Segundo Sprint - día dd/mm/yyyy
+## RETRO Segundo Sprint - SABADO 25/11/2023
+
+### Opiniones de los integrantes 
+
+🙎‍♂️ **Cristian Godoy:** 
+> ***Comenzar a hacer:*** Respetar una rutina para las reuniones. Es decir, un dia y horario fijo, consensuado y respetado.
+Las tarjetas del trello deben ser elegidas y transportadas a la seccion correspondiente, de manera individual.
+Opcionalmente se podria documentar para uso interno, lo que esta haciendo cada uno, "*empiezo con tal cosa*", "*termine tal cosa*".
+> ***Hacer mas:*** Más organización y administración, siempre voy a votar para mejorar esas cosas.
+> ***Hacer menos:*** Depender de Dante, pero esto será una consecuencia de nuestro progreso. A ponerle ganas gente. Nadie es mas que nadie. Si uno puede, todos pueden.
+>***Dejar de hacer:*** Dejar de hacer tan largas las daylies.
+
+🙎‍♀️ **Florencia Tula:**
+Lamentablemente No puede estar tan presente como queria en este spring por lo que mi Restrospectiva es mas personal que grupal:
+> ***Comenzar a hacer:*** Estar más al pendiente de las actividades que debo realizar, ajustando y organizando más mi tiempo para poder completar las tareas designadas.
+> ***Hacer mas:*** Participar más en las reuniones del equipo, necesito ponerme al día con las actividades de clase es necesario para poder ayudar más al equipo.
+> ***Continuar Haciendo:*** Practicando Codigo y poniendome al día con todo lo referente a github y trello
+> ***Hacer menos:*** Estar tan inactiva 
+> ***Dejar de hacer:*** La Tareas No dejarlas para última hora.
+
+🙎‍♂️ **Gustavo Daniel Moya:**
+> ***Comenzar a hacer:*** Definir grupalmente como serán los estilos generales. Detallar en las Daily el trabajo de cada uno para que si surgen dudas de como se hizo cierta parte, todos manejemos la misma info. Usar GitHub para que cada uno haga sus push y no sea necesario que otro cargue los cambios.
+> ***Hacer mas:*** Avanzar de a partes/poco. Ver instructivos y documentación oficial para entender las herramientas.  Utilizar el Trello con las etiquetas y los comentarios de las tarjetas.
+> ***Continuar Haciendo:*** Asistirnos en los bloqueos. Cumplir con  lo que se compromete cada uno.
+> ***Hacer menos:*** Dejar para los últimos días la tarea.
+> ***Dejar de hacer:*** No dar respuesta en las ausencias de las reuniones ni avisar.
+
+🙎‍♂️ **Raúl Manuel Calvimonte:**
+> **Sobre el trabajo del equipo:**
+> Estudiar el Github.
+> Hacer mas: Empézar a hacer las cosas mas solos y sin ayuda de Dante.(solo perdile ayuda cuando estemos muy trabados)
+> Hacer menos: dejar para los últimos días la tarea.
+
+> **Sobre mi trabajo personal:**
+> Empezar a despertarme mas temprano.
+> Estudiar mas.
+> Entender un poco mejor el Github.
+
+🙎‍♂️ **Dante Delprato:**
+> ***Comenzar a hacer:*** Estar al día con las clases para no quede todo para último momento. Estudiar Git Hub para poder usar branchs y saber hacer los merges.
+> ***Hacer mas:*** Completar metódicamente el trello con las tarjetas, el reporte de actividad y la captura de pantalla del avance del proyecto
+> ***Continuar Haciendo:*** Mantenernos comunicados y ayudándonos entre todos, seguir atentos a las necesidades de los compañeros, apoyándonos y completando los trabajos faltantes, sea o no que nos tocara en un primer momento
+> ***Hacer menos:*** No avisar cuando me meto en el area de trabajo de un compañero (intento avisar, pero en el sprint pasado toque cosas por querer ayudar y me avise despues de haberlo hecho).
+Llegar tarde a las reuniones, posponer el horario la Reunión en el mismo día o de plano faltar sin avisar. 
+> ***Dejar de hacer:*** No siento que hayamos tenido ninguna actitud negativa en el equipo, y menos algo que pueda caer en esta categoría como que sea necesaria "dejar de hacer"
+
+👨‍👨‍👧‍👦 **Reflexiones del Equipo**
+
+- Las opiniones de los integrantes reflejan una variedad de puntos de vista sobre el funcionamiento del equipo y las prácticas actuales. Se destacan aspectos como la necesidad de establecer y respetar rutinas para las reuniones, la importancia de la organización y administración, así como la sugerencia de evitar depender excesivamente de un miembro del equipo. Además, se evidencia la importancia de la comunicación, el uso efectivo de herramientas como GitHub y Trello, y la necesidad de avanzar de manera constante en lugar de dejar las tareas para el último momento.
+
+## Conclusiones
+
+- Se puede concluir que hay consenso en la importancia de mejorar la organización, la gestión del tiempo y la comunicación dentro del equipo. La necesidad de autonomía en las tareas individuales, el uso efectivo de herramientas colaborativas y el compromiso con la puntualidad son aspectos resaltados de manera consistente. En general, parece existir una disposición positiva hacia el trabajo en equipo y el progreso conjunto, con sugerencias específicas para optimizar ciertos aspectos de la dinámica grupal. La reflexión individual de cada miembro brinda información valiosa para fortalecer el funcionamiento del equipo y mejorar la productividad en futuros proyectos.
