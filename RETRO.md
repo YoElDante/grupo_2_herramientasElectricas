@@ -79,7 +79,7 @@ Opcionalmente se podria documentar para uso interno, lo que esta haciendo cada u
 
 🙎‍♀️ **Florencia Tula:**
 
-- Lamentablemente No puede estar tan presente como queria en este spring por lo que mi Restrospectiva es mas personal que grupal:
+- Lamentablemente No puede estar tan presente como queria en este sprint por lo que mi Restrospectiva es mas personal que grupal:
 
 > ***Comenzar a hacer:*** Estar más al pendiente de las actividades que debo realizar, ajustando y organizando más mi tiempo para poder completar las tareas designadas.
 > 
