@@ -3,7 +3,7 @@
 
 ### **Reunion Sabado 11/11/23:** 
 
-**OBJETIVOS**  
+**Objetivos**  
 > Acordar tiempos y tareas de trabajo.
 
  **Discusion**  
