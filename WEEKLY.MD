@@ -1,7 +1,7 @@
 # DAYLI  
 
 
-### **Reunión 11/11/23:** 
+### **Reunion Sabado 11/11/23:** 
 
 **OBJETIVOS**  
 > Acordar tiempos y tareas de trabajo.
@@ -21,12 +21,12 @@
 > Terminar con el problema de github.
 
 
-### **Reunion lunes 13:** 
+### **Reunion lunes 13/11/23:** 
 
 > Nadie tiene idea por donde se agarra esto, asi que pasamos la reunion para el 15/11 despues de clase.
 
 
-### **Reunion miercoles 15/11:**
+### **Reunion miercoles 15/11/23:**
 
 **Objetivos**  
 > Acordar tiempos y tareas de trabajo para que ninguno se cargue con demasiado
@@ -44,7 +44,7 @@
 > Se espera Dividir el trabajo 
 
 
-### **Reunión 22/11:** 
+### **Reunión 22/11/23:** 
 
 **Objetivos**  
 > Dividir tareas de manera equitativa
@@ -56,7 +56,7 @@
 > La proxima reunión despues de la clase del miercoles 25/11
 
 
-**Reunion 25/11:**
+**Reunion 25/11/23:**
 **Discusion**  
 > Se realizó un control sobre las tareas designadas. Se dio una guia de como trabajar el Mersh y el push de una manera comoda para poder evitar problemas.
 
@@ -65,3 +65,4 @@
 
 **Siguiente Reunión**
 > La proxima reunión despues de la clase del Lunes 27/11
+
