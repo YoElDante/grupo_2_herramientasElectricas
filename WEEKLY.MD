@@ -1,4 +1,4 @@
-# DAYLI  
+# DAILY  
 
 
 ### **Reunion Sabado 11/11/23:** 
