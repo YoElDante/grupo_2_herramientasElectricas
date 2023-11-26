@@ -1,0 +1,305 @@
+/* ----------------- */
+/* ESTILOS GENERALES */
+/* ----------------- */
+
+
+/* ----------------- */
+/*      HEADER       */
+/* ----------------- */
+header {
+    background: #11111f;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-size: 1rem;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+
+    margin-bottom: 0.625rem;
+}
+
+header i {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+header h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-left: -0.5rem;
+}
+
+.logo {
+    width: 10rem;
+    margin-left: -0.5rem;
+}
+header section input{/* barra de busqueda*/
+    border: solid 1px #ffb81c;
+    border-radius: 25px;
+    color: #11111f;
+}
+
+
+
+/* ----------------- */
+/*       MAIN        */
+/* ----------------- */
+
+main {
+    margin-top: 0.4rem;
+    color: #11111f;
+}
+
+/* titulo */
+.tituloPrincipal{
+    position: relative;
+}
+
+.tituloPrincipal h2{
+    font-size: 1.5rem;
+}
+.tituloPrincipal h3{
+    font-size: 1.125rem;
+}
+
+.tituloPrincipal h4{
+    font-size: 1rem;
+}
+
+.tituloPrincipal img{
+    position:absolute;
+    width: 6rem;
+    right:0;
+    bottom: 0;
+}
+
+/* galeria */
+
+.galeria {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    height: 60vw;
+    max-height: 60vh;
+    border: 0.0625px solid #dcdcdc;
+    align-items: flex-start;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.vistasmini {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    flex: 0 0 20%;
+    height: 100%;
+    width: 100%;
+
+    border-right: 0.0625px solid #dcdcdc;
+}
+
+.vistasmini img {
+    width: 80%;
+    height: calc(100% / 4 - 10px); /* Distribuir uniformemente en 4 columnas con espacio de 10px */
+    object-fit: contain;
+}
+
+.vistagrande {
+    flex: 0 0 80%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.vistagrande img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+/* Main Precios */
+
+.fullname{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.main-precios div{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-grow: 1;
+    line-height: 0rem;
+}
+
+.precio{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.cuotas{
+    font-size: 1rem;
+}
+
+.envio{
+    font-size: 2rem;
+}
+
+.opciones{
+    justify-content: space-between;
+}
+
+.opciones a{
+    align-self: center;
+}
+
+.logosTC{
+    display: flex!important;
+    justify-content: end!important;
+    align-items: center!important;
+}
+
+.logosTC img{
+    width: 1.5rem;
+    margin-left: 0.1875rem;
+}
+
+/* Caracteristicas */
+
+.saber h4{
+    font-size: 1.5rem;
+}
+
+.detalles li{
+    margin-bottom: 0.3125rem;
+}
+
+
+/* ----------------- */
+/*      FOOTER       */
+/* ----------------- */
+
+
+/* ----------------- */
+/*   MEDIA QUERIES   */
+/* ----------------- */
+@media (min-width: 720px) {
+    html {
+        font-size: 16px; 
+      }
+      .logo{
+        width: 5rem;
+      }
+      /* Main */
+      main {
+        margin-top: 1rem; 
+        color: #11111f;
+      }
+      
+      /* Títulos */
+      .tituloPrincipal h2 {
+        font-size: rem; 
+      }
+      
+      .tituloPrincipal h3 {
+        font-size: 1.5rem; 
+      }
+      
+      .tituloPrincipal h4 {
+        font-size: 1.25rem; 
+      }
+      
+      .tituloPrincipal img {
+        width: 8rem; 
+      }
+      
+      /* Galería */
+      .galeria {
+        max-width: 1200px; 
+        height: 50vh; 
+      }
+      
+      .vistasmini {
+        flex: 0 0 15%; 
+      }
+      
+      .vistasmini img {
+        height: calc(100% / 4 - 20px); 
+      }
+      
+      /* Main Precios */
+      .fullname {
+        font-size: 1.2rem;
+        text-align: justify;
+        margin: 1.5rem 0; 
+      }
+      
+      .precio {
+        font-size: 50px; 
+      }
+      
+      .envio {
+        font-size: 2.2rem; 
+      }
+      
+      /* Opciones */
+      .opciones a {
+        align-self: flex-start;
+      }
+      
+      .logosTC {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+      .logosTC img {
+        width: 2rem; 
+      }
+      
+      /* Características */
+      .saber h4 {
+        font-size: 1.0rem; 
+      }
+      .seccion ul{
+        font-size: 30px;
+
+      }
+      
+      /* Promoción de Productos */
+      .titulo {
+        margin: 2rem 0; 
+      }
+      
+      .tarjeta {
+        width: 20%; 
+      }
+      
+      .tarjeta h4 {
+        font-size: 1rem; 
+          }
+      
+      .tarjeta .precios {
+        margin-top: 1rem; 
+      }
+      
+      .next {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.5rem; 
+      }
+      
+  }
+  
+
+

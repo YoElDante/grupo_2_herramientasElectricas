@@ -1,0 +1,183 @@
+/* ----------------- */
+/* ESTILOS GENERALES */
+/* ----------------- */
+
+
+
+/* ----------------- */
+/*      HEADER       */
+/* ----------------- */
+
+header {
+    background: #11111f;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-size: 1rem;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+
+    margin-bottom: 0.625rem;
+}
+
+header i {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+header h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.logo {
+    width: 12rem;
+}
+
+
+/* ----------------- */
+/*       MAIN        */
+/* ----------------- */
+
+main {
+    margin-top: 0.4rem;
+    color: #11111f;
+}
+
+/* Detalles de la compra */
+
+
+.seccion h2 {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.producto {
+    position: relative;
+    display: flex;
+    font-size: 0.5rem;
+    border-top: #dcdcdc 0.0625rem solid;
+}
+
+.producto i {
+    /* circulo rojo con cruz blanca para sacar el producto del carrito */
+    position: absolute;
+    top: 0.4rem;
+    right: 0.5rem;
+    font-size: 1rem;
+    color: #cb483a;
+    text-shadow: none;
+}
+
+
+.articuloTexto {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0.3125rem;
+
+}
+
+.detalleProducto {
+    display: flex;
+    text-align: justify;
+}
+
+.detalleProducto h3,
+.detalleProducto p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    font-size: 0.7rem;
+    margin-right: 0.2rem;
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+}
+
+.precio input {
+    width: 2rem;
+}
+
+.precio label,
+.precio input{
+    font-size: 0.75rem;
+    vertical-align: middle;
+    line-height: 1.875rem;
+}
+
+.monto {
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    top: 1rem;
+    right: 0.5rem;
+}
+
+/* costo envio */
+
+.envio {
+    width: 95vw;
+    margin: auto;
+    background-color: #fff;
+    border: 0.0625rem solid #dcdcdc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+    margin-top: 0.625rem;
+
+    display: flex;
+    padding: 0px 1rem;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.envio h3 {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+/* Calculamdo Valor Final */
+
+.totales {
+    background-color: #fff;
+    border-top: 0.0625rem solid #dcdcdc;
+    box-shadow: #11111f 0px 0.1875px 0.3125rem;
+    margin-top: 1.25rem;
+    width: 100vw;
+    padding: 0px 1.25rem;
+    padding-bottom: 1rem;
+}
+
+
+.item_totales {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-top: 0.0625rem solid #dcdcdc;
+}
+
+/* ----------------- */
+/*      FOOTER       */
+/* ----------------- */
+
+
+/* ----------------- */
+/*   MEDIA QUERIES   */
+/* ----------------- */
+

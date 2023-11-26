@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos -->
+  <%- include('../partials/meta.ejs')%>
+
+  <!-- links -->
+
+  <!--Custom Css-->
+  <link rel="stylesheet" href="css/productCart.css" />
+  <link rel="stylesheet" href="css/generales.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+
+  <!-- Font -->
+  <link rel="" href="" />
+
+
+
+  <!--FavIcon-->
+  <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
+
+  <!-- Titulo de la Pag -->
+  <title>ElectroTools - Carrito de Compras</title>
+</head>
+
+<body>
+  <!-- Cuerpo -->
+
+  <header>
+
+    <%- include('../partials/header.ejs')%>
+
+    
+    <!--Encabezados viejo-->
+    <!--
+      <a href="#" title="Volver">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h1>Carrito de <br>Compras</h1>
+      <a href="#" title="Ir a la pág. principal">
+        <img class="logo" src="/img/electroTools/identidad/LogoAmarillo-LetrasBlancas-FondoTransparente.png" alt="">
+      </a>
+    -->
+
+  </header>
+
+  <main>
+    <!-- principal -->
+
+    <!-- Detalles de la compra -->
+    <div class="carrito">
+
+      <section class="seccion">
+        <h2>Tus Artículos</h2>
+        <div class="articulos">
+          <!-- Producto 1 -->
+          <article class="producto">
+
+            <div class="imgProducto">
+              <a href="#" title="Ir al artículo">
+                <img src="img/herramientas/amoladora BlackDecker/amoladora black decker.webp" alt="amoladora">
+              </a>
+            </div>
+
+            <i class="fa-solid fa-circle-xmark" title="Eliminar elemento del carrito"></i>
+
+            <div class="articuloTexto">
+
+              <div class="detalleProducto">
+                <h3>Amoladora angular</h3>
+                <p>Black+Decker</p>
+                <p>G650</p>
+              </div>
+
+              <div class="precio">
+                <form class="cantidad">
+                  <label for="cant">Cantidad:</label>
+                  <input class="cant" type="number" name="cant" id="cant" value="1">
+                </form>
+                <p class="monto">$28.750.-</p>
+              </div>
+            </div>
+
+          </article>
+          <!-- producto 2 -->
+          <article class="producto">
+
+            <div class="imgProducto">
+              <a href="#" title="Ir al artículo">
+                <img src="img/herramientas/pistola de calor Stanley/pistola de calor Stanley.webp" alt="amoladora">
+              </a>
+            </div>
+
+            <i class="fa-solid fa-circle-xmark" title="Eliminar elemento del carrito"></i>
+
+            <div class="articuloTexto">
+
+              <div class="detalleProducto">
+                <h3>Pistola de calor</h3>
+                <p>Stanley</p>
+                <p>stxh2000</p>
+              </div>
+
+              <div class="precio">
+                <form class="cantidad">
+                  <label for="cant">Cantidad:</label>
+                  <input class="cant" type="number" name="cant" id="cant" value="1">
+                </form>
+                <p class="monto">$45.425.-</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Costo Envio -->
+      <div class="envio">
+        <h4>Valor del Envío</h4>
+        <p>$ 2.000.-</p>
+      </div>
+
+      <!-- Calculando valor final -->
+      <section class="totales">
+        <div class="item_totales">
+          <p>Total de Productos <span>(2)</span></p>
+          <p>$ 74.175.-</p>
+        </div>
+
+        <div class="item_totales">
+          <p>Envío</p>
+          <p>$ 2.000.-</p>
+        </div>
+
+        <div class="item_totales descuento">
+          <form class="item_codigoDescuento">
+            <label for="cupon">Código de Descuento</label>
+            <br>
+            <input type="text" name="cupon" id="cupon" placeholder="Ingrese Código">
+            <i class="fa-solid fa-tags"></i>
+          </form>
+          <p>.-</p>
+        </div>
+
+        <div class="item_totales total">
+          <p>Total</p>
+          <p>$ 76.175.-</p>
+        </div>
+
+        <button class="boton-accion" type="submit">Continuar Compra</button>
+
+      </section>
+
+    </div>
+
+    <!-- Promocion de Productos -->
+    <section class="productos">
+
+      <!-- Recomendados -->
+      <div class="recomendaciones">
+        <h3 class="titulo">Según tu preferencia</h3>
+
+        <section class="tarjetas">
+          <article class="tarjeta product">
+            <h4>Amoladora Angular</h4>
+            <div class="imgProducto">
+              <img src="img/herramientas/amoladora DeWalt/amoladora DeWalt.webp" alt="amoladora DeWalt">
+            </div>
+            <div class="detalles">
+              <p class="marca">DeWalt</p>
+              <p class="modelo">DWE4010 50Hz</p>
+            </div>
+            <i class="fa-solid fa-tags"></i>
+            <div class="precios">
+              <p class="precioAnterior">$ 50.999.-</p>
+              <p class="precioActual">$ 50.999.-</p>
+            </div>
+          </article>
+
+          <article class="tarjeta product">
+            <h4>Taladro Percutor</h4>
+            <div class="imgProducto">
+              <img src="img/herramientas/atornillador Makita/atornillador makita.webp"
+                alt="atornillador electrico Makita">
+            </div>
+            <div class="detalles">
+              <p class="marca">Makita</p>
+              <p class="modelo">DHP453sye 18V</p>
+            </div>
+            <i class="fa-solid fa-tags"></i>
+            <div class="precios">
+              <p class="precioAnterior">$394.960.-</p>
+              <p class="precioActual">$394.960.-</p>
+            </div>
+
+          </article>
+
+          <div class="next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+        </section>
+      </div>
+
+      <!-- Ofertas -->
+      <div class="recomendaciones ofertas">
+        <h3 class="titulo">OFERTAS</h3>
+
+        <section class="tarjetas">
+          <article class="tarjeta oferta">
+            <h4>Taladro Atornillador</h4>
+            <div class="imgProducto">
+              <img src="img/herramientas/atornillador electrico/atornillador electrico.webp"
+                alt="atornillador electrico Versa">
+            </div>
+            <div class="detalles">
+              <p class="marca">VersaMax</p>
+              <p class="modelo">Recargable 8V</p>
+            </div>
+            <i class="fa-solid fa-tags"></i>
+            <div class="precios">
+              <p class="precioAnterior">$ 64.999.-</p>
+              <p class="precioActual">$ 61.999.-</p>
+            </div>
+
+          </article>
+
+          <article class="tarjeta oferta">
+            <h4>Kit RotoMartillo</h4>
+            <div class="imgProducto">
+              <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt.webp" alt="taladro en caja">
+            </div>
+            <div class="detalles">
+              <p class="marca">DeWalt</p>
+              <p class="modelo">SDS DCH133hb</p>
+            </div>
+            <i class="fa-solid fa-tags"></i>
+            <div class="precios">
+              <p class="precioAnterior">$552.599.-</p>
+              <p class="precioActual">$540.000.-</p>
+            </div>
+          </article>
+
+          <div class="next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+
+  <!-- Scrips -->
+  <script src="https://kit.fontawesome.com/30f2e17de6.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

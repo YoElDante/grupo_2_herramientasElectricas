@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos -->
+  <%- include('./partials/meta.ejs')%>
+
+  <!-- links -->
+  <!-- links agregados por Cristian-->
+  <link href="css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha384-..." crossorigin="anonymous" />
+
+  <!--Custom Css-->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/generales.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+
+  <!-- Font -->
+  <link rel="" href="" />
+
+  <!--FavIcon-->
+  <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
+
+  <!-- Titulo de la Pag -->
+  <title>ElectroTools - Home</title>
+</head>
+
+<body>
+  <!-- Cuerpo -->
+
+  <header>
+    <!-- Encabezado -->
+    <%- include('./partials/header.ejs')%>
+  </header>
+
+  <main>
+    <!-- principal -->
+
+    <section class="carrusel">
+
+      <!-- Carrucel Principal -->
+      <div class="item-carrusel" id="item1">
+
+        <div class="img-carrusel">
+          <img src="/img/imgCarrusel/CyberMonday1.jpg" alt="Cyber Monday">
+        </div>
+        <div class="flechas-carrusel">
+          <a href="#item3" title="anterior"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a href="#item2" title="siguiente"><i class="fa-solid fa-circle-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="item-carrusel" id="item2">
+        <div class="img-carrusel">
+          <img src="/img/imgCarrusel/CyberMonday2.jpg" alt="Cyber Monday">
+        </div>
+        <div class="flechas-carrusel">
+          <a href="#item1" title="anterior"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a href="#item3" title="siguiente"><i class="fa-solid fa-circle-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="item-carrusel" id="item3">
+        <div class="img-carrusel">
+          <img src="/img/imgCarrusel/CyberMonday3.jpg" alt="Cyber Monday">
+        </div>
+        <div class="flechas-carrusel">
+          <a href="#item2" title="anterior"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a href="#item1" title="siguiente"><i class="fa-solid fa-circle-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="botones-carrusel">
+      <a href="#item1" title="item1"><i class="fa-regular fa-circle-dot"></i></a>
+      <a href="#item2" title="item2"><i class="fa-regular fa-circle-dot"></i></a>
+      <a href="#item3" title="item3"><i class="fa-regular fa-circle-dot"></i></a>
+    </div>
+
+
+    <!-- Novedades -->
+
+    <section class="novedades productos" id="novedades">
+      <div class="recomendaciones">
+        <h3 class="titulo">Novedades</h3>
+        <a href="/productDetail">
+
+          <section class="tarjetas">
+            <article class="tarjeta product">
+              <h4>Amoladora Angular</h4>
+              <div class="imgProducto">
+                <img src="img/herramientas/amoladora DeWalt/amoladora DeWalt.webp" alt="amoladora DeWalt">
+              </div>
+              <div class="detalles">
+                <p class="marca">DeWalt</p>
+                <p class="modelo">DWE4010 50Hz</p>
+              </div>
+              <i class="fa-solid fa-tags"></i>
+              <div class="precios">
+                <p class="precioAnterior">$ 50.999.-</p>
+                <p class="precioActual">$ 50.999.-</p>
+              </div>
+            </article>
+
+            <article class="tarjeta product">
+              <h4>Taladro Percutor</h4>
+              <div class="imgProducto">
+                <img src="img/herramientas/atornillador Makita/atornillador makita.webp"
+                  alt="atornillador electrico Makita">
+              </div>
+              <div class="detalles">
+                <p class="marca">Makita</p>
+                <p class="modelo">DHP453sye 18V</p>
+              </div>
+              <i class="fa-solid fa-tags"></i>
+              <div class="precios">
+                <p class="precioAnterior">$394.960.-</p>
+                <p class="precioActual">$394.960.-</p>
+              </div>
+
+            </article>
+
+            <div class="next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </section>
+        </a>
+      </div>
+    </section>
+
+    <!-- Caja de Herramientas -->
+
+    <section class="caja-de-herramientas" id="cajaherramientas">
+
+      <h2>CAJA DE HERRAMIENTAS</h2>
+      <h3>Hemos separado para usted los principales articulos para ayudarle en su rutina de trabajo</h3>
+
+      <div class="tarjetas-contenedor">
+        <div class="tarjetas">
+          <img src="/img/imgCajaDeHerramientas/madera.jpg" alt="Madera">
+          <h4>MADERA</h4>
+          <a href="#">Ver coleccion ></a>
+        </div>
+        <div class="tarjetas">
+          <img src="/img/imgCajaDeHerramientas/mamposteria.jpg" alt="Madera">
+          <h4>MAMPOSTERIA</h4>
+          <a href="#">Ver coleccion ></a>
+        </div>
+        <div class="tarjetas">
+          <img src="/img/imgCajaDeHerramientas/metal.jpg" alt="Madera">
+          <h4>METAL</h4>
+          <a href="#">Ver coleccion ></a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Ofertas -->
+
+    <section class="productos" id="ofertas">
+
+      <div class="recomendaciones ofertas">
+        <h3 class="titulo">OFERTAS</h3>
+
+        <a href="/productDetail">
+          <section class="tarjetas">
+
+            <article class="tarjeta oferta">
+              <h4>Taladro Atornillador</h4>
+              <div class="imgProducto">
+                <img src="img/herramientas/atornillador electrico/atornillador electrico.webp"
+                  alt="atornillador electrico Versa">
+              </div>
+              <div class="detalles">
+                <p class="marca">VersaMax</p>
+                <p class="modelo">Recargable 8V</p>
+              </div>
+              <i class="fa-solid fa-tags"></i>
+              <div class="precios">
+                <p class="precioAnterior">$ 64.999.-</p>
+                <p class="precioActual">$ 61.999.-</p>
+              </div>
+            </article>
+
+            <article class="tarjeta oferta">
+              <h4>Kit RotoMartillo</h4>
+              <div class="imgProducto">
+                <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt.webp" alt="taladro en caja">
+              </div>
+              <div class="detalles">
+                <p class="marca">DeWalt</p>
+                <p class="modelo">SDS DCH133hb</p>
+              </div>
+              <i class="fa-solid fa-tags"></i>
+              <div class="precios">
+                <p class="precioAnterior">$552.599.-</p>
+                <p class="precioActual">$540.000.-</p>
+              </div>
+            </article>
+
+            <div class="next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </section>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Animate con ElectroTools (ex conozca mas) -->
+
+    <section class="animate">
+      <h2>Animate con ElectroTools</h2>
+      <div class="tarjetas">
+        <div class="tarjeta1">
+          <iframe width="1344" height="492" src="https://www.youtube.com/embed/0_q1LyrvrmA"
+            title="Como hacer MUEBLE MONTESSORI" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="tarjeta2">
+          <div class="tarjeta2A">
+            <img src="/img/imgAnimateConElectroTools/Herramientas manuales.jpg" class="img2A" alt="herramientas">
+            <div class="info2A">Herramientas manuales</div>
+          </div>
+          <br>
+          <div class="tarjeta2B">
+            <img src="img/imgAnimateConElectroTools/Herramientas electricas.jpg" class="img2B" alt="herramientas">
+            <div class="info2B">Herramientas electricas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manteneme Actualizado -->
+
+    <section class="suscripcion">
+      <h3>MANTÉNGAME ACTUALIZADO</h3>
+      <p>Sea el primero en saber sobre nuestras últimas innovaciones y ofertas especiales</p>
+
+      <a class="letter" href="#" title="Suscríbase!"><i class="fa-solid fa-envelope-circle-check"></i></a>
+
+      <a class="ahora" href="#">¡Regístrese ahora!</a>
+
+    </section>
+
+  </main>
+
+  <footer>
+      <%- include('./partials/footer.ejs') %>
+  </footer>
+
+  <!-- Scrips -->
+  <script src="https://kit.fontawesome.com/30f2e17de6.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
