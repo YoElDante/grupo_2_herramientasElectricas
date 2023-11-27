@@ -8,6 +8,7 @@ const registerRouter = require('./src/routers/register.js')
 const productCartRouter = require('./src/routers/productCart.js')
 const productDetailRouter = require('./src/routers/productDetail.js')
 const registerEditionRouter = require('./src/routers/registerEditionRouter.js')
+const productRouter = require('./src/routers/product.js') // Cristian
 
 const app = express();
 
@@ -36,5 +37,5 @@ app.use('/productCart', productCartRouter);
 
 app.use('/productDetail', productDetailRouter);
 
-
+app.use('/product', productRouter); // Cristian
 

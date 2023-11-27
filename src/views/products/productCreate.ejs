@@ -1,0 +1,38 @@
+<!-- Cristian -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/meta.ejs')%>
+    <link rel="stylesheet" href="/css/productCreate.css">
+    <title>Creacion de productos</title>
+</head>
+<body>
+    <h1 class="title">Aqui se crearan los productos</h1>
+    <main>
+        <section class="formBox">
+            <form action="" method="">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+                <label for="description">Descripcion</label>
+                <textarea name="description" id="description"></textarea>
+                <label for="image">Imagen</label>
+                <input type="file" name="image" id="image">
+                <label for="category">Categoria</label>
+                <select name="category" id="category">
+                    <option value="">Opcion 1</option>
+                    <option value="">Opcion 2</option>
+                    <option value="">Opcion 3</option>
+                    <option value="">Opcion 4</option>
+                    <option value="">Opcion 5</option>
+                </select>
+                <label for="detail">Colores</label>
+                <input type="text" name="detail" id="detail">
+                <label for="price">Precio</label>
+                <input type="text" name="price" id="price">
+                <button type="reset">Cancelar</button>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

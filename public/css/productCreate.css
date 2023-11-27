@@ -1,0 +1,9 @@
+/* Cristian */
+title {
+    color: red;
+}
+
+section.formBox {
+    display: flex;
+    flex-direction: column;
+}
