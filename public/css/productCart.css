@@ -1,44 +1,4 @@
 /* ----------------- */
-/* ESTILOS GENERALES */
-/* ----------------- */
-
-
-
-/* ----------------- */
-/*      HEADER       */
-/* ----------------- */
-
-header {
-    background: #11111f;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    font-size: 1rem;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-
-    margin-bottom: 0.625rem;
-}
-
-header i {
-    font-size: 2rem;
-    margin: 1rem;
-}
-
-header h1 {
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-.logo {
-    width: 12rem;
-}
-
-
-/* ----------------- */
 /*       MAIN        */
 /* ----------------- */
 
@@ -48,7 +8,6 @@ main {
 }
 
 /* Detalles de la compra */
-
 
 .seccion h2 {
     font-size: 1rem;
@@ -62,8 +21,8 @@ main {
     border-top: #dcdcdc 0.0625rem solid;
 }
 
+/* circulo rojo con cruz blanca para sacar el producto del carrito */
 .producto i {
-    /* circulo rojo con cruz blanca para sacar el producto del carrito */
     position: absolute;
     top: 0.4rem;
     right: 0.5rem;
@@ -171,13 +130,4 @@ main {
     font-weight: bold;
     border-top: 0.0625rem solid #dcdcdc;
 }
-
-/* ----------------- */
-/*      FOOTER       */
-/* ----------------- */
-
-
-/* ----------------- */
-/*   MEDIA QUERIES   */
-/* ----------------- */
 

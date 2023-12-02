@@ -3,10 +3,15 @@
 <html lang="es">
 <head>
     <%- include('../partials/meta.ejs')%>
+
+    <%- include('../partials/css.ejs')%>
     <link rel="stylesheet" href="/css/productCreate.css">
     <title>Creacion de productos</title>
 </head>
 <body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
     <h1 class="title">Aqui se crearan los productos</h1>
     <main>
         <section class="formBox">
@@ -34,5 +39,8 @@
             </form>
         </section>
     </main>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
 </body>
 </html>

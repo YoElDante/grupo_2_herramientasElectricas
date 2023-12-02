@@ -1,0 +1,126 @@
+/* ----------------- */
+/*      FOOTER       */
+/* ----------------- */
+
+footer{
+    background-color: #11111f;
+    color: #dcdcdc;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 1rem;
+    margin-top: 1.25rem;
+}
+
+footer section article{
+    margin-top: 2rem;
+}
+
+/* Identidad */
+
+.identidad img{
+    width: 12rem;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.redesSociales a{
+    text-decoration: none;
+    color: #ffb81c;
+    position: relative;
+    bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.125rem #ffb81c solid;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* Medios de Contacto */
+
+.contacto *{
+    text-align: center;
+    margin: 0;
+}
+
+.contacto h4{
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #ffb81c;
+}
+
+.contacto h5{
+    font-size: 1rem;
+}
+
+.contacto p{
+    font-size: 0.8rem;
+}
+
+.contacto div{
+    margin: 1rem
+}
+
+.email a{
+    text-decoration: none;
+    color:#dcdcdc;
+}
+
+.telefono p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* Institucional */
+
+.institucional h4{
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #ffb81c;
+}
+
+.institucional ul{
+    list-style: none;
+    display: block;
+    padding-inline-start: 0px;
+}
+
+.institucional ul li{
+    margin: 0;
+}
+
+
+/* Terceras Marcas */
+.marcas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.marcas img{
+    width: 3rem;
+    margin: 1rem;
+}
+
+
+.copyright{
+    color: #ffb81c;
+    text-decoration: none;
+    position: relative;
+    top: 0.5rem;
+    font-size: 0.5rem;
+}
+
