@@ -1,43 +1,67 @@
-<!-- Cristian -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <%- include('../partials/meta.ejs')%>
 
     <%- include('../partials/css.ejs')%>
-    <link rel="stylesheet" href="/css/productCreate.css">
+    <link rel="stylesheet" href="/css/productCreate.css"><!-- Cristian -->
     <title>Creacion de productos</title>
 </head>
 <body>
     <header>
         <%- include('../partials/header.ejs') %>
     </header>
-    <h1 class="title">Aqui se crearan los productos</h1>
     <main>
-        <section class="formBox">
-            <form action="" method="">
-                <label for="name">Nombre</label>
-                <input type="text" name="name" id="name">
-                <label for="description">Descripcion</label>
-                <textarea name="description" id="description"></textarea>
-                <label for="image">Imagen</label>
-                <input type="file" name="image" id="image">
-                <label for="category">Categoria</label>
-                <select name="category" id="category">
-                    <option value="">Opcion 1</option>
-                    <option value="">Opcion 2</option>
-                    <option value="">Opcion 3</option>
-                    <option value="">Opcion 4</option>
-                    <option value="">Opcion 5</option>
-                </select>
-                <label for="detail">Colores</label>
-                <input type="text" name="detail" id="detail">
-                <label for="price">Precio</label>
-                <input type="text" name="price" id="price">
-                <button type="reset">Cancelar</button>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+        <!-- Cristian -->
+        <div class="mainConteiner">
+            <section class="formConteiner">
+                <h1 class="title">REGISTRO DE PRODUCTOS</h1>
+                <form action="/product/create" method="post" enctype="multipart/form-data">
+                
+                    <label for="name">Ingrese el nombre del producto</label>
+                    <div class="divInput">
+                        <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w" required>
+                    </div>
+
+                    
+                    <label for="price">Ingrese el precio del producto</label>
+                    <div class="divInput">
+                        <input type="text" name="price" id="price" placeholder="Ej: 999999" required>
+                    </div>
+                    
+                    <label for="discount">Ingrese el descuento del producto</label>
+                    <div class="divInput">
+                        <input type="text" name="discount" id="discount" placeholder="Ej: 50">
+                    </div>
+
+                    <label for="description">Ingrese la descripcion del producto</label>
+                    <div class="">
+                        <textarea name="description" id="description" placeholder="Escriba una descripcion..." class="description"></textarea>
+                    </div>
+                    
+                    <label for="category">Ingrese la categoria del producto</label>
+                    <div class="">
+                        <select name="category" id="category" class="category">
+                            <option>Seleccionar...</option>
+                            <option value="Option1">Opcion 1</option>
+                            <option value="Option2">Opcion 2</option>
+                            <option value="Option3">Opcion 3</option>
+                        </select>
+                    </div>
+                    
+                    <label for="image">Ingrese la imagen del producto</label>
+                    <div class="">
+                        <input type="file" name="image" id="image" class="file">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="submit">Guardar</button>
+                    </div>
+        
+                </form>
+            </section>
+        </div>
+        <!-- /Cristian -->
     </main>
     <footer>
         <%- include('../partials/footer.ejs') %>

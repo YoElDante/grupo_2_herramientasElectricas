@@ -1,4 +1,3 @@
-<!-- Cristian -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,6 +6,7 @@
   <%- include('../partials/meta.ejs')%>
 
     <!-- links -->
+    <link rel="stylesheet" href="/css/productCreate.css"><!-- Cristian -->
 
     <!--Custom Css-->
     <%- include('../partials/css.ejs')%>
@@ -29,7 +29,56 @@
   </header>
 
   <main>
-    <h1>Aqui se editaran los productos</h1>
+    <!-- Cristian -->
+    <div class="mainConteiner">
+      <section class="formConteiner">
+          <h1 class="title">EDICION DE PRODUCTOS</h1>
+          <form action="/edit/:id?_method=put" method="post" enctype="multipart/form-data">
+          
+              <label for="name">Ingrese el nuevo nombre del producto</label>
+              <div class="divInput">
+                  <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w" required>
+              </div>
+
+              
+              <label for="price">Ingrese el nuevo precio del producto</label>
+              <div class="divInput">
+                  <input type="text" name="price" id="price" placeholder="Ej: 999999" required>
+              </div>
+              
+              <label for="discount">Ingrese el nuevo descuento del producto</label>
+              <div class="divInput">
+                  <input type="text" name="discount" id="discount" placeholder="Ej: 50">
+              </div>
+
+              <label for="description">Ingrese la nueva descripcion del producto</label>
+              <div class="">
+                  <textarea name="description" id="description" placeholder="Escriba una descripcion..." class="description"></textarea>
+              </div>
+              
+              <label for="category">Ingrese la nueva categoria del producto</label>
+              <div class="">
+                  <select name="category" id="category" class="category">
+                      <option>Seleccionar...</option>
+                      <option value="Option1">Opcion 1</option>
+                      <option value="Option2">Opcion 2</option>
+                      <option value="Option3">Opcion 3</option>
+                  </select>
+              </div>
+              
+              <label for="image">Ingrese la nueva imagen del producto</label>
+              <div class="">
+                  <input type="file" name="image" id="image" class="file">
+              </div>
+
+              <div>
+                  <button type="submit" class="submit">Guardar</button>
+              </div>
+  
+          </form>
+      </section>
+  </div>
+  <!-- /Cristian -->
   </main>
 
   <footer>

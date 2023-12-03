@@ -1,14 +1,19 @@
-// Cristian
-const express = require('express');
-const path = require('path');
+const express = require('express'); // Cristian
+const path = require('path'); // Cristian
 
-const controller = {
-    create: (req,res)=>{
+const controller = { // Cristian
+    create: (req, res)=>{
         res.render(path.resolve(__dirname,'../views/products/productCreate.ejs'))
     },
-    edit: (req,res)=>{
+    createOk: (req, res)=>{
+        res.send("Todo marcha bien Milhouse");
+    },
+    edit: (req, res)=>{
         res.render(path.resolve(__dirname,'../views/products/productEdit.ejs'))
     },
+    editOk: (req, res)=>{
+        // codigo
+    }
 };
 
-module.exports = controller;
+module.exports = controller; // Cristian
