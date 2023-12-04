@@ -4,5 +4,6 @@ const path = require('node:path');
 const registerController = require ('../controllers/registerController.js')
 
 router.get('/', registerController.index);
+router.post('/', registerController.new);
 
 module.exports = router;

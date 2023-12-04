@@ -1,13 +1,14 @@
 [
     {
         "id": 1,
-        "nombre": "Rotomartillo Percutor",
-        "marca": "DeWalt",
-        "modelo": "SDS DCH133hd 20V",
-        "precio": 540000,
-        "descuento": 0,
-        "cuotas": 12,
-        "caracteristicasGeneral": [
+        "name": "Rotomartillo Percutor",
+        "brand": "DeWalt",
+        "model": "SDS DCH133hd 20V",
+        "price": 540000,
+        "discount": 0,
+        "interest": 0,
+        "plan": 12,
+        "generalCharacteristics": [
             "Permite taladrar sin percusión, taladrar con percusión y cincelar.",
             "Rota a una velocidad mínima de 0rpm y una velocidad máxima de 1500rpm.",
             "Con 2.6J de impacto, ideal para trabajos de perforación en el hogar.",
@@ -19,7 +20,7 @@
             "Pesa 2.6 kg.",
             "Herramienta práctica para todo tipo de trabajo."
         ],
-        "caracteristicasTecnicas": {
+        "technicalCharacteristics": {
             "Marca": "DeWalt",
             "Modelo": "D25133K",
             "Color": "Amarillo/Negro",
@@ -28,7 +29,7 @@
             "Potencia": "800 W",
             "Modelo detallado": "D25133k",
         },
-        "imagen": [],
-        "manual": "",
+        "image": [],
+        "userManual": "",
     },
 ];
