@@ -1,70 +1,62 @@
 header {
-    background-color: rgb(16, 16, 30);
-    padding-bottom: 2rem;
+  background-color: rgb(16, 16, 30);
+  padding-bottom: 2rem;
 }
 
 /* --------------- */
 /*  Logo en svg ⚡ */
 /* --------------- */
 .svg-container-header {
-    width: 75vw;
-    margin: 0 auto;
-    margin-top: -2rem;
-    margin-bottom: -2rem;
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
 }
 
 /* --------------------- */
 /*  Boton hamburguesa 🍔 */
 /* --------------------- */
 .burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .burger label {
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #ffb81c;
-    padding: 0.625rem 1rem;
-    border: solid 0.125rem #ffb81c;
-    border-radius: 0.625rem;
-    -webkit-border-radius: 0.625rem;
-    -moz-border-radius: 0.625rem;
-    -ms-border-radius: 0.625rem;
-    -o-border-radius: 0.625rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ffb81c;
+  padding: 0.625rem 1rem;
+  border: solid 0.125rem #ffb81c;
+  border-radius: 0.625rem;
+  -webkit-border-radius: 0.625rem;
+  -moz-border-radius: 0.625rem;
+  -ms-border-radius: 0.625rem;
+  -o-border-radius: 0.625rem;
 }
 
 
-#toggle{
-    position: absolute;
-    visibility: hidden;
+#toggle {
+  position: absolute;
+  visibility: hidden;
 }
 
-#toggle:checked ~ .menus {
-    display: block;
-    transition: all 350;
-    -webkit-transition: all 350;
-    -moz-transition: all 350;
-    -ms-transition: all 350;
-    -o-transition: all 350;
+#toggle:checked~.menus {
+  display: block;
+
 }
 
-#toggle:not(:checked) ~ .menus{
-    display: none;
-    transition: all 350;
-    -webkit-transition: all 350;
-    -moz-transition: all 350;
-    -ms-transition: all 350;
-    -o-transition: all 350;
+#toggle:not(:checked)~.menus {
+  display: none;
+
 }
 
-.menus{
-    margin-top: 2rem;
-    width: 100vw;
+.menus {
+  margin-top: 2rem;
+  width: 100vw;
 }
 
 /* ------------------- */
@@ -73,30 +65,30 @@ header {
 
 /* Menu Usuarios */
 .userBar {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding-left: 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-left: 0;
 }
 
 
 .userBar a {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    text-decoration: none;
-    color: #dcdcdc;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #dcdcdc;
+  font-weight: bold;
 }
 
 .userBar i {
-    font-size: 1.5rem;
-    margin-bottom: 0.3125rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.3125rem;
 }
 
 /* ---------------------- */
@@ -104,45 +96,45 @@ header {
 /* ---------------------- */
 
 .searchBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .searchBar input {
-    width: 75%;
-    padding: 0.8rem;
-    border: solid 0.125px #ffb81c;
-    border-radius: 0.3125rem;
-    color: #11111f;
-    -webkit-border-radius: 0.3125rem;
-    -moz-border-radius: 0.3125rem;
-    -ms-border-radius: 0.3125rem;
-    -o-border-radius: 0.3125rem;
+  width: 75%;
+  padding: 0.8rem;
+  border: solid 0.125px #ffb81c;
+  border-radius: 0.3125rem;
+  color: #11111f;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  -ms-border-radius: 0.3125rem;
+  -o-border-radius: 0.3125rem;
 }
 
 .searchBar input::placeholder {
-    color: #11111f;
-    font-size: 1rem;
+  color: #11111f;
+  font-size: 1rem;
 }
 
 /* boton de buscar */
 .searchBar button {
-    padding: 0.2rem;
-    background-color: #dcdcdc;
-    border: solid 1px #ffb81c;
-    font-size: 1rem;
-    margin-left: 0.625rem;
-    border-radius: 0.3125rem;
-    -webkit-border-radius: 0.3125rem;
-    -moz-border-radius: 0.3125rem;
-    -ms-border-radius: 0.3125rem;
-    -o-border-radius: 0.3125rem;
+  padding: 0.2rem;
+  background-color: #dcdcdc;
+  border: solid 1px #ffb81c;
+  font-size: 1rem;
+  margin-left: 0.625rem;
+  border-radius: 0.3125rem;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  -ms-border-radius: 0.3125rem;
+  -o-border-radius: 0.3125rem;
 }
 
 .searchBar button:hover {
-    background-color: #ffb81c;
+  background-color: #ffb81c;
 }
 
 /* ----------------------- */
@@ -150,51 +142,310 @@ header {
 /* ----------------------- */
 
 .navBar {
-    font-size: 1.2rem;
-    text-align: center;
-    padding-top: 1rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  padding-top: 1rem;
+  font-weight: bold;
 }
 
 .navBar a {
-    text-decoration: none;
-    color: #dcdcdc;
+  text-decoration: none;
+  color: #dcdcdc;
 }
 
-.navBar ul{
-padding: 0;
-margin-bottom: 0;
+.navBar ul {
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .navBar li {
-    margin-top: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 /* ------------------ */
 /*  Boton Carrito 🛒 */
 /* ------------------ */
 .cart {
-    font-size: 1.5rem;
-    background-color: #11111f;
-    position: fixed;
-    top: 0.625rem;
-    right: 0.625rem;
-    border: solid 0.125rem #ffb81c;
-    border-radius: 50%;
-    padding: 0.8rem;
-    margin: 0px;
-    z-index: 9999;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+  font-size: 1.5rem;
+  background-color: #11111f;
+  position: fixed;
+  top: 0.625rem;
+  right: 0.625rem;
+  border: solid 0.125rem #ffb81c;
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin: 0px;
+  z-index: 9999;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-.cart a{
+.cart a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  right: 0.0625rem;
+}
+
+
+/* ----------------- */
+/*   MEDIA QUERIES   */
+/* ----------------- */
+
+@media (min-width:445px) {
+
+  header {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+  }
+
+  /* --------------- */
+  /*  Logo en svg ⚡ */
+  /* --------------- */
+  .svg-container-header {
+    width: 10rem;
+    padding-top: 1rem;
+    top: 0.5rem;
+    justify-self: l;
+    position: absolute;
+  }
+
+  /* --------------------- */
+  /*  Boton hamburguesa 🍔 */
+  /* --------------------- */
+
+  .burger label {
+    display: none
+  }
+
+  .burger {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
+    align-items: baseline;
     position: relative;
-    right: 0.0625rem;
+  }
+
+
+  #toggle:not(:checked)~.menus {
+    display: flex;
+  }
+
+  .menus {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+
+  /* ------------------- */
+  /*    Menu Usuario 👷‍♂️  */
+  /* ------------------- */
+
+  /* Menu Usuarios */
+  .userBar {
+    align-self: flex-end;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 6rem;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .userBar a {
+    display: flex;
+    align-items: center;
+    font-size: 0.5rem;
+  }
+
+  .userBar i {
+    font-size: 0.75rem;
+  }
+
+  /* ---------------------- */
+  /*  Barra de Busqueda 🔍 */
+  /* ---------------------- */
+
+  .searchBar {
+    display: flex;
+    width: 60%;
+    font-size: 0.5rem;
+    align-self: flex-end;
+    order: 2;
+    padding-top: 1rem;
+    padding-right: 2.2rem;
+  }
+
+  .searchBar input {
+    width: 70%;
+    padding: 0.5rem;
+  }
+
+  .searchBar input::placeholder {
+    font-size: 0.5rem;
+  }
+
+  /* boton de buscar */
+  .searchBar button {
+    padding: 0.2rem;
+    font-size: 0.5rem;
+    margin-left: 0.625rem;
+  }
+
+
+  /* ----------------------- */
+  /*  Menu de navegacion ⛵ */
+  /* ----------------------- */
+  .navBar {
+    width: 100vw;
+    order: 3;
+    padding: 1rem;
+  }
+
+  .navBar ul {
+    align-self: center;
+    flex-grow: 1;
+    display: flex;
+    font-size: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .navBar li {
+    margin-top: 0;
+  }
+
+
+  /* ------------------ */
+  /*  Boton Carrito 🛒 */
+  /* ------------------ */
+  .cart {
+    font-size: 0.8rem;
+    background-color: #11111f;
+    position: fixed;
+    top: 0.3rem;
+    right: 0.3rem;
+    border: solid 0.125rem #ffb81c;
+    border-radius: 50%;
+    padding: 0.4rem;
+  }
+
 }
+
+@media (min-width:580px) {}
+
+@media (min-width:710px) {
+
+  header {
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0.5rem;
+  }
+
+  /* --------------- */
+  /*  Logo en svg ⚡ */
+  /* --------------- */
+  .svg-container-header {
+    width: 6rem;
+    padding-top: 1rem;
+    top: 0.5rem;
+    justify-self: l;
+    position: absolute;
+  }
+
+
+  /* --------------------- */
+  /*  Boton hamburguesa 🍔 */
+  /* --------------------- */
+
+
+  #toggle:not(:checked)~.menus {
+    display: flex;
+  }
+
+  .menus {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+
+  }
+
+
+  /* ------------------- */
+  /*    Menu Usuario 👷‍♂️  */
+  /* ------------------- */
+
+  /* Menu Usuarios */
+  .userBar {
+    align-self: flex-end;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    order: 1;
+  }
+
+  .userBar a {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.5rem;
+
+  }
+
+  .userBar i {
+    font-size: 0.75rem;
+    margin-bottom: 0.3125rem;
+  }
+
+  /* ---------------------- */
+  /*  Barra de Busqueda 🔍 */
+  /* ---------------------- */
+
+  .searchBar {
+    display: flex;
+    width: 40%;
+    font-size: 0.5rem;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    order: 2;
+    padding-top: 1rem;
+    margin-left: 4rem;
+  }
+
+  .searchBar input {
+    width: 70%;
+    padding: 0.5rem;
+  }
+
+  .searchBar input::placeholder {
+    font-size: 0.5rem;
+  }
+
+  /* ----------------------- */
+  /*  Menu de navegacion ⛵ */
+  /* ----------------------- */
+  .navBar {
+    width: 100vw;
+    order: 3;
+    padding: 0rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:1200px) {}
