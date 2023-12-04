@@ -124,3 +124,149 @@ footer section article{
     font-size: 0.5rem;
 }
 
+/* ----------------- */
+/*   MEDIA QUERIES   */
+/* ----------------- */
+
+@media (min-width:445px){
+
+    html{
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width:580px){
+
+    footer{
+        padding: 0;
+    }
+    .main-footer{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    /* identidad */
+
+    .identidad img{
+        width: 8rem;
+        margin-top: -1rem;
+    }
+
+    .redesSociales{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .redesSociales a{
+
+        bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .redesSociales i{
+        font-size: 0.75rem;
+    }
+
+    /* Medios de Contacto */
+
+    .contacto {
+        width: 30%;
+    }
+
+    .contacto *{
+        text-align: center;
+        margin: 0;
+    }
+    
+    .contacto h4{
+        font-size: 1rem;
+        margin: 0.6rem;
+    }
+    
+    .contacto h5{
+        font-size: 0.6rem;
+    }
+    
+    .contacto p{
+        font-size: 0.4rem;
+    }
+    
+    .contacto div{
+        margin: 0.6rem;
+    }
+
+    .email{
+        justify-content: center;
+    }
+    .email a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 0.5rem;
+    }
+
+    
+    .telefono p{
+        font-size: 0.6rem;
+        font-weight: 600;
+    }
+
+    
+/* Institucional */
+
+.institucional{
+    text-align: left;
+}
+
+.institucional h4{
+    font-size: 1rem;
+    margin: 0.6rem;
+}
+
+.institucional ul{
+    list-style: none;
+    display: block;
+    padding-inline-start: 0px;
+}
+
+.institucional ul li {
+    font-size: 0.5rem;
+    margin: 0.5rem 0.6rem;
+    font-weight: 600;
+
+}
+.copyright{
+    color: #ffb81c;
+    text-decoration: none;
+    position: relative;
+    top: 0;
+    font-size: 0.5rem;
+}
+}
+
+@media (min-width:710px){
+
+    html{
+        font-size: 32px;
+    }
+
+}
+
+@media (min-width:1200px){
+
+    html{
+        font-size: 42px;
+    }
+
+}
