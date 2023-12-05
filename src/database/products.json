@@ -2,12 +2,13 @@
     {
         "id": 1,
         "name": "Rotomartillo Percutor",
-        "marca": "DeWalt",
-        "modelo": "SDS DCH133hd 20V",
+        "brand": "DeWalt",
+        "model": "SDS DCH133hd 20V",
         "price": 540000,
         "discount": 0,
-        "cuotas": 12,
-        "caracteristicasGeneral": [
+        "interest": 0,
+        "plan": 12,
+        "generalCharacteristics": [
             "Permite taladrar sin percusión, taladrar con percusión y cincelar.",
             "Rota a una velocidad mínima de 0rpm y una velocidad máxima de 1500rpm.",
             "Con 2.6J de impacto, ideal para trabajos de perforación en el hogar.",
@@ -19,7 +20,7 @@
             "Pesa 2.6 kg.",
             "Herramienta práctica para todo tipo de trabajo."
         ],
-        "caracteristicasTecnicas": {
+        "technicalCharacteristics": {
             "Marca": "DeWalt",
             "Modelo": "D25133K",
             "Color": "Amarillo/Negro",
@@ -27,6 +28,37 @@
             "Frecuencia": "50 Hz",
             "Potencia": "800 W",
             "Modelo detallado": "D25133k"
+        },
+        "image": [],
+        "userManual": ""
+    },
+    {
+        "id": 2,
+        "name": "Miniamoladora angular DWE4010 ",
+        "branch": "DeWalt",
+        "model": "SDS DCH133hd 20V",
+        "price": 223000,
+        "discount": 10,
+        "dues": 12,
+        "generalCharacteristics": [
+            "Apta para un disco de 115 mm de diámetro.",
+            "Trae interruptor tecla.",
+            "Su potencia es de 700 W.",
+            "Velocidad máxima de rotación de 11000 rpm.",
+            "Tiene botón de bloqueo de disco.",
+            "Pesa 1.8 kg.",
+            "Herramienta versátil para distintos usos.",
+            "Protector de disco incorporado.",
+            "Incluye: 1 llave"
+        ],
+        "technicalcharacteristics": {
+            "Marca": "DeWalt",
+            "Modelo": "DWE4010",
+            "Color": "Amarillo/Azul",
+            "Voltaje": "220 V",
+            "Frecuencia": "50 Hz",
+            "Potencia": "700 W",
+            "Modelo detallado": "DWE4010"
         },
         "imagen": [],
         "manual": ""
