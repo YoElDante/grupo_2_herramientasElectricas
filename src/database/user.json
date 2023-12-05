@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "username": "RECT",
+        "nombre": "Raúl Calvimonte",
+        "email": "calvimonteraul@gmail.com",
+        "age": 725,
+        "address": {
+            "street": "ST-Joseph",
+            "city": "Los Santos",
+            "country": "EEUU"
+        },
+        "preferences": {
+            "language": "español",
+            "tema": "oscuro"
+        }
+    }
+]
