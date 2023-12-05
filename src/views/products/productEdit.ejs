@@ -33,22 +33,22 @@
     <div class="mainConteiner">
       <section class="formConteiner">
           <h1 class="title">EDICION DE PRODUCTOS</h1>
-          <form action="/edit/:id?_method=put" method="post" enctype="multipart/form-data">
+          <form action="/product/edit/<%= product.id %>?_method=put" method="post" enctype="multipart/form-data">
           
               <label for="name">Ingrese el nuevo nombre del producto</label>
               <div class="divInput">
-                  <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w" required>
+                  <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w" value="<%= product.name %>" required>
               </div>
 
               
               <label for="price">Ingrese el nuevo precio del producto</label>
               <div class="divInput">
-                  <input type="text" name="price" id="price" placeholder="Ej: 999999" required>
+                  <input type="text" name="price" id="price" placeholder="Ej: 999999" value="<%= product.price %>" required>
               </div>
               
               <label for="discount">Ingrese el nuevo descuento del producto</label>
               <div class="divInput">
-                  <input type="text" name="discount" id="discount" placeholder="Ej: 50">
+                  <input type="text" name="discount" id="discount" placeholder="Ej: 50" value="<%= product.discount %>">
               </div>
 
               <label for="description">Ingrese la nueva descripcion del producto</label>
