@@ -2,271 +2,351 @@
 /*      FOOTER       */
 /* ----------------- */
 
-footer{
-    background-color: #11111f;
-    color: #dcdcdc;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 1rem;
-    margin-top: 1.25rem;
+footer {
+  background-color: #11111f;
+  color: #dcdcdc;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1rem;
+  margin-top: 1.25rem;
 }
 
-footer section article{
-    margin-top: 2rem;
+footer section article {
+  margin-top: 2rem;
 }
 
 /* Identidad */
 
-.identidad img{
-    width: 12rem;
+.identidad img {
+  width: 12rem;
 }
 
-.redesSociales{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.redesSociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.redesSociales a{
-    text-decoration: none;
-    color: #ffb81c;
-    position: relative;
-    bottom: 1.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0.5rem;
-    width: 2rem;
-    height: 2rem;
-    border: 0.125rem #ffb81c solid;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+.redesSociales a {
+  text-decoration: none;
+  color: #ffb81c;
+  position: relative;
+  bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem #ffb81c solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Medios de Contacto */
 
-.contacto *{
-    text-align: center;
-    margin: 0;
+.contacto * {
+  text-align: center;
+  margin: 0;
 }
 
-.contacto h4{
-    font-size: 1.5rem;
-    margin: 1rem;
-    color: #ffb81c;
+.contacto h4 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #ffb81c;
 }
 
-.contacto h5{
-    font-size: 1rem;
+.contacto h5 {
+  font-size: 1rem;
 }
 
-.contacto p{
-    font-size: 0.8rem;
+.contacto p {
+  font-size: 0.8rem;
 }
 
-.contacto div{
-    margin: 1rem
+.contacto div {
+  margin: 1rem
 }
 
-.email a{
-    text-decoration: none;
-    color:#dcdcdc;
+.email a {
+  text-decoration: none;
+  color: #dcdcdc;
 }
 
-.telefono p{
-    font-size: 1.5rem;
-    font-weight: 600;
+.telefono p {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 
 /* Institucional */
 
-.institucional h4{
-    font-size: 1.5rem;
-    margin: 1rem;
-    color: #ffb81c;
+.institucional h4 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #ffb81c;
 }
 
-.institucional ul{
-    list-style: none;
-    display: block;
-    padding-inline-start: 0px;
+.institucional ul {
+  list-style: none;
+  display: block;
+  padding-inline-start: 0px;
 }
 
-.institucional ul li{
-    margin: 0;
+.institucional ul li {
+  margin: 0;
 }
 
 
 /* Terceras Marcas */
-.marcas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.marcas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
-.marcas img{
-    width: 3rem;
-    margin: 1rem;
+.marcas img {
+  width: 3rem;
+  margin: 1rem;
 }
 
 
-.copyright{
-    color: #ffb81c;
-    text-decoration: none;
-    position: relative;
-    top: 0.5rem;
-    font-size: 0.5rem;
+.copyright {
+  color: #ffb81c;
+  text-decoration: none;
+  position: relative;
+  top: 0.5rem;
+  font-size: 0.5rem;
 }
 
 /* ----------------- */
 /*   MEDIA QUERIES   */
 /* ----------------- */
 
-@media (min-width:445px){
 
-    html{
-        font-size: 20px;
-    }
+@media (min-width:580px) {
 
-}
+  footer {
+    padding: 0;
+  }
 
-@media (min-width:580px){
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
 
-    footer{
-        padding: 0;
-    }
-    .main-footer{
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
+  /* identidad */
 
-    /* identidad */
+  .identidad img {
+    width: 8rem;
+    margin-top: -1rem;
+  }
 
-    .identidad img{
-        width: 8rem;
-        margin-top: -1rem;
-    }
+  .redesSociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .redesSociales{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    .redesSociales a{
+  }
 
-        bottom: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0.3rem;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    .redesSociales i{
-        font-size: 0.75rem;
-    }
+  .redesSociales a {
 
-    /* Medios de Contacto */
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-    .contacto {
-        width: 30%;
-    }
+  .redesSociales i {
+    font-size: 0.75rem;
+  }
 
-    .contacto *{
-        text-align: center;
-        margin: 0;
-    }
-    
-    .contacto h4{
-        font-size: 1rem;
-        margin: 0.6rem;
-    }
-    
-    .contacto h5{
-        font-size: 0.6rem;
-    }
-    
-    .contacto p{
-        font-size: 0.4rem;
-    }
-    
-    .contacto div{
-        margin: 0.6rem;
-    }
+  /* Medios de Contacto */
 
-    .email{
-        justify-content: center;
-    }
-    .email a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        font-size: 0.5rem;
-    }
+  .contacto {
+    width: 30%;
+  }
 
-    
-    .telefono p{
-        font-size: 0.6rem;
-        font-weight: 600;
-    }
+  .contacto * {
+    text-align: center;
+    margin: 0;
+  }
 
-    
-/* Institucional */
-
-.institucional{
-    text-align: left;
-}
-
-.institucional h4{
+  .contacto h4 {
     font-size: 1rem;
     margin: 0.6rem;
-}
+  }
 
-.institucional ul{
+  .contacto h5 {
+    font-size: 0.6rem;
+  }
+
+  .contacto p {
+    font-size: 0.4rem;
+  }
+
+  .contacto div {
+    margin: 0.6rem;
+  }
+
+  .email {
+    justify-content: center;
+  }
+
+  .email a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 0.5rem;
+  }
+
+
+  .telefono p {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+
+
+  /* Institucional */
+
+  .institucional {
+    text-align: left;
+  }
+
+  .institucional h4 {
+    font-size: 1rem;
+    margin: 0.6rem;
+
+  }
+
+  .institucional ul {
     list-style: none;
     display: block;
     padding-inline-start: 0px;
-}
+  }
 
-.institucional ul li {
+  .institucional ul li {
     font-size: 0.5rem;
     margin: 0.5rem 0.6rem;
     font-weight: 600;
 
-}
-.copyright{
-    color: #ffb81c;
-    text-decoration: none;
+  }
+
+  .copyright {
     position: relative;
     top: 0;
     font-size: 0.5rem;
-}
-}
-
-@media (min-width:710px){
-
-    html{
-        font-size: 32px;
-    }
-
+  }
 }
 
-@media (min-width:1200px){
+/* MEDIA QUERY 710 PX */
 
-    html{
-        font-size: 42px;
-    }
 
+@media (min-width:710px) {
+
+  footer {
+    padding: 0;
+  }
+
+  footer section article {
+    margin-top: 0.5rem;
+  }
+
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  /* identidad */
+
+  .identidad img {
+    width: 6rem;
+    margin-top: -1rem;
+  }
+
+
+  .redesSociales a {
+
+    bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    border: 0.0625rem #ffb81c solid;
+  }
+
+  .redesSociales i {
+    font-size: 0.5rem;
+  }
+
+  /* Medios de Contacto */
+
+  .contacto h4 {
+    font-size: 0.8rem;
+    margin: 0.6em;
+  }
+
+  .contacto h5 {
+    font-size: 0.6rem;
+  }
+
+  .contacto p {
+    font-size: 0.4rem;
+  }
+
+  .contacto div {
+    margin: 0.6rem;
+  }
+
+
+  .telefono p {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+
+
+  /* Institucional */
+
+  .institucional {
+    text-align: left;
+  }
+
+  .institucional h4 {
+    font-size: 0.8rem;
+    margin: 0.6rem;
+
+  }
+
+  .institucional ul li {
+    font-size: 0.6rem;
+    margin: 0.5rem 0.6rem;
+    font-weight: 600;
+
+  }
+
+  .copyright {
+    position: relative;
+    top: 0;
+    font-size: 0.5rem;
+  }
 }
+
+
+
+@media (min-width:1200px) {}

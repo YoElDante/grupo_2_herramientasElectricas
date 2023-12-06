@@ -5,7 +5,7 @@
 
         "username": "RECT",
         "Password": "hola",
-        "Image": ,
+        "Image": "",
 
         "name": "Raúl",
         "lastName": "Calvimonte",
@@ -16,8 +16,8 @@
             "street": "ST-Joseph",
             "city": "Los Santos",
             "country": "EEUU",
-            "CP": 4000,
-        },
+            "CP": 4000
+        }
 
     }
 ]
