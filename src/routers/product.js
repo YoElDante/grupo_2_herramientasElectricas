@@ -17,9 +17,9 @@ const storage = multer.diskStorage({ // Cristian
 const imgUpload = multer({storage: storage}); // Cristian
 
 router.get('/create', productController.create); // Cristian
-router.post('/create', imgUpload.single('image'), productController.createOk); // Cristian
+router.post('/create', imgUpload.array('image'), productController.createOk); // Cristian
 
-router.get('/edit', productController.edit); // Cristian
-router.put('/edit', productController.editOk); // Cristian
+router.get('/edit/:id', productController.edit); // Cristian
+router.put('/edit/:id', imgUpload.array('image'), productController.editOk); // Cristian
 
 module.exports = router; // Cristian
