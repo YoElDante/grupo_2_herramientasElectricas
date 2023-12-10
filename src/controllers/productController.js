@@ -27,7 +27,24 @@ const controller = {
     },
     editOk: (req, res)=>{
         res.send("Producto editado correctamente");
-    }
+    },
+    delete: (req, res) => {
+        const productId = req.params.id;
+        const productIndex = products.findIndex((product) => product.id == productId);
+    
+        if (productIndex !== -1) {
+          // Borra el producto del array
+          products.splice(productIndex, 1);
+    
+          // Guarda los cambios en el archivo JSON
+          const newProductsJSON = JSON.stringify(products);
+          fs.writeFileSync(productsFilePath, newProductsJSON);
+    
+          res.send('Producto eliminado correctamente');
+        } else {
+          res.status(404).send('Producto no encontrado');
+        }
+    },
 };
 
-module.exports = controller; // Cristian
+module.exports = controller; // Cristian - Florencia 

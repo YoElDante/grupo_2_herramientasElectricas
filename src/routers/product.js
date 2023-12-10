@@ -22,4 +22,6 @@ router.post('/create', imgUpload.array('image'), productController.createOk); //
 router.get('/edit/:id', productController.edit); // Cristian
 router.put('/edit/:id', imgUpload.array('image'), productController.editOk); // Cristian
 
+router.delete('/:id', productController.delete);
+
 module.exports = router; // Cristian
