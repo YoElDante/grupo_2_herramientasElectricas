@@ -66,3 +66,33 @@
 **Siguiente Reunión**
 > La proxima reunión despues de la clase del Lunes 27/11
 
+**Reunion 27/11/23**
+**Discusion**
+> definimos reuniones obligatorias de 15' lunes (despues de clases) , miercoles(despues de clases) y viernes (19hs.) - Proxima reunion planificacion del sprint . 
+
+**Siguiente Reunión**
+> La próxima reunión miercoles 29/11/23 luego de la clase
+
+**Reunion 29/11/23**
+**Discusion**
+> se trabajo en Trello, para organizar mejor las tareas y darles un grado de dificultad, poniendo etiqueta para que todo el equipo tenga en cuenta al tomar una tarea. 
+
+**Siguiente Reunión**
+> La próxima reunión Viernes 01/11/23 
+
+**Reunion 01/11/23**
+**Discusion**
+> Se dividieron las tareas, teniendo en cuenta la dificultad de cada una y el tiempo disponible de cada integrante del grupo 
+
+**Siguiente Reunión**
+> La próxima reunión 06/11/23 
+
+**Reunion 06/11/23**
+**Discusion**
+>  Se realizá la retrospectiva del sprint 3, quitar dudas de las tareas que se vienen realizando.
+
+**Siguiente Reunión**
+> La próxima reunión el Lunes 11/11/23 
+
+
+
