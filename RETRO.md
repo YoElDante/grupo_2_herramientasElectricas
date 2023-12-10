@@ -1,5 +1,83 @@
 # Retrospectivas del Equipo
 
+## RETRO Tercer Sprint - MIERCOLES 06/11/2023
+
+### Opiniones de los integrantes 
+
+🙎‍♂️ **Cristian Godoy:** 
+
+> ***Comenzar a hacer:*** Los problemas que surgen a la hora de subir nuestro trabajo a github, se dan, segun mi entender, cuando dos o mas personas tocan una misma linea de cogigo. Esto se puede evitar con una buena division de tareas y lo mas importante, respetar el trabajo del compañero. Los comentarios y sugerencias siempre deben ser bien recibidas, pero no deben ser mas que eso, comentarios y sugerencias.
+>
+> ***Hacer más:*** La comunicacion clara y precisa simpre sera importante.
+>
+> ***Continuar haciendo:*** Estudiar, practicar, pedir ayuda, ayudar, motivar, elogiar, valorar, respetar.
+>
+> ***Hacer menos:*** No se me viene nada a la mente, que deba hacerse menos.
+
+> ***Dejar de hacer:*** Del tercer sprint, una sola cosa me parecio que no se hizo de la manera adecuada. Y es la toma desenfrenada de tareas.
+
+🙎‍♀️ **Florencia Tula:**
+
+> ***Comenzar a hacer:*** Trabajar en tareas con un poco mas de dificultad para ir quitandome los miedos
+>
+> ***Hacer más:*** Colaborar más con el equipo
+>
+> ***Continuar haciendo:*** El trabajo en equipo es importante me parece que debemos seguir trabajando así.
+>
+> *El sprint 3 fue bastante productivo, se nota que el equipo funciona como tal.*
+
+🙎‍♂️ **Gustavo Daniel Moya:**
+
+**GRUPAL:**
+> ***Comenzar a hacer:*** mas distributivas las tareas en cantidad y complejidad
+>
+> ***Hacer mas:*** las tareas optativas del Sprint
+>
+> ***Continuar haciendo:*** Buena comunicación y buen trato.
+>
+> ***Hacer menos:*** esperar hasta los últimos días para tener la parte de cada uno
+
+**PERSONAL:**
+> ***Comenzar a hacer:*** debo empezar a tomar tareas más complejas para poder ver bien los temas que no manejo aun y mejorar. 
+>
+> ***Hacer mas:*** Llevar el PG al día. Organizar mejor  mi tiempo.
+>
+> ***Continuar haciendo:*** seguir cumpliendo con las reuniones del grupo y las tareas que me comprometí.
+
+🙎‍♂️ **Raúl Manuel Calvimonte:**
+
+> **Sobre mi trabajo personal:**
+> 
+> ***Comenzar a Hacer:*** Estudiar más
+> 
+> ***Hacer Más:*** Colaborar más con el Equipo.
+> 
+> ***Continuar Haciendo:*** Mantener el trabajo en equipo.
+
+🙎‍♂️ **Dante Delprato:**
+
+> ***Comenzar a hacer:*** Mover las tarjetas ordenadamente de acuerdo al progreso o trabajo en la Tarea. Que siempre sea un tercero de nuestro equipo quien mueva la tarjeta de la columna de "En revisión" a "Done" (obviamente luego de revisar lo hecho).
+-Comenzar a puntuar las tarjetas por dificultad.
+-Hacer la RETRO inmediatamente el mismo día que comienza el siguiente Sprint.
+-Aprender a trabajar con Branchs y saber hacer merges con Visual Studio Code,
+>
+> ***Hacer mas:*** Distribuir más las tareas y confiar en los trabajos de los compañeros. Manejar mejor el GitHub.
+>
+> ***Hacer menos:*** Tocar el código del compañero sin consultar antes. Para ello nos coordinaremos mejor con las tarjetas del trello.
+>
+> ***Dejar de hacer:*** Terminar el Sprint el último día antes de la entrega
+
+👨‍👨‍👧‍👦 **Reflexiones del Equipo**
+
+- En el tercer sprint, el equipo ha compartido valiosas opiniones que reflejan una dinámica de trabajo colaborativa. La necesidad de una comunicación clara y precisa se destaca como un elemento fundamental para evitar problemas al subir el trabajo a GitHub. Cristian enfatiza la importancia de una buena división de tareas y el respeto al trabajo del compañero como medidas para evitar conflictos en el código. Además, destaca la importancia de mantener un equilibrio en la toma de tareas, evitando una sobrecarga desenfrenada.
+Florencia resalta la productividad del equipo durante el tercer sprint y aboga por enfrentar tareas con mayor dificultad para superar miedos individuales. Su llamado a colaborar más con el equipo sugiere un enfoque centrado en el trabajo conjunto y el apoyo mutuo. Gustavo por su parte propone una distribución más equitativa y compleja de las tareas, abogando por abordar las tareas optativas del sprint. Destaca la importancia de una buena comunicación y trato entre los miembros del equipo, pero señala la necesidad de evitar dejar las tareas para los últimos días y Dante propone mejoras prácticas, como la clasificación de tarjetas por dificultad y el manejo ordenado de las mismas en GitHub. Su llamado a distribuir más las tareas y confiar en el trabajo de los compañeros refleja la importancia de la confianza y la colaboración en equipo.
+
+### Conclusiones
+
+- En este Sprint el equipo mostro un compromiso con la mejora continua, identificando áreas de fortaleza y oportunidades de crecimiento. La comunicación efectiva, la distribución equitativa de tareas, y la planificación personal surgieron como aspectos cruciales para el éxito del equipo. La confianza en las habilidades de los compañeros y el respeto hacia el trabajo individual son piedras angulares en la construcción de un ambiente de trabajo positivo y eficiente. La reflexión colectiva demuestra la madurez del equipo para reconocer áreas de mejora y la disposición para implementar cambios que beneficien a todos.
+
+
+
 ## RETRO Segundo Sprint - SABADO 25/11/2023
 
 ### Opiniones de los integrantes 
@@ -69,11 +147,11 @@ Llegar tarde a las reuniones, posponer el horario la Reunión en el mismo día o
 > 
 > ***Dejar de hacer:*** No siento que hayamos tenido ninguna actitud negativa en el equipo, y menos algo que pueda caer en esta categoría como que sea necesaria "dejar de hacer"
 
-👨‍👨‍👧‍👦 **Reflexiones del Equipo**
+👨‍👨‍👧‍👦  **Reflexiones del Equipo**
 
 - Las opiniones de los integrantes reflejan una variedad de puntos de vista sobre el funcionamiento del equipo y las prácticas actuales. Se destacan aspectos como la necesidad de establecer y respetar rutinas para las reuniones, la importancia de la organización y administración, así como la sugerencia de evitar depender excesivamente de un miembro del equipo. Además, se evidencia la importancia de la comunicación, el uso efectivo de herramientas como GitHub y Trello, y la necesidad de avanzar de manera constante en lugar de dejar las tareas para el último momento.
 
-## Conclusiones
+### Conclusiones
 
 - Se puede concluir que hay consenso en la importancia de mejorar la organización, la gestión del tiempo y la comunicación dentro del equipo. La necesidad de autonomía en las tareas individuales, el uso efectivo de herramientas colaborativas y el compromiso con la puntualidad son aspectos resaltados de manera consistente. En general, parece existir una disposición positiva hacia el trabajo en equipo y el progreso conjunto, con sugerencias específicas para optimizar ciertos aspectos de la dinámica grupal. La reflexión individual de cada miembro brinda información valiosa para fortalecer el funcionamiento del equipo y mejorar la productividad en futuros proyectos.
 
@@ -126,11 +204,11 @@ Tuve que buscar inspiración en otras páginas. Utilicé más páginas de refere
 > Me cargué con mucho trabajo y no supe delegarlo ni pedir ayuda.
 He disfrutado mucho haciendo el trabajo que me tocó. Me gusta organizar y generar las herramientas necesarias para que todos estén cómodos y tengan todo para trabajar.
 
-👨‍👨‍👧‍👦 **Reflexiones del Equipo**
+👨‍👨‍👧‍👦 ### **Reflexiones del Equipo**
 
 - Las tareas, como la creación del GitHub u otras que son más “complejas” y diferentes a las que hacen los demás, estaría bueno que las hiciéramos entre todos o entre los que tenemos menos conocimientos. Para los que ya saben, es solo hacerlas... pero para los que no, nos ayudaría a refrescar conocimientos y equivocarnos para aprender. Me gustaría que se definiera el día y hora que se lo va a hacer (a la persona que le toque) y quienes deseen se puedan sumar al trabajo; ya sea solo viendo cómo se comparte la pantalla o también metiendo mano a la distancia. Quizás ahora fue más tranquilo, pero a medida que esto avance, los conceptos seguramente van a saltar más actividades así.
 
-## Conclusiones
+### Conclusiones
 
 - Reuniones por Discord después de cada clase, de duración aproximada de 5 a 10 min. También se define una para el Sábado 4/11 a las 16:00 Horas.
 
@@ -138,5 +216,3 @@ He disfrutado mucho haciendo el trabajo que me tocó. Me gusta organizar y gener
 > - Dejar 1 imagen al realizar el trabajo.
 > - Hacer la lista de "En Revisión" para que los compañeros puedan dar feedback sobre la tarea antes de darla por terminada.
 > - Solo el dueño de la tarea puede moverla hacia la derecha y solo los compañeros pueden moverla a "completada".
-
-
