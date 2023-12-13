@@ -1,12 +1,5 @@
 /* Cristian (La prioridad es mantener un diseño consistente con el diseño de Gus */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
-
 .mainConteiner {
     width: 100vw;
     display: flex;
@@ -18,36 +11,36 @@
 }
 
 .formConteiner {
-    width: 50%;
+    width: 75%;
     max-width: 720px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 25px;
+    margin: 1rem;
     border: #000000 solid 3px;
     border-radius: 25px;
     background-color: #dcdcdcde;
     box-shadow: #000000 0px 0.1875rem 0.3125rem;
 }
 
-h1 {
+.formConteiner h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #ce9416;
-    margin: 25px;
+    margin: 1rem;
 }
 
-form {
+.formConteiner form {
     width: 90%;
     display: flex;
     flex-direction: column;
 }
 
-label {
-    font-size: 1.5rem;
+.formConteiner label {
+    font-size: 0.75rem;
     color: #000000;
-    margin-left: 25px;
+    margin-left: 0.75rem;
 }
 
 .divInput {
@@ -59,42 +52,42 @@ label {
     overflow: hidden;
     border: #11111f5d solid 3px;
     border-radius: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
     height: fit-content;
 }
 
 .divInput input {
     text-align: center;
     width: 90%;
-    height: 2rem;
+    height: 1rem;
     background: transparent;
     outline: none;
     color: #11111f;
-    font-size: 1.3rem;
+    font-size: 0.6rem;
     border: transparent;
 }
 
 .description {
-    font-size: 1rem;
-    padding: 5px 13px;
+    font-size: 0.6rem;
+    padding: 0.125rem 0.8125rem;
     border: #11111f5d solid 3px;
     border-radius: 25px;
     resize: none;
     width: 100%;
-    height: 100px;
-    margin: 5px 0 25px 0;
+    height: 100%;
+    margin: 0.3125rem 0 0.6rem 0;
     /*background-color: #00000000;*/
     background: none;
 }
 
 .category {
-    margin: 5px 25px 25px;
-    font-size: 1.3rem;
+    margin: 0.3125rem 1.5625rem 1.5625rem;
+    font-size: 0.6rem;
 }
 
 .file {
-    margin: 5px 25px;
-    font-size: 1.3rem;
+    margin: 0.3125rem 1.5625rem;
+    font-size: 0.6rem;
 }
 
 .submit {
@@ -102,10 +95,69 @@ label {
     align-items: center;
     justify-content: center;
     background-color: #d19617;
-    margin: 25px 0;
+    margin: 1rem 0;
     width: 100%;
     border-radius: 25px;
-    height: 3rem;
+    height: 2rem;
     border: #11111f solid 2px;
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+/* ----------------- */
+/*   MEDIA QUERIES   */
+/* ----------------- */
+
+@media (min-width:710px) {
+
+    .formConteiner {
+        width: 80%;
+        margin: 0.8rem;
+    }
+
+    .formConteiner h1 {
+        font-size: 0.6rem;
+        margin: 0.6rem;
+    }
+
+    .formConteiner label {
+        font-size: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .divInput {
+        margin-bottom: 0.6rem;
+    }
+
+
+    .divInput input {
+        height: 0.6rem;
+        font-size: 0.5rem;
+    }
+
+    .formConteiner input::placeholder{
+        font-size: 0.5rem;
+    }
+
+    .description {
+        font-size: 0.4rem;
+        padding: 0.125rem 0.8125rem;
+        resize: none;
+        width: 100%;
+        height: 2rem;
+        /*background-color: #00000000;*/
+        background: none;
+    }
+
+
+    .file {
+        margin: 0.3125rem 1.5625rem;
+        font-size: 0.4rem;
+    }
+
+    .submit {
+        margin: 0.6rem 0;
+        height: 1.6rem;
+        font-size: 0.8rem;
+    }
+
 }
