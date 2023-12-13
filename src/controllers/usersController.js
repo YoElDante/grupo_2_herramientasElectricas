@@ -5,9 +5,15 @@ const fs = require("fs");
 
 const controller = {
 
-    index: (req, res) => {
+    login: (req, res) => {
+        res.render(path.resolve(__dirname, '../views/users/login.ejs'));
+    },
+
+    register: (req, res) => {
         res.render(path.resolve(__dirname, '../views/users/register.ejs'));
     },
+
+    // Se crea un nuevo usuario por metodo PORT
     create: (req, res) => {
         let usuario = {
             nombreYApellido: req.body.nombreYApellido,
@@ -29,7 +35,24 @@ const controller = {
         usuariosJSON = JSON.stringify(usuarios);
         fs.writeFileSync("src/database/user.json", usuariosJSON);
         res.redirect("/");
+    },
+
+    // pedido GET del formulario de edicion de usuario
+    editionForm: (req, res) => {
+        res.render(path.resolve(__dirname, '../views/users/edicionRegistro.ejs'));
+    },
+
+    // se actualizan los datos del usuario por PUT
+    editionStore: (req, res) => {
+        res.send("se actualizan los datos del usuario " + req.params.id)
+    },
+
+    // se borrara un usuario de la lista por metodo DELETE
+    delete: (req, res) => {
+        res.send("se borraran los datos del usuario " + req.params.id)
     }
+
 };
 
 module.exports = controller;
+

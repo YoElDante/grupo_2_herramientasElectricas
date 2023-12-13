@@ -4,12 +4,9 @@ const methodOverride = require('method-override'); // Cristian
 
 // Routers
 const homeRouter = require('./src/routers/home.js')
-const loginRouter = require('./src/routers/login.js')
-const registerRouter = require('./src/routers/register.js')
-const productCartRouter = require('./src/routers/productCart.js')
-const productDetailRouter = require('./src/routers/productDetail.js')
-const registerEditionRouter = require('./src/routers/registerEditionRouter.js')
-const productRouter = require('./src/routers/product.js') // Cristian
+const usersRouter = require('./src/routers/users.js')
+const productsRouter = require('./src/routers/products.js')
+
 
 const app = express();
 
@@ -30,17 +27,12 @@ app.listen(3000, ()=> {
     console.log("Servidor online en puerto 3000");
 });
 
+// Seccion HOME
 app.use('/', homeRouter);
 
-app.use('/login', loginRouter);
+// Seccion USERS
+app.use('/users',usersRouter)
 
-app.use('/register', registerRouter);
-
-app.use('/edicionRegistro', registerEditionRouter);
-
-app.use('/productCart', productCartRouter);
-
-app.use('/productDetail', productDetailRouter);
-
-app.use('/product', productRouter); // Cristian
+// Seccion PRODUCTS
+app.use('/products',productsRouter)
 
