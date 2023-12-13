@@ -1,376 +1,332 @@
 /* ----------------- */
-/*      HEADER       */
-/* ----------------- */
-
-header{
-    background-color: #11111f;
-    color: white;
-}
-header section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-header section img{/* logo */
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width: 50vw;
-}
-header section input{/* barra de busqueda*/
-    width: 75vw;
-    border: solid 1px #ffb81c;
-    border-radius: 25px;
-    color: #11111f;
-}
-header section input::placeholder{
-    color: #11111f;
-    font-size: 0.8rem;
-}
-header section button{/* boton de buscar */
-    background-color: white;
-    border-radius: 25px;
-    border: solid 1px #ffb81c;
-    font-size: 0.8rem;
-    margin: 10px;
-}
-header section button:hover{
-    background-color: #ffb81c;
-}
-header section div div.sesion-registrate{/*Log-in - Registrate */
-    display: none;
-}
-header section div i{
-    padding: 5px;
-}
-header section div .carrito{
-    background-color: #11111f;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    border: solid 1px #ffb81c;
-    border-radius: 25px;
-    padding: 5;
-    margin: 0px;
-    z-index: 9999;
-}
-header section div .carrito i{
-    font-size: 1rem;
-    padding: 10px;
-}
-.burger{/* Menu hamburguesa */
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 1.5rem;
-}
-.navbar a{
-    display:none;
-    text-decoration: none;
-    color:#11111f
-}
-
-
-/* ----------------- */
 /*       MAIN        */
 /* ----------------- */
 
-
 /* --- CARRUSEL --- */
 
-section.carrusel{
-    margin-top: 1rem;
-    width: 100vw;
-    height: 25vh;
-    overflow: hidden;
+section.carrusel {
+  margin-top: 1rem;
+  width: 100vw;
+  height: 25vh;
+  overflow: hidden;
 }
 
-section.carrusel .item-carrusel{
-    background-color: #9b43ef;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    position: relative;
+section.carrusel .item-carrusel {
+  background-color: #9b43ef;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-section.carrusel .img-carrusel{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+
+section.carrusel .img-carrusel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-section.carrusel img{
-    width: 100%;
-    height: 100%;
+
+section.carrusel img {
+  width: 100%;
+  height: 100%;
 }
-section.carrusel .flechas-carrusel{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+
+section.carrusel .flechas-carrusel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
-section.carrusel a, div.botones-carrusel a{
-    text-decoration: none;
+
+section.carrusel a,
+div.botones-carrusel a {
+  text-decoration: none;
 }
-div.botones-carrusel{
-    display: flex;
-    justify-content: space-around;
-    margin: 0% 40%;
-    margin-top: 0.5rem;
+
+div.botones-carrusel {
+  display: flex;
+  justify-content: space-around;
+  margin: 0% 40%;
+  margin-top: 0.5rem;
 }
 
 /* --- FIN CARRUSEL --- */
 
 /* --- CAJA DE HERRAMIENTAS --- */
 
-section.caja-de-herramientas{
-    font-size: 16px;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100vw;
-    height: 40vw;
-    background-image: url(/img/electroTools/fondos/FondoCirculitos.jpg);
-    background-size: 100%;
-    background-position: top;
-    border: solid 1px #11111f;
+section.caja-de-herramientas {
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  background-image: url(/img/electroTools/fondos/FondoCirculitos.jpg);
+  background-size: 100%;
+  background-position: top;
+  border: solid 1px #11111f;
 }
-section.caja-de-herramientas h2{
-    font-size: 1rem;
-    margin: 0px;
-    padding: 0px;
-    background-color: #11111f;
-    color: #ffb81c;
-    width: 100%;
-    text-align: center;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+
+section.caja-de-herramientas h2 {
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0px;
+  background-color: #11111f;
+  color: #ffb81c;
+  width: 100%;
+  text-align: center;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
 }
-section.caja-de-herramientas h3{
-    font-size: 0.5rem;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    background-color: #ffb81c;
-    color: #11111f;
-    text-align: center;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+
+section.caja-de-herramientas h3 {
+  font-size: 0.5rem;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-color: #ffb81c;
+  color: #11111f;
+  text-align: center;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
 }
-section.caja-de-herramientas .tarjetas-contenedor{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+
+section.caja-de-herramientas .tarjetas-contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-section.caja-de-herramientas .tarjetas{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 20%;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-    margin: 0px 20px;
-    background-color: #ffffff;
+
+section.caja-de-herramientas .tarjetas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+  margin: 0px 20px;
+  background-color: #ffffff;
 }
-section.caja-de-herramientas img{
-    margin-top: 10px;
-    width: 100%;
+
+section.caja-de-herramientas img {
+  margin-top: 10px;
+  width: 100%;
 }
-section.caja-de-herramientas h4{
-    font-size: 0.5rem;
-    margin: 0px;
-    align-self: center;
+
+section.caja-de-herramientas h4 {
+  font-size: 0.5rem;
+  margin: 0px;
+  align-self: center;
 }
-section.caja-de-herramientas a{
-    font-size: 0.4rem;
-    margin-left: 10px;
-    text-decoration: none;
+
+section.caja-de-herramientas a {
+  font-size: 0.4rem;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
 /* --- FIN CAJA DE HERRAMIENTAS --- */
 
 /* --- ANIMATE CON ELECTROTOOLS --- */
 
-section.animate{
-    border: solid 1px #11111f;
-    font-size: 16px;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+section.animate {
+  border: solid 1px #11111f;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-section.animate h2{
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    background-color: #11111f;
-    color: #ffb81c;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+
+section.animate h2 {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  background-color: #11111f;
+  color: #ffb81c;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
 }
-section.animate .tarjetas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 0px;
-    width: 100%;
+
+section.animate .tarjetas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0px;
+  width: 100%;
 }
-section.animate .tarjeta1{
-    border: solid 1px #11111f;
-    width: 40%;
-    height: 80%;
-    position: relative;
-    margin: 10px 20px 10px 0px;
-    padding: 0px;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eeeff4;
+
+section.animate .tarjeta1 {
+  border: solid 1px #11111f;
+  width: 40%;
+  height: 80%;
+  position: relative;
+  margin: 10px 20px 10px 0px;
+  padding: 0px;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeff4;
 }
-section.animate .tarjeta1 iframe{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+
+section.animate .tarjeta1 iframe {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
-section.animate .tarjeta2{
-    width: 40%;
-    height: 80%;
-    margin: 10px 0px 10px 20px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+section.animate .tarjeta2 {
+  width: 40%;
+  height: 80%;
+  margin: 10px 0px 10px 20px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-section.animate .tarjeta2A{
-    width: 100%;
-    height: 45%;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eeeff4;
+
+section.animate .tarjeta2A {
+  width: 100%;
+  height: 45%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeff4;
+  font-size: 0.5rem;
 }
-section.animate .img2A{
-    width: 95%;
-    height: 95%;
-    margin: 0px;
-    padding: 0px;
+
+section.animate .img2A {
+  width: 95%;
+  height: 95%;
+  margin: 0px;
+  padding: 0px;
 }
-section.animate .info2A{
-    border: solid 1px #ffb81c;
-    background-color: #11111f;
-    color: #ffb81c;
-padding: 0.2rem 0.5rem;
-    position: absolute;
-    top: -0.75rem;
-    right: 10px;
-    margin: 0px;
-    text-align: center;
-    border-radius: 8px;
+
+section.animate .info2A {
+  border: solid 1px #ffb81c;
+  background-color: #11111f;
+  color: #ffb81c;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -0.75rem;
+  right: 10px;
+  margin: 0px;
+  text-align: center;
+  border-radius: 8px;
 }
-section.animate .tarjeta2B{
-    width: 100%;
-    height: 45%;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eeeff4;
+
+section.animate .tarjeta2B {
+  width: 100%;
+  height: 45%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeff4;
 }
-section.animate .img2B{
-    width: 95%;
-    height: 95%;
-    margin: 0px;
-    padding: 0px;
+
+section.animate .img2B {
+  width: 95%;
+  height: 95%;
+  margin: 0px;
+  padding: 0px;
 }
-section.animate .info2B{
-    border: solid 1px #ffb81c;
-    background-color: #11111f;
-    color: #ffb81c;
-padding: 0.2rem 0.5rem;
-    position: absolute;
-    top: -0.75rem;
-    right: 10px;
-    margin: 0px;
-    text-align: center;
-    border-radius: 8px;
+
+section.animate .info2B {
+  border: solid 1px #ffb81c;
+  background-color: #11111f;
+  color: #ffb81c;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -0.75rem;
+  right: 10px;
+  margin: 0px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.5rem;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 /* --- FIN ANIMATE CON ELECTROTOOLS --- */
 
 /* --- Manteneme Actualizado --- */
-.suscripcion{
-    background-color: #11111f;
-    color: white;
-    text-align: center;
-    padding: 0.625rem 1rem;
-    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.suscripcion {
+  background-color: #11111f;
+  color: white;
+  text-align: center;
+  padding: 0.625rem 1rem;
+  box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.suscripcion h3{
-    color:#ffb81c;
+.suscripcion h3 {
+  color: #ffb81c;
 }
 
-.letter{
-    text-decoration: none;
-    color: #ffb81c;
-    font-size: 1.5rem;
-    text-align: center;
+.letter {
+  text-decoration: none;
+  color: #ffb81c;
+  font-size: 1.5rem;
+  text-align: center;
 
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
 
-    width: 3.5rem;
-    height: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
 
-    border: 0.1875rem #ffb81c solid;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+  border: 0.1875rem #ffb81c solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .ahora {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -378,113 +334,113 @@ padding: 0.2rem 0.5rem;
 /*   MEDIA QUERIES   */
 /* ----------------- */
 
-@media (min-width:445px){
+@media (min-width:445px) {
 
-    html{
-        font-size: 20px;
-    }
 
-}
+  /* --- Manteneme Actualizado --- */
+  .suscripcion {
+    padding: 0.5rem 0.8rem;
+  }
 
-@media (min-width:580px){
+  .suscripcion h3 {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+  }
 
-    html{
-        font-size: 26px;
-    }
+  .letter {
 
-}
+    font-size: 1.2rem;
+    margin: 0 0.4rem;
+    width: 3rem;
+    height: 3rem;
+  }
 
-@media (min-width: 769px){
-
-    /* --- HEADER --- */
-
-    header section{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-    header section img{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        width: 30vw;
-    }
-    header section input{
-        border-radius: 25px;
-        font-size: 20px;
-        width: 30vw;
-    }
-    header section input::placeholder{
-        font-size: 20px;
-    }
-    header section button{
-        border-radius: 25px;
-        font-size: 20px;
-    }
-    header section div.top-header-rigth{
-        width: 20vw;
-        align-self: flex-end;
-    }
-    header section div div.sesion-registrate{
-        display: flex;
-        justify-content: flex-end;
-        color: #ffffff;
-    }
-    header section div div.sesion-registrate a{
-        color: white;
-        font-size: 0.5rem;
-        text-decoration: none;
-    }
-    header section div .carrito i{
-        font-size: 0.65rem;
-    }
-    header nav{
-        border-top: solid 5px white;
-        background-color: #11111f;
-        width: 100vw;
-    }
-    .burger{
-        display: none;
-    }
-    header nav ul{
-        display: flex;
-        justify-content: space-around;
-        padding: 0px;
-        margin: 0px;
-    }
-    header nav ul li{
-        border: solid 1px #ffb81c;
-        background-color: white;
-        border-radius: 25px;
-        color: #11111f;
-        margin: 10px 0px;
-        padding: 5px 10px;
-        font-size: 20px;
-    }
-    header nav ul li:hover{
-        background-color: #ffb81c;
-    }
-
-    .navbar a{
-        display: contents;
-    }
-
-    /* --- FIN HEADER --- */
-
-    /* --- CARRUSEL --- */
-
-    section.carrusel img{
-        width: max-content;
-    }
-
-    /* --- FIN CARRUSEL --- */
+  .ahora {
+    font-size: 0.8rem;
+    margin: 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
 
 }
 
-@media (min-width:1200px){
+@media (min-width:580px) {
 
-    html{
-        font-size: 42px;
+  /* --- Manteneme Actualizado --- */
+  .suscripcion {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .suscripcion h3 {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+  }
+
+  .suscripcion p {
+    font-size: 0.6rem;
+  }
+
+  .letter {
+    font-size: 1rem;
+    margin: 0 0.2rem;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .ahora {
+    font-size: 0.6rem;
+    padding-top: 0.6rem;
+  }
+}
+
+@media (min-width:710px) {
+    /* --- Manteneme Actualizado --- */
+    .suscripcion {
+      padding: 0.5rem 0.8rem;
     }
+  
+    .suscripcion h3 {
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+    }
+  
+    .suscripcion p {
+      font-size: 0.4rem;
+    }
+  
+    .letter {
+      border: 0.125rem #ffb81c solid;
+      font-size: 0.6rem;
+      padding: 0.2rem;
+      width: 2rem;
+      height: 2rem;
+
+    }
+  
+    .ahora {
+      font-size: 0.4rem;
+      padding-top: 0.6rem;
+    }
+}
+
+@media (min-width: 769px) {
+
+  /* --- CARRUSEL --- */
+
+  section.carrusel img {
+    width: max-content;
+  }
+
+  /* --- FIN CARRUSEL --- */
+
+}
+
+@media (min-width:1200px) {
+
+  html {
+    font-size: 42px;
+  }
 
 }

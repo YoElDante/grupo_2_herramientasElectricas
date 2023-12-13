@@ -1,9 +1,27 @@
-// Cristian
-const express = require('express');
-const router = express.Router();
-const productController = require('../controllers/productController.js');
+const express = require('express'); // Cristian
+const router = express.Router(); // Cristian
+const path = require('path'); // Cristian
+const productController = require('../controllers/productController.js'); // Cristian
 
-router.get('/create',productController.create);
-router.get('/edit',productController.edit);
+const multer = require('multer'); // Cristian
+const storage = multer.diskStorage({ // Cristian
+    destination: (req, file, cb)=>{
+        const folder = path.resolve(__dirname, '../../public/img/multerProducts');
+        cb(null, folder);
+    },
+    filename: (req, file, cb)=>{
+        const imgName = Date.now() + path.extname(file.originalname);
+        cb(null, imgName);
+    }
+});
+const imgUpload = multer({storage: storage}); // Cristian
 
-module.exports = router;
+router.get('/create', productController.create); // Cristian
+router.post('/create', imgUpload.array('image'), productController.createOk); // Cristian
+
+router.get('/edit/:id', productController.edit); // Cristian
+router.put('/edit/:id', imgUpload.array('image'), productController.editOk); // Cristian
+
+router.delete('/:id', productController.delete);
+
+module.exports = router; // Cristian

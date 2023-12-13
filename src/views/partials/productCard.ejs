@@ -1,0 +1,21 @@
+<article class="tarjeta product">
+  <h4>
+    <%=product.name%>
+  </h4>
+  <div class="imgProducto">
+    <img src="img/herramientas/<%=product.image%>" alt="Imagen de <%=product.name%>">
+  </div>
+  <div class="detalles">
+    <p class="marca">
+      <%=product.brand%>
+    </p>
+    <p class="modelo">
+      <%=product.model%>
+    </p>
+  </div>
+  <i class="fa-solid fa-tags"></i>
+  <div class="precios">
+    <p class="precioAnterior">$ <%=product.price%>.-</p>
+    <p class="precioActual">$ <%= product.price (product.price*product.discount/100) %>.-</p>
+  </div>
+</article>

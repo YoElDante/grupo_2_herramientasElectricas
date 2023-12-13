@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require("node:path");
+const methodOverride = require('method-override'); // Cristian
 
 // Routers
 const homeRouter = require('./src/routers/home.js')
@@ -11,6 +12,10 @@ const registerEditionRouter = require('./src/routers/registerEditionRouter.js')
 const productRouter = require('./src/routers/product.js') // Cristian
 
 const app = express();
+
+app.use(methodOverride('_method')); // Cristian
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 // Indicamos que vamos a trabajar con un motor de plantillas
 app.set('view engine','ejs');

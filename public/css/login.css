@@ -1,24 +1,6 @@
 /* ----------------- */
-/* ESTILOS GENERALES */
-/* ----------------- */
-
-
-
-/* ----------------- */
-/*      HEADER       */
-/* ----------------- */
-
-
-
-/* ----------------- */
 /*       MAIN        */
 /* ----------------- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-}
 
 .conteiner {
     width: 100%;
@@ -83,7 +65,7 @@
     border: transparent;
 }
 
-input::placeholder {
+.login-conteiner input::placeholder {
     color: #11111f;
     font-size: 1rem;
     align-items: center;
@@ -168,7 +150,6 @@ footer {
     .login-conteiner{
         max-width: 500px;
     }
-    .form {}
 
     .form-conteiner {
         padding: 30px 50px 70px;

@@ -1,12 +1,128 @@
-<!-- Cristian -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edicion de productos</title>
+  <!-- Metadatos -->
+  <%- include('../partials/meta.ejs')%>
+
+    <!-- links -->
+    <link rel="stylesheet" href="/css/productCreate.css"><!-- Cristian -->
+
+    <!--Custom Css-->
+    <%- include('../partials/css.ejs')%>
+
+      <!-- Font -->
+      <link rel="" href="" />
+
+
+
+      <!--FavIcon-->
+      <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
+
+      <!-- Titulo de la Pag -->
+      <title>ElectroTools - Edición de Producto</title>
 </head>
+
 <body>
-    Aqui se editaran los productos
+  <header>
+    <%- include('../partials/header.ejs')%>
+  </header>
+
+  <main>
+    <!-- Cristian -->
+    <div class="mainConteiner">
+      <section class="formConteiner">
+          <h1 class="title">EDICION DE PRODUCTOS</h1>
+          <form action="/product/edit/<%= product.id %>?_method=put" method="post" enctype="multipart/form-data">
+          
+            <label for="name">Ingrese el nombre del producto</label>
+            <div class="divInput">
+              <input type="text" name="name" id="name" value="<%= product.name %>">
+            </div>
+                    
+            <label for="brand">Ingrese la marca del producto</label>
+            <div class="divInput">
+              <input type="text" name="brand" id="brand" value="<%= product.brand %>">
+            </div>
+                    
+            <label for="model">Ingrese el modelo del producto</label>
+            <div class="divInput">
+              <input type="text" name="model" id="model" value="<%= product.model %>">
+            </div>
+
+            <label for="description">Ingrese la descripcion del producto</label>
+            <div class="">
+              <textarea name="description" id="description" class="description"><%= product.description %></textarea>
+            </div>
+
+            <label for="price">Ingrese el precio del producto</label>
+            <div class="divInput">
+              <input type="text" name="price" id="price" value="<%= product.price %>">
+            </div>
+                    
+            <label for="discount">Ingrese el descuento del producto</label>
+            <div class="divInput">
+              <input type="text" name="discount" id="discount" value="<%= product.discount %>">
+            </div>
+                    
+            <label for="interest">Ingrese el interes del producto</label>
+            <div class="divInput">
+              <input type="text" name="interest" id="interest" value="<%= product.interest %>">
+            </div>
+
+            <label for="plan">Ingrese las cuotas del producto</label>
+            <div class="divInput">
+              <input type="text" name="plan" id="plan" value="<%= product.plan %>">
+            </div>
+
+            <label for="color">Ingrese el color del producto</label>
+            <div class="divInput">
+              <input type="text" name="color" id="color" value="<%= product.color %>">
+            </div>
+
+            <label for="voltage">Ingrese el voltage del producto</label>
+            <div class="divInput">
+              <input type="text" name="voltage" id="voltage" value="<%= product.voltage %>">
+            </div>
+
+            <label for="frequency">Ingrese la frecuencia del producto</label>
+            <div class="divInput">
+                <input type="text" name="frequency" id="frequency" value="<%= product.frequency %>">
+            </div>
+
+            <label for="power">Ingrese la potencia del producto</label>
+            <div class="divInput">
+                <input type="text" name="power" id="power" value="<%= product.power %>">
+            </div>
+            
+            <!--<label for="generalCharacteristics">Ingrese las caracteristicas del producto</label>
+            <div class="divInput">
+                <input type="text" name="generalCharacteristics" id="generalCharacteristics" value="<%= product.generalCharacteristics %>">
+            </div>-->
+            
+            <label for="userManual">Ingrese el manual del producto</label>
+            <div class="divInput">
+                <input type="text" name="userManual" id="userManual" value="<%= product.userManual %>">
+            </div>
+            
+            <label for="image">Ingrese las imagenes del producto</label>
+            <div class="divInput">                     
+                <input type="file" multiple name="image" id="image" class="file">
+            </div>
+
+            <div>
+                <button type="submit" class="submit">Guardar</button>
+            </div>
+  
+          </form>
+      </section>
+  </div>
+  <!-- /Cristian -->
+  </main>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
 </body>
+
 </html>

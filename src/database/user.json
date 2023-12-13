@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "admin": false,
+        "username": "RECT",
+        "Password": "hola",
+        "Image": "",
+        "name": "Raúl",
+        "lastName": "Calvimonte",
+        "telphone": "00",
+        "email": "calvimonteraul@gmail.com",
+        "age": 25,
+        "address": {
+            "street": "ST-Joseph",
+            "city": "Los Santos",
+            "country": "EEUU",
+            "CP": 4000
+        }
+    }
+]
