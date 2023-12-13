@@ -1,12 +1,17 @@
 /* ----------------- */
 /*       MAIN        */
 /* ----------------- */
+html{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
 
 /* --- CARRUSEL --- */
 
 section.carrusel {
   margin-top: 1rem;
-  width: 100vw;
+  width: 100%;
   height: 25vh;
   overflow: hidden;
 }
@@ -69,7 +74,7 @@ section.caja-de-herramientas {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
   background-image: url(/img/electroTools/fondos/FondoCirculitos.jpg);
   background-size: 100%;
   background-position: top;
@@ -147,8 +152,9 @@ section.animate {
   font-size: 16px;
   margin: 0px;
   padding: 0px;
+  margin:auto;
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -295,6 +301,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .suscripcion h3 {

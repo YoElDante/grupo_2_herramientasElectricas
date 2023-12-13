@@ -1,1 +1,238 @@
-[{"id":1,"name":"Taladro Atornillador","brand":"DeWalt","model":"DCD709B","description":"Taladro Atornillador Percusión 1/2 13mm Dewalt Dcd709b","price":279312,"discount":0,"interest":0,"plan":12,"color":"Amarillo","voltage":"220V","frequency":"1650rpm","power":"800W","generalCharacteristics":["Con función reversa.","Cuenta con función destornillador.","Incluye función percutor.","Velocidad máxima de rotación: 1650rpm.","Posee control de torque.","Tiene luz led.","Dimensiones: 7.5'' de ancho, 7.9'' de alto y 6.9'' de largo."],"image":["img1","img2","img3","img4","img5"],"userManual":"https://www.manual.ar/dewalt/dcd709/manual"},{"id":2,"name":"Taladro percutor atornillador","brand":"Makita","model":"HP1630","description":"Taladro percutor atornillador eléctrico de 13mm Makita HP1630 710W + accesorio con caja de cartón 220V","price":81466,"discount":0,"interest":60,"plan":6,"color":"Turquesa","voltage":"220V","frequency":"3200rpm","power":"710W","generalCharacteristics":["Con función reversa.","Viene con caja de cartón.","Cuenta con función destornillador.","Incluye función percutor.","Ejecuta 5500 golpes por minuto.","Velocidad máxima de rotación: 3200rpm.","Dimensiones: 75mm de ancho, 204mm de alto y 296mm de largo."],"image":["img1","img2","img3","img4","img5"],"userManual":"https://www.manual.ar/makita/hp1630/manual"},{"id":3,"name":"Atornillador Inalámbrico","brand":"Makita","model":"DF001DW","description":"Atornillador Inalámbrico Makita 3.6v Df001dw + Accesesorios Color Turquesa Frecuencia 50","price":99000,"discount":0,"interest":60,"plan":6,"color":"Turquesa","voltage":"","frequency":"220rpm","power":"3.6W","generalCharacteristics":["Destornillador eléctrico compacto","Es inalámbrico","Potencia de 3.6W","Velocidad de rotación de entre 220rpm y 220rpm","Torque máximo: 6Nm","Incluye adaptador de ca.","Mandril de 3.6mm","Iluminación LED para mejor visibilidad"],"image":["img1","img2","img3","img4","img5"],"userManual":"https://www.manual.ar/makita/df001dw/manual"},{"id":4,"name":"Amoladora Angular","brand":"Makita","model":"GA7020","description":"Amoladora Angular Makita GA7020 color turquesa 2200 W 220 V + accesorio","price":188975,"discount":0,"interest":60,"plan":6,"color":"Turquesa","voltage":"220V","frequency":"8500rpm","power":"2200W","generalCharacteristics":["Apta para un disco de 180 mm de diámetro.","Trae interruptor gatillo","Su potencia es de 2200 W.","Velocidad máxima de rotación de 8500 rpm","Es antipolvo y protege al motor de la suciedad entrante.","Cuenta con protección contra sobrecarga","Posee freno automático por atascamiento","Tiene botón de bloqueo de disco","El largo del cable es de 1.95 m.","Pesa 5.5 kg.","Incluye: llave"],"image":["img1","img2","img3","img4","img5"],"userManual":"https://www.manual.ar/makita/ga7020/manual"},{"id":5,"name":"Rotomartillo Percutor","brand":"DeWalt","model":"D25133K","description":"Amoladora Angular Makita GA7020 color turquesa 2200 W 220 V + accesorio","price":235000,"discount":0,"interest":60,"plan":6,"color":"Amarillo","voltage":"220V","frequency":"50Hz","power":"2200W","generalCharacteristics":["Permite taladrar sin percusión, taladrar con percusión y cincelar.","Rota a una velocidad mínima de 0rpm y una velocidad máxima de 1500rpm.","Con 2.6J de impacto, ideal para trabajos de perforación en el hogar.","Perfora hormigón de hasta 26mm, metal de 13mm y madera de 30mm.","Ejecuta 5500 golpes por minuto.","Utiliza encastre SDS Plus de 10mm de diámetro.","Tiene embrague de seguridad para mayor protección.","Pesa 2.6 kg.","Diseño ergonómico con encastre SDS Plus y embrague de seguridad para un manejo seguro y cómodo."],"image":["img1","img2","img3","img4","img5"],"userManual":"https://www.manual.ar/dewalt/d25133k/manual"},{"id":6,"name":"Rotomartillo Electroneumático","brand":"Bosch","model":"GBH 2-28 D","description":"Rotomartillo electroneumático Bosch Professional GBH 2-28 D azul con 850W de potencia 220V","price":292500,"discount":0,"interest":60,"plan":6,"color":"Azul","voltage":"220V","frequency":"4000rpm","power":"2200W","generalCharacteristics":["Permite taladrar sin percusión, taladrar con percusión y cincelar.","Rota a una velocidad mínima de 0rpm y una velocidad máxima de 4000rpm.","Con 3.2J de impacto, ideal para trabajos de perforación en el hogar","Perfora hormigón de hasta 28mm, metal de 13mm y madera de 30mm.","Ejecuta 4000 golpes por minuto","Utiliza encastre SDS Plus de 10mm de diámetro.","Tiene embrague de seguridad para mayor protección.","Pesa 2.8 kg.","Incluye maletín."],"image":["img1","img2","img3","img4","img5"],"userManual":"https://www.manual.ar/bosch/gbh-2-28-d-professional/manual"},{"id":7,"name":"Amoladora Angular","brand":"Bosch","model":"Gws 700 Professional","description":"Amoladora Bosch Angular Gws 700 Professional Azul 12.000 Rpm Frecuencia 220","price":59999,"discount":0,"interest":60,"plan":6,"color":"Azul","voltage":"220V","frequency":"12000rpm","power":"710W","generalCharacteristics":["Apta para un disco de 115 mm de diámetro.","Alcanza una profundidad de corte de 65 mm.","Trae interruptor tecla.","Su potencia es de 710 W.","Velocidad máxima de rotación de 12000 rpm.","Tiene botón de bloqueo de disco.","El largo del cable es de 2 m.","Pesa 1.8 kg.","Protector de disco incorporado."],"image":["img1","img2","img3","img4",""],"userManual":"https://www.manual.ar/bosch/gws-700-professional/manual"},{"id":8,"name":"Nombre de prueba","brand":"Marca de prueba","model":"Modelo de prueba","description":"","price":"","discount":"","interest":"","plan":"","color":"","voltage":"","frequency":"","power":"","userManual":""}]
+[
+    {
+        "id": 1,
+        "name": "Taladro Atornillador",
+        "brand": "DeWalt",
+        "model": "DCD709B",
+        "description": "Taladro Atornillador Percusión 1/2 13mm Dewalt Dcd709b",
+        "price": 279312,
+        "discount": 0,
+        "interest": 0,
+        "plan": 12,
+        "color": "Amarillo",
+        "voltage": "220V",
+        "frequency": "1650rpm",
+        "power": "800W",
+        "generalCharacteristics": [
+            "Con función reversa.",
+            "Cuenta con función destornillador.",
+            "Incluye función percutor.",
+            "Velocidad máxima de rotación: 1650rpm.",
+            "Posee control de torque.",
+            "Tiene luz led.",
+            "Dimensiones: 7.5'' de ancho, 7.9'' de alto y 6.9'' de largo."
+        ],
+        "image": [
+            "dewalt/atornillador/img1.webp",
+            "dewalt/atornillador/img2.webp",
+            "dewalt/atornillador/img3.webp",
+            "dewalt/atornillador/img4.webp",
+            "dewalt/atornillador/img5.webp"
+
+        ],
+        "userManual": "https://www.manual.ar/dewalt/dcd709/manual"
+    },
+    {
+        "id": 2,
+        "name": "Taladro percutor atornillador",
+        "brand": "Makita",
+        "model": "HP1630",
+        "description": "Taladro percutor atornillador eléctrico de 13mm Makita HP1630 710W + accesorio con caja de cartón 220V",
+        "price": 81466,
+        "discount": 0,
+        "interest": 60,
+        "plan": 6,
+        "color": "Turquesa",
+        "voltage": "220V",
+        "frequency": "3200rpm",
+        "power": "710W",
+        "generalCharacteristics": [
+            "Con función reversa.",
+            "Viene con caja de cartón.",
+            "Cuenta con función destornillador.",
+            "Incluye función percutor.",
+            "Ejecuta 5500 golpes por minuto.",
+            "Velocidad máxima de rotación: 3200rpm.",
+            "Dimensiones: 75mm de ancho, 204mm de alto y 296mm de largo."
+        ],
+        "image": [
+            "makita/taladro/img1.webp",
+            "makita/taladro/img2.webp",
+            "makita/taladro/img3.webp",
+            "makita/taladro/img4.webp",
+            "makita/taladro/img5.webp"
+        ],
+        "userManual": "https://www.manual.ar/makita/hp1630/manual"
+    },
+    {
+        "id": 3,
+        "name": "Atornillador Inalámbrico",
+        "brand": "Makita",
+        "model": "DF001DW",
+        "description": "Atornillador Inalámbrico Makita 3.6v Df001dw + Accesesorios Color Turquesa Frecuencia 50",
+        "price": 99000,
+        "discount": 0,
+        "interest": 60,
+        "plan": 6,
+        "color": "Turquesa",
+        "voltage": "",
+        "frequency": "220rpm",
+        "power": "3.6W",
+        "generalCharacteristics": [
+            "Destornillador eléctrico compacto",
+            "Es inalámbrico",
+            "Potencia de 3.6W",
+            "Velocidad de rotación de entre 220rpm y 220rpm",
+            "Torque máximo: 6Nm",
+            "Incluye adaptador de ca.",
+            "Mandril de 3.6mm",
+            "Iluminación LED para mejor visibilidad"
+        ],
+        "image": [
+            "makita/atornillador/img1.webp",
+            "makita/atornillador/img2.webp",
+            "makita/atornillador/img3.webp",
+            "makita/atornillador/img4.webp",
+            "makita/atornillador/img5.webp"
+        ],
+        "userManual": "https://www.manual.ar/makita/df001dw/manual"
+    },
+    {
+        "id": 4,
+        "name": "Amoladora Angular",
+        "brand": "Makita",
+        "model": "GA7020",
+        "description": "Amoladora Angular Makita GA7020 color turquesa 2200 W 220 V + accesorio",
+        "price": 188975,
+        "discount": 0,
+        "interest": 60,
+        "plan": 6,
+        "color": "Turquesa",
+        "voltage": "220V",
+        "frequency": "8500rpm",
+        "power": "2200W",
+        "generalCharacteristics": [
+            "Apta para un disco de 180 mm de diámetro.",
+            "Trae interruptor gatillo",
+            "Su potencia es de 2200 W.",
+            "Velocidad máxima de rotación de 8500 rpm",
+            "Es antipolvo y protege al motor de la suciedad entrante.",
+            "Cuenta con protección contra sobrecarga",
+            "Posee freno automático por atascamiento",
+            "Tiene botón de bloqueo de disco",
+            "El largo del cable es de 1.95 m.",
+            "Pesa 5.5 kg.",
+            "Incluye: llave"
+        ],
+        "image": [
+            "makita/amoladoraAngular/img1.webp",
+            "makita/amoladoraAngular/img2.webp",
+            "makita/amoladoraAngular/img3.webp",
+            "makita/amoladoraAngular/img4.webp",
+            "makita/amoladoraAngular/img5.webp"
+        ],
+        "userManual": "https://www.manual.ar/makita/ga7020/manual"
+    },
+    {
+        "id": 5,
+        "name": "Rotomartillo Percutor",
+        "brand": "DeWalt",
+        "model": "D25133K",
+        "description": "Amoladora Angular Makita GA7020 color turquesa 2200 W 220 V + accesorio",
+        "price": 235000,
+        "discount": 0,
+        "interest": 60,
+        "plan": 6,
+        "color": "Amarillo",
+        "voltage": "220V",
+        "frequency": "50Hz",
+        "power": "2200W",
+        "generalCharacteristics": [
+            "Permite taladrar sin percusión, taladrar con percusión y cincelar.",
+            "Rota a una velocidad mínima de 0rpm y una velocidad máxima de 1500rpm.",
+            "Con 2.6J de impacto, ideal para trabajos de perforación en el hogar.",
+            "Perfora hormigón de hasta 26mm, metal de 13mm y madera de 30mm.",
+            "Ejecuta 5500 golpes por minuto.",
+            "Utiliza encastre SDS Plus de 10mm de diámetro.",
+            "Tiene embrague de seguridad para mayor protección.",
+            "Pesa 2.6 kg.",
+            "Diseño ergonómico con encastre SDS Plus y embrague de seguridad para un manejo seguro y cómodo."
+        ],
+        "image": [
+            "dewalt/rotomartilloPercutor/img1.webp",
+            "dewalt/rotomartilloPercutor/img2.webp",
+            "dewalt/rotomartilloPercutor/img3.webp",
+            "dewalt/rotomartilloPercutor/img4.webp",
+            "dewalt/rotomartilloPercutor/img5.webp"
+        ],
+        "userManual": "https://www.manual.ar/dewalt/d25133k/manual"
+    },
+    {
+        "id": 6,
+        "name": "Rotomartillo Electroneumático",
+        "brand": "Bosch",
+        "model": "GBH 2-28 D",
+        "description": "Rotomartillo electroneumático Bosch Professional GBH 2-28 D azul con 850W de potencia 220V",
+        "price": 292500,
+        "discount": 0,
+        "interest": 60,
+        "plan": 6,
+        "color": "Azul",
+        "voltage": "220V",
+        "frequency": "4000rpm",
+        "power": "2200W",
+        "generalCharacteristics": [
+            "Permite taladrar sin percusión, taladrar con percusión y cincelar.",
+            "Rota a una velocidad mínima de 0rpm y una velocidad máxima de 4000rpm.",
+            "Con 3.2J de impacto, ideal para trabajos de perforación en el hogar",
+            "Perfora hormigón de hasta 28mm, metal de 13mm y madera de 30mm.",
+            "Ejecuta 4000 golpes por minuto",
+            "Utiliza encastre SDS Plus de 10mm de diámetro.",
+            "Tiene embrague de seguridad para mayor protección.",
+            "Pesa 2.8 kg.",
+            "Incluye maletín."
+        ],
+        "image": [
+            "bosch/rotomartilloElectroneumático/img1.webp",
+            "bosch/rotomartilloElectroneumático/img2.webp",
+            "bosch/rotomartilloElectroneumático/img3.webp",
+            "bosch/rotomartilloElectroneumático/img4.webp",
+            "bosch/rotomartilloElectroneumático/img5.webp"
+        ],
+        "userManual": "https://www.manual.ar/bosch/gbh-2-28-d-professional/manual"
+    },
+    {
+        "id": 7,
+        "name": "Amoladora Angular",
+        "brand": "Bosch",
+        "model": "Gws 700 Professional",
+        "description": "Amoladora Bosch Angular Gws 700 Professional Azul 12.000 Rpm Frecuencia 220",
+        "price": 59999,
+        "discount": 0,
+        "interest": 60,
+        "plan": 6,
+        "color": "Azul",
+        "voltage": "220V",
+        "frequency": "12000rpm",
+        "power": "710W",
+        "generalCharacteristics": [
+            "Apta para un disco de 115 mm de diámetro.",
+            "Alcanza una profundidad de corte de 65 mm.",
+            "Trae interruptor tecla.",
+            "Su potencia es de 710 W.",
+            "Velocidad máxima de rotación de 12000 rpm.",
+            "Tiene botón de bloqueo de disco.",
+            "El largo del cable es de 2 m.",
+            "Pesa 1.8 kg.",
+            "Protector de disco incorporado."
+        ],
+        "image": [
+            "bosch/amoladoraAngular/img1.webp",
+            "bosch/amoladoraAngular/img2.webp",
+            "bosch/amoladoraAngular/img3.webp",
+            "bosch/amoladoraAngular/img4.webp",
+            "bosch/amoladoraAngular/"
+        ],
+        "userManual": "https://www.manual.ar/bosch/gws-700-professional/manual"
+    }
+]

@@ -5,18 +5,18 @@
   <!-- Metadatos -->
   <%- include('./partials/meta.ejs')%>
 
-  <%- include('./partials/css.ejs')%>
+    <%- include('./partials/css.ejs')%>
 
-  <link rel="stylesheet" href="css/index.css" />
+      <link rel="stylesheet" href="css/index.css" />
 
-  <!-- Font -->
-  <link rel="" href="" />
+      <!-- Font -->
+      <link rel="" href="" />
 
-  <!--FavIcon-->
-  <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
+      <!--FavIcon-->
+      <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
 
-  <!-- Titulo de la Pag -->
-  <title>ElectroTools - Home</title>
+      <!-- Titulo de la Pag -->
+      <title>ElectroTools - Home</title>
 </head>
 
 <body>
@@ -75,40 +75,13 @@
     <section class="novedades productos" id="novedades">
       <div class="recomendaciones">
         <h3 class="titulo">Novedades</h3>
-        <a href="/productDetail">
 
-          <section class="tarjetas">
-            <article class="tarjeta product">
-              <h4>Amoladora Angular</h4>
-              <div class="imgProducto">
-                <img src="img/herramientas/amoladora DeWalt/amoladora DeWalt.webp" alt="amoladora DeWalt">
-              </div>
-              <div class="detalles">
-                <p class="marca">DeWalt</p>
-                <p class="modelo">DWE4010 50Hz</p>
-              </div>
-              <i class="fa-solid fa-tags"></i>
-              <div class="precios">
-                <p class="precioAnterior">$ 50.999.-</p>
-                <p class="precioActual">$ 50.999.-</p>
-              </div>
-            </article>
+        <section class="tarjetas">
 
-            <article class="tarjeta product">
-              <h4>Taladro Percutor</h4>
-              <div class="imgProducto">
-                <img src="img/herramientas/atornillador Makita/atornillador makita.webp"
-                  alt="atornillador electrico Makita">
-              </div>
-              <div class="detalles">
-                <p class="marca">Makita</p>
-                <p class="modelo">DHP453sye 18V</p>
-              </div>
-              <i class="fa-solid fa-tags"></i>
-              <div class="precios">
-                <p class="precioAnterior">$394.960.-</p>
-                <p class="precioActual">$394.960.-</p>
-              </div>
+
+          <%- include("./partials/productCard.ejs", {product: products[0]}) %>
+
+          <%- include("./partials/productCard.ejs", {product: products[1]}) %>
 
             </article>
 
@@ -116,8 +89,7 @@
               <i class="fa-solid fa-arrow-right"></i>
             </div>
 
-          </section>
-        </a>
+        </section>
       </div>
     </section>
 
@@ -155,48 +127,17 @@
       <div class="recomendaciones ofertas">
         <h3 class="titulo">OFERTAS</h3>
 
-        <a href="/productDetail">
           <section class="tarjetas">
 
-            <article class="tarjeta oferta">
-              <h4>Taladro Atornillador</h4>
-              <div class="imgProducto">
-                <img src="img/herramientas/atornillador electrico/atornillador electrico.webp"
-                  alt="atornillador electrico Versa">
-              </div>
-              <div class="detalles">
-                <p class="marca">VersaMax</p>
-                <p class="modelo">Recargable 8V</p>
-              </div>
-              <i class="fa-solid fa-tags"></i>
-              <div class="precios">
-                <p class="precioAnterior">$ 64.999.-</p>
-                <p class="precioActual">$ 61.999.-</p>
-              </div>
-            </article>
+            <%- include('./partials/productCardSale.ejs', {product:products[4]}) %>
 
-            <article class="tarjeta oferta">
-              <h4>Kit RotoMartillo</h4>
-              <div class="imgProducto">
-                <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt.webp" alt="taladro en caja">
-              </div>
-              <div class="detalles">
-                <p class="marca">DeWalt</p>
-                <p class="modelo">SDS DCH133hb</p>
-              </div>
-              <i class="fa-solid fa-tags"></i>
-              <div class="precios">
-                <p class="precioAnterior">$552.599.-</p>
-                <p class="precioActual">$540.000.-</p>
-              </div>
-            </article>
+            <%- include('./partials/productCardSale.ejs', {product:products[5]}) %>
 
             <div class="next">
               <i class="fa-solid fa-arrow-right"></i>
             </div>
 
           </section>
-        </a>
 
       </div>
 
@@ -208,8 +149,7 @@
       <h2>Animate con ElectroTools</h2>
       <div class="tarjetas">
         <div class="tarjeta1">
-          <iframe src="https://www.youtube.com/embed/0_q1LyrvrmA"
-            title="Como hacer MUEBLE MONTESSORI" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/0_q1LyrvrmA" title="Como hacer MUEBLE MONTESSORI" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
@@ -227,7 +167,7 @@
       </div>
     </section>
 
-    <!-- Manteneme Actualizado --> 
+    <!-- Manteneme Actualizado -->
 
     <section class="suscripcion">
       <h3>MANTÉNGAME ACTUALIZADO</h3>
@@ -242,7 +182,7 @@
   </main>
 
   <footer>
-      <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/footer.ejs') %>
   </footer>
 
   <!-- Scrips -->
