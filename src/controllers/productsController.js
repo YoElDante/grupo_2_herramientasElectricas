@@ -1,6 +1,7 @@
 // Cristian y Florencia
 const express = require('express'); // Cristian
 const path = require('path'); // Cristian
+const productsFilePath = path.join(__dirname, '../database/products.json'); // Cristian
 const fs = require('fs'); // Cristian
 const products = require('../models/JSONtoArray');
 
@@ -19,7 +20,7 @@ const controller = {
   create: (req, res) => { // Cristian
     res.render(path.resolve(__dirname, '../views/products/productCreate.ejs'))
   },
-  createOk: (req, res) => {
+  createOk: (req, res) => { // Cristian
 
     const newProduct = { id: products.length + 1, ...req.body };
     products.push(newProduct);
@@ -39,7 +40,17 @@ const controller = {
   },
 
   editOk: (req, res) => {
-    res.send("Producto editado correctamente");
+    const editedProduct = {id: (req.params).id, ...(req.body)};
+    for(let i=0; i<products.length; i++){
+      if(products[i].id == (req.params).id){
+        products.splice(i,1,editedProduct);
+
+        const newProductsJSON = JSON.stringify(products);
+        fs.writeFileSync(productsFilePath, newProductsJSON);
+
+        res.send("Producto editado correctamente");
+      }
+    }
   },
 
   delete: (req, res) => {
