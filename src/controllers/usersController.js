@@ -11,6 +11,11 @@ const controller = {
         res.render(path.resolve(__dirname, '../views/users/login.ejs'));
     },
 
+    loginOk: (req, res) => {
+        req.session.logined = true;
+        res.redirect('/')
+    },
+
     register: (req, res) => {
         res.render(path.resolve(__dirname, '../views/users/register.ejs'));
     },
