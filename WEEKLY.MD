@@ -1,5 +1,6 @@
 # DAILY  
 
+// Hay que ordenar la información de manera Descendente 
 
 ### **Reunion Sabado 11/11/23:** 
 
