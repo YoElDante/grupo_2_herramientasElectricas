@@ -1,5 +1,27 @@
 # Retrospectivas del Equipo
 
+
+
+------------------------------------------
+## RETRO Cuarto Sprint - MARTES 13/12/2023
+Para la retrospectiva del cuarto sprint, se dejó de lado las opiniones personales. En su lugar, se realizó un análisis de manera grupal dejando asentado las conclusiones en forma de tarjetas, separadas por categorías. Las cuales son:
+***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+- Mejor comunicación intergrupal entre los miembros del equipo en cuanto a las actividades diarias y tareas en proceso y concluidas.
+- Plataformas de comunicación y organización más limpias y llenas. Mejor coordinación.
+- Le hemos puesto más compromiso y estudio. Todos estamos más cerca en conocimiento.
+***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+- Ayudar a los compañeros a poder incorporarse en las tareas.
+- Poder distribuir mejor la dificultad de las tareas.
+- Estilos y capturas de CSS.
+***Lo que podemos hacer para mejorar:***
+- Definir tareas centrales y secundarias, y repartirlas de una manera más óptima.
+- Diario de trabajo (daily) por cada participante del equipo en el discord, para motivar la acción de todos y encontrar problemáticas comunes.
+- Agregar comentarios de autor a las líneas de código como hace Cristian para saber quién lo hizo, al igual que agregar comentarios descriptivos de lo que hacen esas líneas.
+## FIN RETRO CUARTO SPRINT
+--------------------------
+
+
+
 ## RETRO Tercer Sprint - MIERCOLES 06/11/2023
 
 ### Opiniones de los integrantes 
