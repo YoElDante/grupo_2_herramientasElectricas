@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('node:path');
 const fs = require("fs");
+const bcrypt = require('bcryptjs');
+
 
 
 const controller = {
@@ -16,12 +18,24 @@ const controller = {
     // Se crea un nuevo usuario por metodo PORT
     create: (req, res) => {
         let usuario = {
-            nombreYApellido: req.body.nombreYApellido,
-            correoElectronico: req.body.correoElectronico,
-            telefono: req.body.telefono,
-            contrasenia: req.body.contrasenia,
-            contrasenia2: req.body.contrasenia2
+            id: 999,/*prueba*/
+            admin: false,/*prueba*/
+            email: req.body.correoElectronico,
+            username: req.body.Usuario,
+            Password: bcrypt.hashSync(req.body.contrasenia, 10),
+            name: req.body.nombre,
+            lastName: req.body.apellido,
+            age: req.body.edad,
+            telphone: req.body.telefono,
+            address: {
+                street: req.body.calle,
+                city: req.body.ciudad,
+                country: req.body.pais,
+                CP: req.body.codigoPostal,
+            },
+            // Image: req.body.imagen /*prueba*/
         };
+
         let archivoUser = fs.readFileSync("src/database/user.json", { encoding: "utf-8" })
         let usuarios;
         if (archivoUser == "") {

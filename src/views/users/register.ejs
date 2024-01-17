@@ -37,17 +37,42 @@
     <div class="conteiner">
       <section class="form-conteiner">
         <h1 class="heder-register">REGISTRO DE USUARIO</h1>
-        <form action="/products/register" method="post" class="form">
+        <form action="/products/register" method="post" class="form" enctype="multipart/form-data">
           
-          <div class="div-form" id="name">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="nombreYApellido" placeholder="Nombre y Apellido" id="nombre-y-apellido" required>
-          </div>
-
           <div class="div-form" id="email">
             <i class="fa-solid fa-envelope"></i>
             <input type="email" name="correoElectronico" placeholder="Correo Electrónico" id="correo-electronico"
               required>
+          </div>
+
+          <div class="div-form" id="userName">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="Usuario" placeholder="Nombre de Usuario" id="nombre-de-usuario" required>
+          </div>
+
+          <div class="div-form" id="password">
+            <i class="fa-solid fa-eye-slash"></i>
+            <input type="password" name="contrasenia" placeholder="Contraseña" id="contrasenia" required>
+          </div>
+
+          <div class="div-form" id="password">
+            <i class="fa-solid fa-eye-slash"></i>
+            <input type="password" name="contrasenia2" placeholder="Confirmar Contraseña" id="contrasenia2" required>
+          </div>
+
+          <div class="div-form" id="name">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="nombre" placeholder="Nombre" id="nombre" required>
+          </div>
+
+          <div class="div-form" id="lastName">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="apellido" placeholder="Apellido" id="apellido" required>
+          </div>
+
+          <div class="div-form" id="age">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="number" name="edad" placeholder="Edad" id="edad" required>
           </div>
 
           <div class="div-form" id="tel">
@@ -55,13 +80,29 @@
             <input type="tel" name="telefono" placeholder="Teléfono" id="telefono" required>
           </div>
 
-          <div class="div-form" id="password">
-            <i class="fa-solid fa-eye-slash"></i>
-            <input type="password" name="contrasenia" placeholder="Contraseña" id="contrasenia" required>
+          <div class="div-form" id="street">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" name="calle" placeholder="Calle" id="calle" required>
           </div>
-          <div class="div-form" id="password">
-            <i class="fa-solid fa-eye-slash"></i>
-            <input type="password" name="contrasenia2" placeholder="Confirmar Contraseña" id="contrasenia2" required>
+
+          <div class="div-form" id="city">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" name="ciudad" placeholder="Ciudad" id="ciudad" required>
+          </div>
+
+          <div class="div-form" id="country">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" name="pais" placeholder="País" id="pais" required>
+          </div>
+
+          <div class="div-form" id="CP">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" name="codigoPostal" placeholder="Código Postal" id="codigoPostal" required>
+          </div>
+
+          <div class="div-form" id="image">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="file" name="imagen" placeholder="Imagen de Perfil" id="imagen" required>
           </div>
 
           <div  id="buttom-imput">

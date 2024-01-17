@@ -11,7 +11,7 @@
 
 .conteiner {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     background-image: url(../img/electroTools/fondos/FondoCirculitos.jpg);
     background-attachment: fixed;
@@ -101,7 +101,7 @@ input::placeholder {
     font-size: 1.5rem;
     cursor: pointer;
     position: relative;
-    top: -10px;
+    /* top: -10px; */
 }
 
 
@@ -114,15 +114,6 @@ input::placeholder {
 /* ----------------- */
 /*   MEDIA QUERIES   */
 /* ----------------- */
-@media(max-height: 475px) {
-    .div-form {
-        margin: 5px 0;
-    }
-    .buttom-register{
-    top: 0px;
-    }
-}
-
 @media (min-width:445px) {
 
     html {
@@ -139,6 +130,15 @@ input::placeholder {
 
 
 }
+@media(max-height: 475px) {
+    .div-form {
+        margin: 5px 0;
+    }
+    .buttom-register{
+    top: 0px;
+    }
+}
+
 
 @media (min-width:580px) {
 
@@ -190,7 +190,7 @@ input::placeholder {
         padding: 10px 30px 70px;
         height: 95%;
         max-width: 750px;
-        max-height: 420px;
+        /* max-height: 420px; */
     }
     .heder-register {
         font-size: 1.7rem;
