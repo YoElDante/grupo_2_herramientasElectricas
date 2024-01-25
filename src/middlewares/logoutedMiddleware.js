@@ -7,4 +7,4 @@ const logouted = (req, res, next) =>{
       }
 }
 
-module.exports = logoutes;
+module.exports = logouted;

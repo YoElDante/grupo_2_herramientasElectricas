@@ -8,10 +8,10 @@ const logined = require ('../middlewares/loginedMiddleware.js');
 // rutas
 
 router.get('/create', logined, productsController.create);
-router.post('/create', imgUpload.array(image), productsController.createOk);
+// router.post('/create', imgUpload.array(image), productsController.createOk);
 
 router.get('/edit/:id', logined, productsController.edit);
-router.put('edit/:id', imgUpload.array(image), productsController.editOk);
+// router.put('edit/:id', imgUpload.array(image), productsController.editOk);
 
 router.delete('/:id', logined, productsController.delete); 
 

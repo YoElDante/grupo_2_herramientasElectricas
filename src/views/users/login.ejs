@@ -32,7 +32,7 @@
     <%- include('../partials/header.ejs')%>
   </header>
 
-  <main>
+  <main id="main">
     <!-- principal -->
     <div class="conteiner">
       <section class="login-conteiner">
@@ -41,7 +41,7 @@
 
           <div class="div-form" id="email">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" name="correo-electronico" placeholder="Correo Electrónico" id="correo-electronico"
+            <input type="email" name="correo-electronico" placeholder="Su Email" id="correo-electronico"
               required>
           </div>
           <div class="div-form" id="password">
@@ -51,6 +51,9 @@
 
           <div class="buttom-imput">
             <button type="submit" class="buttom-register">Ingresar</button>
+          </div>
+
+          <div class="sinCuenta">
             <p class="texto" >¿No tiene una cuenta?</p>
             <a class="texto" href="/users/register">Crear cuenta</a>
             <a class="texto" href="/#">¿Olvidó su contraseña?</a>
