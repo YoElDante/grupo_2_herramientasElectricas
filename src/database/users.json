@@ -2,11 +2,9 @@
     {
         "id": 1,
         "admin": false,
-
         "email": "calvimonteraul@gmail.com",
         "username": "user1",
         "password": "1234",
-
         "firstname": "Raúl",
         "lastname": "Calvimonte",
         "age": 18,
@@ -17,7 +15,24 @@
             "country": "Argentina",
             "CP": 4700
         },
-
         "image": "../../public/img/users/default.jpg"
+    },
+    {
+        "id": 2,
+        "admin": false,
+        "email": "sda@gmail.com",
+        "username": "dsa",
+        "password": "$2a$10$Q83KG01zRDypGCT0T3gnR.fsaOmVkctjDOFN4sWjATUKtw5w3wY/G",
+        "firtsname": "dsa",
+        "lastname": "dsa",
+        "age": "16",
+        "phone": "dsa",
+        "address": {
+            "street": "dsa",
+            "city": "dsa",
+            "country": "dsa",
+            "cp": "dsa"
+        },
+        "image": "C:\\workspace\\DigitalHouse\\Dante\\grupo_2_herramientasElectricas\\public\\img\\users\\user1706238453389.jpg"
     }
 ]

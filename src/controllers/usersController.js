@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('node:path');
-const users = require('../models/Users');
+const userModel = require('../models/Users');
 const bcrypt = require('bcryptjs');
 
 
@@ -12,6 +12,7 @@ const controller = {
     },
 
     loginOk: (req, res) => {
+        console.log(req.body);
         req.session.logined = true;
         res.redirect('/')
     },
@@ -22,16 +23,22 @@ const controller = {
 
     // Se crea un nuevo usuario por metodo PORT
     create: (req, res) => {
-        let user = {
+
+        let newUser = {
             id: null,
             admin: false,/*prueba*/
-            email: req.body.email,
-            username: req.body.userName,
+
+            //Datos de la Cuenta
+            email: req.body.email.trim(),
+            username: req.body.username,
             password: bcrypt.hashSync(req.body.password, 10),
-            confirmpassword: bcrypt.hashSync(req.body.confirmpassword, 10),
+
+            //Datos personales
             firtsname: req.body.firtsname,
             lastname: req.body.lastname,
             age: req.body.age,
+
+            //Datos de Contacto
             phone: req.body.phone,
             address: {
                 street: req.body.street,
@@ -39,20 +46,13 @@ const controller = {
                 country: req.body.country,
                 cp: req.body.cp
             },
+
+            //Direccion de la imagen.
+            image: path.resolve(req.file.destination, req.file.filename),
         };
 
-        let archivoUser = fs.readFileSync("src/database/user.json", { encoding: "utf-8" })
-        let usuarios;
-        if (archivoUser == "") {
-            usuarios = [];
-        } else {
-            usuarios = JSON.parse(archivoUser);
-        };
+        userModel.save(newUser);
 
-        usuarios.push(usuario);
-
-        usuariosJSON = JSON.stringify(usuarios);
-        fs.writeFileSync("src/database/user.json", usuariosJSON);
         res.redirect("/");
     },
 

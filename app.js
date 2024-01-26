@@ -19,7 +19,7 @@ app.use(session({secret:"Boom, the dinamite"})); // el mensaje explosivo de Cris
 
 // Indicamos que vamos a trabajar con un motor de plantillas
 app.set('view engine','ejs');
-// app.set('views', path.resolve(__dirname,'./src/views')); 
+app.set('views', path.resolve(__dirname,'./src/views')); 
 
 // Habilitar la capeta Public
 const publicFolderPath = path.resolve(__dirname, './public');
