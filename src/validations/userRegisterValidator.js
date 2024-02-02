@@ -1,3 +1,4 @@
+const path = require ('node:path');
 const { body } = require('express-validator');
 
 const validations = [
@@ -56,6 +57,23 @@ const validations = [
     //input type="file" name="image" placeholder="Imagen de Perfil" id="image" required>
     body("image")
         .notEmpty().withMessage("Ingrese su contraseña por favor").bail()
+        .custom((value, {req}) => {
+            // Verificacion de extension de tipo de imagen
+            let file = req.file;
+            let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+            if (!file){
+                throw new Error ('Tiene que subir una imagen')
+            } else {
+                let fileExtension = path.extname(file.originalname);
+
+                if (!acceptedExtensions.includes(fileExtension)){
+                    throw new Error (`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`);
+                }
+            }
+
+            return true;
+        })
 
 ]
 

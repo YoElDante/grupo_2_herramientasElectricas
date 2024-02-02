@@ -14,7 +14,7 @@ const controller = {
     loginOk: (req, res) => {
         console.log(req.body);
         req.session.logined = true;
-        res.redirect('/')
+        res.redirect('/');
     },
 
     register: (req, res) => {
