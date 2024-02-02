@@ -1,10 +1,9 @@
 const path = require('path');
 const fs = require('fs');
 
+//Cargar el array con la base de Datos
 const usersFilePath = path.join(__dirname, '../database/users.json');
-
 let usersJSON = fs.readFileSync(usersFilePath, 'utf-8');
-
 const users = JSON.parse(usersJSON);
 
 
