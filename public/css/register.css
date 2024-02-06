@@ -35,6 +35,13 @@
     text-align: center;
 }
 
+.error{
+    color: red;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-right: 1rem;
+}
+
 .heder-register {
     text-align: center;
     background-color: #dcdcdc00;
@@ -59,6 +66,7 @@
     overflow: hidden;
     border: #11111f5d solid 3px;
     border-radius: 25px;
+    justify-content: right;
 }
 
 .div-form input {

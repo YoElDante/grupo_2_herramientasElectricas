@@ -3,6 +3,10 @@ const path = require('node:path');
 const userModel = require('../models/Users');
 const bcrypt = require('bcryptjs');
 
+//validaciones
+const { validationResult } = require('express-validator');
+
+
 
 
 const controller = {
@@ -24,36 +28,51 @@ const controller = {
     // Se crea un nuevo usuario por metodo PORT
     create: (req, res) => {
 
-        let newUser = {
-            id: null,
-            admin: false,/*prueba*/
+        //creamos una variable con los errores recibidos
+        let errors = validationResult(req);
 
-            //Datos de la Cuenta
-            email: req.body.email.trim(),
-            username: req.body.username,
-            password: bcrypt.hashSync(req.body.password, 10),
+        // preguntamos si hay errores
+        if (errors.isEmpty()) {
+            //si no hay errores, grabamos el nuevo usuario
 
-            //Datos personales
-            firtsname: req.body.firtsname,
-            lastname: req.body.lastname,
-            age: req.body.age,
+            //creamos un nuevo usuario con los datos recibidos del formulario
+            let newUser = {
+                id: null,
+                admin: false,/*prueba*/
 
-            //Datos de Contacto
-            phone: req.body.phone,
-            address: {
-                street: req.body.street,
-                city: req.body.city,
-                country: req.body.country,
-                cp: req.body.cp
-            },
+                //Datos de la Cuenta
+                email: req.body.email.trim(),
+                username: req.body.username,
+                password: bcrypt.hashSync(req.body.password, 10),
 
-            //Direccion de la imagen.
-            image: path.resolve(req.file.destination, req.file.filename),
-        };
+                //Datos personales
+                firtsname: req.body.firtsname,
+                lastname: req.body.lastname,
+                age: req.body.age,
 
-        userModel.save(newUser);
+                //Datos de Contacto
+                phone: req.body.phone,
+                address: {
+                    street: req.body.street,
+                    city: req.body.city,
+                    country: req.body.country,
+                    cp: req.body.cp
+                },
 
-        res.redirect("/");
+                //Direccion de la imagen.
+                image: path.resolve(req.file.destination, req.file.filename),
+            };
+            //pasamos el usuario al modelo para que lo guarde en la bd
+            userModel.save(newUser);
+            //redirigimos al home
+            res.redirect("/");
+        } else {
+            //Si hay errores
+
+            // Pasamos los errores pasamos mappeados y pasamos la informacion anterior
+            res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
+        }
+
     },
 
     // pedido GET del formulario de edicion de usuario
