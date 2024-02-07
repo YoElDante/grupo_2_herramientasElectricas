@@ -6,9 +6,6 @@ const bcrypt = require('bcryptjs');
 //validaciones
 const { validationResult } = require('express-validator');
 
-
-
-
 const controller = {
 
     login: (req, res) => {
@@ -30,15 +27,17 @@ const controller = {
 
         //creamos una variable con los errores recibidos
         let errors = validationResult(req);
-
+        
         // preguntamos si hay errores
         if (errors.isEmpty()) {
             //si no hay errores, grabamos el nuevo usuario
 
+            //queremos ver que pasa por los errores
+            console.log(`pase por el "if con true" ${errors.mapped()}`)
+
             //creamos un nuevo usuario con los datos recibidos del formulario
             let newUser = {
                 id: null,
-                admin: false,/*prueba*/
 
                 //Datos de la Cuenta
                 email: req.body.email.trim(),
@@ -60,16 +59,24 @@ const controller = {
                 },
 
                 //Direccion de la imagen.
-                image: path.resolve(req.file.destination, req.file.filename),
+                //Si viene de req.file, la recibe del formulario, sino manda la img defauld
+                image: (req.file)? path.resolve(req.file.destination, req.file.filename): "../../public/img/users/default.jpg"
+
             };
+
             //pasamos el usuario al modelo para que lo guarde en la bd
             userModel.save(newUser);
+
             //redirigimos al home
             res.redirect("/");
+
         } else {
             //Si hay errores
 
-            // Pasamos los errores pasamos mappeados y pasamos la informacion anterior
+            //Imprimimos por consola lo que le vamos a pasar a la vista
+            console.log(`pase por el "else" ${JSON.stringify(errors.array())}`)
+
+            // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
             res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
         }
 

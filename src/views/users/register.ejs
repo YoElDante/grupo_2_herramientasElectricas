@@ -15,7 +15,7 @@
   <link rel="" href="" />
 
   <!--FavIcon-->
-  <link rel="shortcut icon" href="/img/icons/FavIcoYellow.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
   <!--Icons-->
   <script src="https://kit.fontawesome.com/28a6abd58f.js" crossorigin="anonymous"></script>
 
@@ -46,7 +46,7 @@
               name="email" 
               id="email"
               placeholder="Correo Electrónico" 
-              value="<%= locals.oldData? oldData.email : null%>">
+              value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
               <% if (locals.errors && errors.email) { %>
                 <p class="error"> <%= errors.email.msg %> </p>
               <% } %>
@@ -74,9 +74,9 @@
           <div class="div-form" id="firstname">
             <i class="fa-solid fa-user"></i>
             <input type="text" name="firtsname" placeholder="Nombre" id="firtsname" required
-            value="<%= locals.oldData? oldData.firstname : null%>">
-            <% if (locals.errors && errors.firstname) { %>
-              <p class="error"> <%= errors.firstname.msg %></p>
+            value="<%= locals.oldData? oldData.firtsname : null%>">
+            <% if (locals.errors && errors.firtsname) { %>
+              <p class="error"> <%= errors.firtsname.msg %></p>
             <% } %>
           </div>
 

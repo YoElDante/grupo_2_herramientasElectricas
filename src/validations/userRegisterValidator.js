@@ -1,4 +1,4 @@
-const path = require ('node:path');
+const path = require('node:path');
 const { body } = require('express-validator');
 
 const validations = [
@@ -36,11 +36,11 @@ const validations = [
     //input type="text" name="phone" placeholder="Teléfono" id="phone" required>
     body("phone")
         .notEmpty().withMessage("Ingrese su número de telefono por favor ❗").bail()
-        .isLength({min:10, max:10}).withMessage("el número de telefono no debe incluir 0 del principio ni el 15 del comienzo del celular ❗"),
+        .isLength({ min: 10, max: 10 }).withMessage("el número no debe incluir 0 ni 15 del comienzo del celular ❗"),
 
     //input type="text" name="street" placeholder="Calle y Altura" id="street" required>
     body("street")
-        .notEmpty().withMessage("Ingrese el nombre de su calle y la altura de su casa por favor ❗").bail(),
+        .notEmpty().withMessage("Ingrese la calle y la altura de su casa por favor ❗").bail(),
 
     //input type="text" name="city" placeholder="Ciudad" id="city" required>
     body("city")
@@ -55,25 +55,19 @@ const validations = [
         .notEmpty().withMessage("Ingrese su Código Postal por favor ❗").bail(),
 
     //input type="file" name="image" placeholder="Imagen de Perfil" id="image" required>
-    body("image")
-        .notEmpty().withMessage("Ingrese su contraseña por favor ❗").bail()
-        .custom((value, {req}) => {
-            // Verificacion de extension de tipo de imagen
-            let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png', '.gif'];
+    body("image").custom((value, { req }) => {
+        // Verificacion de extension de tipo de imagen
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
-            if (!file){
-                throw new Error ('Tiene que subir una imagen')
-            } else {
-                let fileExtension = path.extname(file.originalname);
-
-                if (!acceptedExtensions.includes(fileExtension)){
-                    throw new Error (`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')} ❗`);
-                }
+        if(file){
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')} ❗`);
             }
-
-            return true;
-        })
+        }
+        return true;
+    })
 
 ]
 
