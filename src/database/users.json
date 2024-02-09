@@ -7,7 +7,7 @@
         "password": "1234",
         "firstname": "Raúl",
         "lastname": "Calvimonte",
-        "age": 18,
+        "birthday": 18,
         "phone": "3834121212",
         "address": {
             "street": "Los Arahucos 1212",

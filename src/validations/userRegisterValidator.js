@@ -28,15 +28,14 @@ const validations = [
     body("lastname")
         .notEmpty().withMessage("Ingrese su apellido por favor ❗").bail(),
 
-    //input type="number" name="age" placeholder="Edad" id="age" required>
-    body("age")
-        .notEmpty().withMessage("Ingrese su edad en números por favor ❗").bail()
-        .isInt({ gt: 18, lt: 100 }),
+    //input type="number" name="birthday" placeholder="fecha de nacimiento" id="birthday" required>
+    body("birthday")
+        .notEmpty().withMessage("Ingrese su fecha de nacimiento por favor ❗").bail(),
 
     //input type="text" name="phone" placeholder="Teléfono" id="phone" required>
     body("phone")
         .notEmpty().withMessage("Ingrese su número de telefono por favor ❗").bail()
-        .isLength({ min: 10, max: 10 }).withMessage("el número no debe incluir 0 ni 15 del comienzo del celular ❗"),
+        .isLength({ min: 10, max: 10 }).withMessage("No debe incluir 0 ni 15 del número celular ❗"),
 
     //input type="text" name="street" placeholder="Calle y Altura" id="street" required>
     body("street")

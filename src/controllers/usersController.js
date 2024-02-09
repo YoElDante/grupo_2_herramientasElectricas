@@ -47,7 +47,7 @@ const controller = {
                 //Datos personales
                 firtsname: req.body.firtsname,
                 lastname: req.body.lastname,
-                age: req.body.age,
+                birthday: req.body.birthday,
 
                 //Datos de Contacto
                 phone: req.body.phone,
