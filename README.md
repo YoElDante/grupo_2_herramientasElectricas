@@ -80,9 +80,10 @@ https://trello.com/b/rryHy42Q/proyecto-integrador
 
 
 ### Base de Datos en SQL
-El pdf y los scripts de generacion de la base de datos se encuentan en la ruta "./src/database", igualmente se dejan a mano link a continuación.
+El pdf y los scripts de generacion de la base de datos se encuentan en la ruta "./src/database", igualmente se dejan a mano los links a continuación.
 
 ![Diagrama_Entidad_Relación_DER](./src/database/DER.jpg)
+
 <a href="./src/database/DER ElectroTools.pdf" download>📕 Descargar DER en PDF</a>
 
 <a href="./src/database/electrotools_db_structure.sql" download>📂 Descargar Script de Estructura</a>
