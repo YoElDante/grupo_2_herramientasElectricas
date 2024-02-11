@@ -1,4 +1,4 @@
-// Cristian: Actualizar las credenciales.
+// Cristian: Actualizar las credenciales. De momento las desconozco.
 
 module.exports = {
   "development": {

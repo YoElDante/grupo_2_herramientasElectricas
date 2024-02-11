@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes)=>{
         },*/
         product_id: {
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         },
         voltage: {
             type: dataTypes.STRING(10)
@@ -36,8 +36,16 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'productdetails',
         timestamps: true
     };
+
     const ProductDetail = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    ProductDetail.associate = (models)=>{
+        ProductDetail.belongsTo(models.Product, {
+            as: "product",
+            foreignKey: "product_id"
+        })
+    };
     
     return ProductDetail;
 }

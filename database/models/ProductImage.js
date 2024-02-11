@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes)=>{
         },*/
         product_id: {
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         },
         image: {
             type: dataTypes.STRING(255)
@@ -24,8 +24,16 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'productimages',
         timestamps: true
     };
+
     const ProductImage = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    ProductImage.associate = (models)=>{
+        ProductImage.belongsTo(models.Product, {
+            as: "product",
+            foreignKey: "product_id"
+        })
+    };
     
     return ProductImage;
 }

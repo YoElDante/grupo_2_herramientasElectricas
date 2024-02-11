@@ -26,15 +26,29 @@ module.exports = (sequelize, dataTypes)=>{
         },
         user_id: {
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         }
     };
     const config = { // Cristian: Configuraciones opcionales.
         tableName: 'accounts',
         timestamps: true
     };
+
     const Account = sequelize.define(alias, colums, config);
+    
     // Cristian: Asociaciones.
+    Account.associate = (models)=>{
+        Account.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "user_id"
+        })
+    };
+    Account.associate = (models)=>{
+        Account.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: "account_id"
+        })
+    };
     
     return Account;
 }

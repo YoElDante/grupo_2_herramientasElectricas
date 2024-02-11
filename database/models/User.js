@@ -41,8 +41,16 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'users',
         timestamps: true
     };
+
     const User = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    User.associate = (models)=>{
+        User.belongsTo(models.Account, { // Cristian: Concluimos que un usuario tiene una cuenta.
+            as: "account",
+            foreignKey: "user_id"
+        })
+    };
     
     return User;
 }

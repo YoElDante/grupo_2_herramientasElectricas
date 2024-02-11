@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes)=>{
         },*/
         account_id: {
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         },
         solddate: { // Cristian: ¿Todo en minuscula?
             type: dataTypes.DATE // Cristian: ¿tipo DATE?
@@ -24,8 +24,22 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'orders',
         timestamps: true
     };
+
     const Order = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    Order.associate = (models)=>{
+        Order.belongsTo(models.Account, {
+            as: "account",
+            foreignKey: "account_id"
+        })
+    };
+    Order.associate = (models)=>{
+        Order.hasMany(models.orderdetails, { // Cristian: ¿?
+            as: "orderDetails",
+            foreignKey: "order_id"
+        })
+    };
     
     return Order;
 }

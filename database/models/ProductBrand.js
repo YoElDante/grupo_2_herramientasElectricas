@@ -20,8 +20,16 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'productbrands',
         timestamps: true
     };
+
     const ProductBrand = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    ProductBrand.associate = (models)=>{
+        ProductBrand.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "productbrand_id"
+        })
+    };
     
     return ProductBrand;
 }

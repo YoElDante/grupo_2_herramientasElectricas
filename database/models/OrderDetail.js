@@ -14,11 +14,11 @@ module.exports = (sequelize, dataTypes)=>{
         },*/
         order_id: {
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         },
         product_id: {
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         },
         quantity: {
             type: dataTypes.INTEGER(10)
@@ -28,8 +28,22 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'orderdetails',
         timestamps: true
     };
+
     const OrderDetail = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    OrderDetail.associate = (models)=>{
+        OrderDetail.belongsTo(models.Order, {
+            as: "order",
+            foreignKey: "order_id"
+        })
+    };
+    OrderDetail.associate = (models)=>{
+        OrderDetail.belongsTo(models.Product, { // Cristian: ¿?
+            as: "product",
+            foreignKey: "product_id"
+        })
+    };
     
     return OrderDetail;
 }

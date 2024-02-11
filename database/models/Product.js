@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes)=>{
         },
         productbrand_id: {  // Cristian: ¿Todo en minuscula?
             type: dataTypes.INTEGER(10),
-            //foreingKey: true
+            //foreignKey: true
         },
         model: {
             type: dataTypes.STRING(25)
@@ -36,8 +36,34 @@ module.exports = (sequelize, dataTypes)=>{
         tableName: 'products',
         timestamps: true
     };
+
     const Product = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
+    Product.associate = (models)=>{
+        Product.hasMany(models.OrderDetail, {
+            as: "orderDetails",
+            foreignKey: "product_id"
+        })
+    };
+    Product.associate = (models)=>{
+        Product.belongsTo(models.ProductDetail, { // Cristian: Concluimos que un producto, tiene un detalle.
+            as: "productDetail",
+            foreignKey: "product_id"
+        })
+    };
+    Product.associate = (models)=>{
+        Product.hasMany(models.ProductImage, {
+            as: "productImages",
+            foreignKey: "product_id"
+        })
+    };
+    Product.associate = (models)=>{
+        Product.belongsTo(models.ProductBrand, {
+            as: "productBrand",
+            foreignKey: "productbrand_id"
+        })
+    };
     
     return Product;
 }
