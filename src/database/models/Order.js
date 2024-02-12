@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes)=>{
-    const alias = 'Account';
+    const alias = 'Order';
     const colums = { // Cristian: Columnas de la base de datos.
         id: {
             type: dataTypes.INTEGER(10),
@@ -12,43 +12,34 @@ module.exports = (sequelize, dataTypes)=>{
         updateAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
             type: dataTypes.DATE
         },*/
-        username: { // Cristian: ¿Todo en minuscula?
-            type: dataTypes.STRING(25)
-        },
-        email: {
-            type: dataTypes.STRING(50)
-        },
-        password: {
-            type: dataTypes.STRING(255)
-        },
-        avatar: {
-            type: dataTypes.STRING(255)
-        },
-        user_id: {
+        account_id: {
             type: dataTypes.INTEGER(10),
             //foreignKey: true
+        },
+        solddate: { // Cristian: ¿Todo en minuscula?
+            type: dataTypes.DATE // Cristian: ¿tipo DATE?
         }
     };
     const config = { // Cristian: Configuraciones opcionales.
-        tableName: 'accounts',
+        tableName: 'orders',
         timestamps: true
     };
 
-    const Account = sequelize.define(alias, colums, config);
-    
+    const Order = sequelize.define(alias, colums, config);
+
     // Cristian: Asociaciones.
-    Account.associate = (models)=>{
-        Account.belongsTo(models.User, {
-            as: "user",
-            foreignKey: "user_id"
-        })
-    };
-    Account.associate = (models)=>{
-        Account.hasMany(models.Order, {
-            as: "orders",
+    Order.associate = (models)=>{
+        Order.belongsTo(models.Account, {
+            as: "account",
             foreignKey: "account_id"
         })
     };
+    Order.associate = (models)=>{
+        Order.hasMany(models.OrderDetail, { // Cristian: ¿?
+            as: "orderDetails",
+            foreignKey: "order_id"
+        })
+    };
     
-    return Account;
+    return Order;
 }

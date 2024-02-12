@@ -5,22 +5,22 @@
   <!-- Metadatos -->
   <%- include('../partials/meta.ejs')%>
 
-  <!-- links -->
+    <!-- links -->
 
-  <!--Custom Css-->
-  <%- include('../partials/css.ejs')%>
-  <link rel="stylesheet" href="/css/register.css" />
+    <!--Custom Css-->
+    <%- include('../partials/css.ejs')%>
+      <link rel="stylesheet" href="/css/register.css" />
 
-  <!-- Font -->
-  <link rel="" href="" />
+      <!-- Font -->
+      <link rel="" href="" />
 
-  <!--FavIcon-->
-  <link rel="shortcut icon" href="/img/icons/FavIcoYellow.ico" type="image/x-icon" />
-  <!--Icons-->
-  <script src="https://kit.fontawesome.com/28a6abd58f.js" crossorigin="anonymous"></script>
+      <!--FavIcon-->
+      <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
+      <!--Icons-->
+      <script src="https://kit.fontawesome.com/28a6abd58f.js" crossorigin="anonymous"></script>
 
-  <!-- Titulo de la Pag -->
-  <title>ElectroTools - Registración</title>
+      <!-- Titulo de la Pag -->
+      <title>ElectroTools - Registración</title>
 
 </head>
 
@@ -38,76 +38,144 @@
       <section class="form-conteiner">
         <h1 class="heder-register">REGISTRO DE USUARIO</h1>
         <form action="/users/register" method="post" class="form" enctype="multipart/form-data">
-          
-          <div class="div-form" id="email">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="email" name="email" placeholder="Correo Electrónico" id="email"
-              required>
-          </div>
 
-          <div class="div-form" id="username">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="username" placeholder="Nombre de Usuario" id="username" required>
-          </div>
+          <fieldset>
+            <h2>Datos de la Cuenta</h2>
+            <div class="div-form" id="email">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" name="email" id="email" placeholder="Correo Electrónico"
+                value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
+              <% if (locals.errors && errors.email) { %>
+                <p class="error">
+                  <%= errors.email.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="password">
-            <i class="fa-solid fa-eye-slash"></i>
-            <input type="password" name="password" placeholder="Contraseña" id="password" required>
-          </div>
+            <div class="div-form" id="username">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="username" placeholder="Nombre de Usuario" id="username" required
+                value="<%= locals.oldData? oldData.username : null%>">
+              <% if (locals.errors && errors.username) { %>
+                <p class="error">
+                  <%= errors.username.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="password">
-            <i class="fa-solid fa-eye-slash"></i>
-            <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña" id="confirmPassword" required>
-          </div>
+            <div class="div-form" id="password">
+              <i class="fa-solid fa-eye-slash"></i>
+              <input type="password" name="password" placeholder="Contraseña" id="password" required>
+            </div>
 
-          <div class="div-form" id="firstname">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="firtsname" placeholder="Nombre" id="firtsname" required>
-          </div>
+            <div class="div-form" id="password">
+              <i class="fa-solid fa-eye-slash"></i>
+              <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña" id="confirmPassword"
+                required>
+            </div>
+          </fieldset>
 
-          <div class="div-form" id="lastname">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="lastname" placeholder="Apellido" id="lastname" required>
-          </div>
+          <fieldset>
+            <h2>Datos de Usuario</h2>
+            <div class="div-form" id="firstname">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="firtsname" placeholder="Nombre" id="firtsname" required
+                value="<%= locals.oldData? oldData.firtsname : null%>">
+              <% if (locals.errors && errors.firtsname) { %>
+                <p class="error">
+                  <%= errors.firtsname.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="age">
-            <i class="fa-solid fa-calendar-days"></i>
-            <input type="number" name="age" placeholder="Edad" id="age" required>
-          </div>
+            <div class="div-form" id="lastname">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="lastname" placeholder="Apellido" id="lastname" required
+                value="<%= locals.oldData? oldData.lastname : null%>">
+              <% if (locals.errors && errors.lastname) { %>
+                <p class="error">
+                  <%= errors.lastname.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="phone">
-            <i class="fa-solid fa-phone"></i>
-            <input type="text" name="phone" placeholder="Teléfono" id="phone" required>
-          </div>
+            <div class="div-form" id="birthday">
+              <i class="fa-solid fa-calendar-days"></i>
+              <input type="date" name="birthday" placeholder="Fecha de nacimiento" id="birthday" required
+                value="<%= locals.oldData? oldData.birthday : null%>">
+              <% if (locals.errors && errors.birthday) { %>
+                <p class="error">
+                  <%= errors.birthday.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="street">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" name="street" placeholder="Calle y Altura" id="street" required>
-          </div>
+            <div class="div-form" id="phone">
+              <i class="fa-solid fa-phone"></i>
+              <input type="text" name="phone" placeholder="Teléfono" id="phone" required
+                value="<%= locals.oldData? oldData.phone : null%>">
+              <% if (locals.errors && errors.phone) { %>
+                <p class="error">
+                  <%= errors.phone.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="city">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" name="city" placeholder="Ciudad" id="city" required>
-          </div>
+            <div class="div-form" id="street">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" name="street" placeholder="Calle y Altura" id="street" required
+                value="<%= locals.oldData? oldData.street : null%>">
+              <% if (locals.errors && errors.street) { %>
+                <p class="error">
+                  <%= errors.street.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="country">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" name="country" placeholder="País" id="country" required>
-          </div>
+            <div class="div-form" id="city">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" name="city" placeholder="Ciudad" id="city" required
+                value="<%= locals.oldData? oldData.city : null%>">
+              <% if (locals.errors && errors.city) { %>
+                <p class="error">
+                  <%= errors.city.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="cp">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="text" name="cp" placeholder="Código Postal" id="cp" required>
-          </div>
+            <div class="div-form" id="country">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" name="country" placeholder="País" id="country" required
+                value="<%= locals.oldData? oldData.country : null%>">
+              <% if (locals.errors && errors.country) { %>
+                <p class="error">
+                  <%= errors.country.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div class="div-form" id="image">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="file" name="image" placeholder="Imagen de Perfil" id="image" required>
-          </div>
+            <div class="div-form" id="cp">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" name="cp" placeholder="Código Postal" id="cp" required
+                value="<%= locals.oldData? oldData.cp : null%>">
+              <% if (locals.errors && errors.cp) { %>
+                <p class="error">
+                  <%= errors.cp.msg %>
+                </p>
+                <% } %>
+            </div>
 
-          <div  id="buttom-imput">
-            <button type="submit" class="buttom-register">Registrarse</button>
-          </div>
+            <h3>Tu avatar</h3>
+            <div class="div-form" id="image">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="file" name="image" placeholder="Imagen de Perfil" id="image">
+            </div>
+
+          </fieldset>
+
+            <div id="buttom-imput">
+              <button type="submit" class="buttom-register">Registrarse</button>
+            </div>
 
         </form>
       </section>

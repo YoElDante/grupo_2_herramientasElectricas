@@ -1,24 +1,22 @@
-// Cristian: Actualizar las credenciales. De momento las desconozco.
-
 module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "electrotools_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "electrotools_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "electrotools_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
