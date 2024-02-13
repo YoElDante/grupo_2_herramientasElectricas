@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos -->
+  <%- include('../partials/meta.ejs')%>
+
+    <%- include('../partials/css.ejs')%>
+
+      <link rel="stylesheet" href="/css/index.css" />
+
+      <!-- Font -->
+      <link rel="" href="" />
+
+      <!--FavIcon-->
+      <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
+
+      <!-- Titulo de la Pag -->
+      <title>ElectroTools - Products</title>
+</head>
+
+<body>
+  <!-- Cuerpo -->
+
+  <header>
+    <!-- Encabezado -->
+    <%- include('../partials/header.ejs')%>
+  </header>
+
+  <main>
+    <!-- principal -->
+
+    <section class="carrusel">
+
+      <!-- Carrucel Principal -->
+      <div class="item-carrusel" id="item1">
+
+        <div class="img-carrusel">
+          <img src="/img/imgCarrusel/CyberMonday1.jpg" alt="Cyber Monday">
+        </div>
+        <div class="flechas-carrusel">
+          <a href="#item3" title="anterior"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a href="#item2" title="siguiente"><i class="fa-solid fa-circle-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="item-carrusel" id="item2">
+        <div class="img-carrusel">
+          <img src="/img/imgCarrusel/CyberMonday2.jpg" alt="Cyber Monday">
+        </div>
+        <div class="flechas-carrusel">
+          <a href="#item1" title="anterior"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a href="#item3" title="siguiente"><i class="fa-solid fa-circle-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="item-carrusel" id="item3">
+        <div class="img-carrusel">
+          <img src="/img/imgCarrusel/CyberMonday3.jpg" alt="Cyber Monday">
+        </div>
+        <div class="flechas-carrusel">
+          <a href="#item2" title="anterior"><i class="fa-solid fa-circle-arrow-left"></i></a>
+          <a href="#item1" title="siguiente"><i class="fa-solid fa-circle-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="botones-carrusel">
+      <a href="#item1" title="item1"><i class="fa-regular fa-circle-dot"></i></a>
+      <a href="#item2" title="item2"><i class="fa-regular fa-circle-dot"></i></a>
+      <a href="#item3" title="item3"><i class="fa-regular fa-circle-dot"></i></a>
+    </div>
+
+
+    <!-- Novedades -->
+
+    <section class="novedades productos" id="novedades">
+      <div class="recomendaciones">
+        <h3 class="titulo">Novedades</h3>
+
+        <section class="tarjetas">
+
+          <%- include("./partials/productCard.ejs", {product: products[0]}) %>
+
+          <%- include("./partials/productCard.ejs", {product: products[1]}) %>
+
+            <div class="next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </section>
+      </div>
+    </section>
+
+    <!-- Caja de Herramientas -->
+
+    <section class="caja-de-herramientas" id="cajaherramientas">
+
+      <h2>CAJA DE HERRAMIENTAS</h2>
+      <h3>Hemos separado para usted los principales articulos para ayudarle en su rutina de trabajo</h3>
+
+      <div class="tarjetas-contenedor">
+        <div class="tarjetas">
+          <img src="/img/imgCajaDeHerramientas/madera.jpg" alt="Madera">
+          <h4>MADERA</h4>
+          <a href="#">Ver coleccion ></a>
+        </div>
+        <div class="tarjetas">
+          <img src="/img/imgCajaDeHerramientas/mamposteria.jpg" alt="Madera">
+          <h4>MAMPOSTERIA</h4>
+          <a href="#">Ver coleccion ></a>
+        </div>
+        <div class="tarjetas">
+          <img src="/img/imgCajaDeHerramientas/metal.jpg" alt="Madera">
+          <h4>METAL</h4>
+          <a href="#">Ver coleccion ></a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Ofertas -->
+
+    <section class="productos" id="ofertas">
+
+      <div class="recomendaciones ofertas">
+        <h3 class="titulo">OFERTAS</h3>
+
+          <section class="tarjetas">
+
+            <%- include('./partials/productCardSale.ejs', {product:products[4]}) %>
+
+            <%- include('./partials/productCardSale.ejs', {product:products[5]}) %>
+
+            <div class="next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <%- include('./partials/footer.ejs') %>
+  </footer>
+
+  <!-- Scrips -->
+  <script src="https://kit.fontawesome.com/30f2e17de6.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

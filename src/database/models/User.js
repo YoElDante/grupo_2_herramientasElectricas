@@ -48,10 +48,10 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: true,
   }
 
-  const Account = sequelize.define(alias, cols, config);
+  const User = sequelize.define(alias, cols, config);
 
-  Account.associate = function (models) {
-    Account.belongsTo(models.Account, {
+  User.associate = function (models) {
+    User.belongsTo(models.Account, {
       // models.Account -> User es el valor de alias en Account.js
       as: "account",
       foreignKey: "user_id"
@@ -59,5 +59,5 @@ module.exports = (sequelize, dataTypes) => {
 
   }
 
-  return Account // Cristian: Dante, este es el modelo de User. Ver lineas 51, 53, 54 y 62
+  return User 
 };

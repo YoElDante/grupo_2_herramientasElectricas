@@ -6,6 +6,7 @@ const imgUpload = require('../middlewares/multerMiddleware.js')
 const logined = require ('../middlewares/loginedMiddleware.js');
 
 // rutas
+router.get('/',productsController.index);
 
 router.get('/create', logined, productsController.create);
 // router.post('/create', imgUpload.array(image), productsController.createOk);

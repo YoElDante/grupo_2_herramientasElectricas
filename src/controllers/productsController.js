@@ -3,10 +3,13 @@ const express = require('express'); // Cristian
 const path = require('path'); // Cristian
 const productsFilePath = path.join(__dirname, '../database/products.json'); // Cristian
 const fs = require('fs'); // Cristian
-const products = require('../models/JSONtoArray');
+const products = require('../database/services/productsdataAccessService.js');
 
 
 const controller = {
+  inder:(req, res) => {
+    res.render(path.resolve(__dirname, '../views/products/products.ejs') , {products});
+  },
 
   cart: (req, res) => {
     res.render(path.resolve(__dirname, '../views/products/productCart.ejs') , {products});

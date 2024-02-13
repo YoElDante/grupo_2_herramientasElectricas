@@ -7,7 +7,7 @@ let usersJSON = fs.readFileSync(usersFilePath, 'utf-8');
 const users = JSON.parse(usersJSON);
 
 
-const model = {
+const userServices = {
     getAll: ()=> users,
 
     getOne: (id) => {
@@ -27,4 +27,4 @@ const model = {
     }
 }
 
-module.exports = model;
+module.exports = userServices;

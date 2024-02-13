@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-02-2024 a las 07:14:04
+-- Tiempo de generación: 13-02-2024 a las 06:16:41
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -25,14 +25,14 @@ SET time_zone = "+00:00";
 -- Volcado de datos para la tabla `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `createAT`, `updatedAT`, `username`, `email`, `password`, `avatar`, `user_id`) VALUES
+INSERT INTO `accounts` (`id`, `createAt`, `updatedAt`, `userName`, `email`, `password`, `avatar`, `user_id`) VALUES
 (1, '2024-02-09 04:15:18', '2024-02-09 06:05:14', 'yoeldante', 'dante@mail.com', 'dddd', 'users/default.jpg', 1);
 
 --
 -- Volcado de datos para la tabla `productbrands`
 --
 
-INSERT INTO `productbrands` (`id`, `createAT`, `updatedAT`, `name`) VALUES
+INSERT INTO `productbrands` (`id`, `createAt`, `updatedAt`, `name`) VALUES
 (1, '2024-02-09 03:16:09', '2024-02-09 03:16:09', 'dewalt'),
 (2, '2024-02-09 03:17:47', '2024-02-09 03:17:47', 'bosch'),
 (3, '2024-02-09 03:19:07', '2024-02-09 03:19:07', 'makita'),
@@ -43,7 +43,7 @@ INSERT INTO `productbrands` (`id`, `createAT`, `updatedAT`, `name`) VALUES
 -- Volcado de datos para la tabla `productdetails`
 --
 
-INSERT INTO `productdetails` (`id`, `createAT`, `updatedAT`, `product_id`, `voltage`, `frequency`, `power`, `extras`, `manual`) VALUES
+INSERT INTO `productdetails` (`id`, `createAt`, `updatedAt`, `product_id`, `voltage`, `frequency`, `power`, `extras`, `manual`) VALUES
 (1, '2024-02-09 04:22:45', '2024-02-09 05:04:08', 1, '220V', '1650rpm', '800W', 'Con función reversa.\r\nCuenta con función destornillador.\r\nIncluye función percutor.\r\nVelocidad máxima de rotación: 1650rpm.\r\nPosee control de torque.\r\nTiene luz led.\r\nDimensiones: 7.5\'\' de ancho, 7.9\'\' de alto y 6.9\'\' de largo.', 'https://www.manual.ar/dewalt/dcd709/manual'),
 (2, '2024-02-09 04:34:58', '2024-02-09 05:04:32', 2, '220V', '3200rpm', '710W', 'Con función reversa.\r\nViene con caja de cartón.\r\nCuenta con función destornillador.\r\nIncluye función percutor.\r\nEjecuta 5500 golpes por minuto.\r\nVelocidad máxima de rotación: 3200rpm.\r\nDimensiones: 75mm de ancho, 204mm de alto y 296mm de largo.', 'https://www.manual.ar/makita/hp1630/manual'),
 (3, '2024-02-09 05:06:53', '2024-02-09 05:06:53', 3, '220V', '220rpm', '3.6W', 'Destornillador eléctrico compacto\r\nEs inalámbrico\r\nPotencia de 3.6W\r\nVelocidad de rotación de entre 220rpm\r\nTorque máximo: 6Nm\r\nIncluye adaptador de ca.\r\nMandril de 3.6mm\r\nIluminación LED para mejor visibilidad', 'https://www.manual.ar/makita/df001dw/manual'),
@@ -56,7 +56,7 @@ INSERT INTO `productdetails` (`id`, `createAT`, `updatedAT`, `product_id`, `volt
 -- Volcado de datos para la tabla `productimages`
 --
 
-INSERT INTO `productimages` (`id`, `createAT`, `updatedAT`, `product_id`, `image`) VALUES
+INSERT INTO `productimages` (`id`, `createAt`, `updatedAt`, `product_id`, `image`) VALUES
 (1, '2024-02-09 05:53:59', '2024-02-09 05:53:59', 1, 'dewalt/atornillador/img1.webp'),
 (2, '2024-02-09 05:53:59', '2024-02-09 05:53:59', 1, 'dewalt/atornillador/img2.webp'),
 (3, '2024-02-09 05:56:56', '2024-02-09 05:56:56', 1, 'dewalt/atornillador/img3.webp'),
@@ -96,7 +96,7 @@ INSERT INTO `productimages` (`id`, `createAT`, `updatedAT`, `product_id`, `image
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `createAT`, `updatedAT`, `name`, `productbrand_id`, `model`, `description`, `price`, `units`) VALUES
+INSERT INTO `products` (`id`, `createAt`, `updatedAt`, `name`, `productbrand_id`, `model`, `description`, `price`, `units`) VALUES
 (1, '2024-02-09 04:20:13', '2024-02-09 04:40:29', 'Taladro Atornillador', 1, 'DCD709B', 'Taladro Atornillador Percusión 1/2 13mm Dewalt Dcd709b', 320000, 6),
 (2, '2024-02-09 04:32:47', '2024-02-09 04:40:45', 'Taladro percutor atornill', 3, 'HP1630', 'Taladro percutor atornillador eléctrico de 13mm Makita HP1630 710W + accesorio con caja de cartón 22', 102500, 8),
 (3, '2024-02-09 04:37:33', '2024-02-09 04:41:18', 'Atornillador Inalámbrico', 3, 'DF001DW', 'Atornillador Inalámbrico Makita 3.6v Df001dw + Accesesorios Color Turquesa Frecuencia 50', 102000, 4),
@@ -109,7 +109,7 @@ INSERT INTO `products` (`id`, `createAT`, `updatedAT`, `name`, `productbrand_id`
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `createAT`, `updatedAT`, `firtsname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
+INSERT INTO `users` (`id`, `createAt`, `updatedAt`, `firtsname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
 (1, '2024-02-09 04:11:54', '2024-02-09 04:13:24', 'dante', 'delprato', '1987-02-05', '3516115500', 'la habana 1955', 'cordoba', 'argentina', '5000'),
 (2, '2024-02-09 04:16:58', '2024-02-09 04:17:26', 'pepito', 'juarez', '1982-08-13', '3834568741', 'catartica 123', 'catalunia', 'españa', '7840');
 COMMIT;

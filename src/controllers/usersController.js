@@ -1,101 +1,107 @@
 const express = require('express');
 const path = require('node:path');
-const userModel = require('../models/Users');
+const userModel = require('../database/services/userdataAccessService.js');
 const bcrypt = require('bcryptjs');
 
 //validaciones
 const { validationResult } = require('express-validator');
 
+
 const controller = {
 
-    login: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/users/login.ejs'));
-    },
+  login: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/users/login.ejs'));
+  },
 
-    loginOk: (req, res) => {
-        console.log(req.body);
-        req.session.logined = true;
-        res.redirect('/');
-    },
+  loginOk: (req, res) => {
+    console.log(req.body);
+    req.session.logined = true;
+    res.redirect('/');
+  },
 
-    register: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/users/register.ejs'));
-    },
+  register: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/users/register.ejs'));
+  },
 
-    // Se crea un nuevo usuario por metodo PORT
-    create: (req, res) => {
 
-        //creamos una variable con los errores recibidos
-        let errors = validationResult(req);
-        
-        // preguntamos si hay errores
-        if (errors.isEmpty()) {
-            //si no hay errores, grabamos el nuevo usuario
+  // Se crea un nuevo usuario por metodo POST
+  create: (req, res) => {
 
-            //queremos ver que pasa por los errores
-            console.log(`pase por el "if con true" ${errors.mapped()}`)
+    //creamos una variable con los errores recibidos
+    let errors = validationResult(req);
 
-            //creamos un nuevo usuario con los datos recibidos del formulario
-            let newUser = {
-                id: null,
+    // preguntamos si hay errores
+    if (errors.isEmpty()) {
+      //si no hay errores
 
-                //Datos de la Cuenta
-                email: req.body.email.trim(),
-                username: req.body.username,
-                password: bcrypt.hashSync(req.body.password, 10),
+      //bandera TRUE
+      console.log(`pase por el "if con true" ${errors.mapped()}`)
 
-                //Datos personales
-                firtsname: req.body.firtsname,
-                lastname: req.body.lastname,
-                birthday: req.body.birthday,
+      //creamos un nuevo usuario con los datos recibidos del formulario
+      let newUser = {
+        id: null,
 
-                //Datos de Contacto
-                phone: req.body.phone,
-                address: {
-                    street: req.body.street,
-                    city: req.body.city,
-                    country: req.body.country,
-                    cp: req.body.cp
-                },
+        //Datos de la Cuenta
+        email: req.body.email.trim(),
+        username: req.body.username,
+        password: bcrypt.hashSync(req.body.password, 10),
 
-                //Direccion de la imagen.
-                //Si viene de req.file, la recibe del formulario, sino manda la img defauld
-                image: (req.file)? path.resolve(req.file.destination, req.file.filename): "../../public/img/users/default.jpg"
+        //Datos personales
+        firtsname: req.body.firtsname,
+        lastname: req.body.lastname,
+        birthday: req.body.birthday,
 
-            };
+        //Datos de Contacto
+        phone: req.body.phone,
+        address: {
+          street: req.body.street,
+          city: req.body.city,
+          country: req.body.country,
+          cp: req.body.cp
+        },
 
-            //pasamos el usuario al modelo para que lo guarde en la bd
-            userModel.save(newUser);
+        //Direccion de la imagen.
+        //Si viene de req.file
+        image: (req.file) ?
+          //la recibe del formulario
+          path.resolve(req.file.destination, req.file.filename) :
+          //sino manda la img defauld
+          path.resolve(__dirname, "../../public/img/users/default.jpg")
 
-            //redirigimos al home
-            res.redirect("/");
+      };
 
-        } else {
-            //Si hay errores
+      //pasamos el usuario al modelo para que lo guarde en la bd
+      userModel.save(newUser);
 
-            //Imprimimos por consola lo que le vamos a pasar a la vista
-            console.log(`pase por el "else" ${JSON.stringify(errors.array())}`)
+      //redirigimos al home
+      res.redirect("/");
 
-            // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
-            res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
-        }
+    } else {
+      //Si hay errores
 
-    },
+      //Imprimimos por consola lo que le vamos a pasar a la vista
+      console.log(`pase por el "else" ${JSON.stringify(errors.array())}`)
 
-    // pedido GET del formulario de edicion de usuario
-    editionForm: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/users/edicionRegistro.ejs'));
-    },
-
-    // se actualizan los datos del usuario por PUT
-    editionStore: (req, res) => {
-        res.send("se actualizan los datos del usuario " + req.params.id)
-    },
-
-    // se borrara un usuario de la lista por metodo DELETE
-    delete: (req, res) => {
-        res.send("se borraran los datos del usuario " + req.params.id)
+      // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
+      res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
     }
+
+  },
+
+  // pedido GET del formulario de edicion de usuario
+  editionForm: (req, res) => {
+    res.render(path.resolve(__dirname, '../views/users/edicionRegistro.ejs'));
+  },
+
+  // se actualizan los datos del usuario por PUT
+  editionStore: (req, res) => {
+    res.send("se actualizan los datos del usuario " + req.params.id)
+  },
+
+  // se borrara un usuario de la lista por metodo DELETE
+  delete: (req, res) => {
+    res.send("se borraran los datos del usuario " + req.params.id)
+  }
 
 };
 
