@@ -1,39 +1,35 @@
-module.exports = (sequelize, dataTypes)=>{
-    const alias = 'ProductImage';
-    const colums = { // Cristian: Columnas de la base de datos.
-        id: {
-            type: dataTypes.INTEGER(10),
-            primaryKey: true,
-            autoIncrement: true
-        },
-        /*createAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },
-        updateAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },*/
-        product_id: {
-            type: dataTypes.INTEGER(10),
-            //foreignKey: true
-        },
-        image: {
-            type: dataTypes.STRING(255)
-        }
-    };
-    const config = { // Cristian: Configuraciones opcionales.
-        tableName: 'productimages',
-        timestamps: true
-    };
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/config.js');
 
-    const ProductImage = sequelize.define(alias, colums, config);
+const alias = 'ProductImage';
+const cols = {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    product_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+    },
+    image: {
+        type: DataTypes.STRING(255),
+        allowNull: false
+    }
+};
 
-    // Cristian: Asociaciones.
-    ProductImage.associate = (models)=>{
-        ProductImage.belongsTo(models.Product, {
-            as: "product",
-            foreignKey: "product_id"
-        })
-    };
-    
-    return ProductImage;
-}
+const config = {
+    tableName: 'productimages',
+    timestamps: true
+};
+
+const ProductImage = sequelize.define(alias, cols, config);
+
+ProductImage.associate = models => {
+    ProductImage.belongsTo(models.Product, {
+        as: 'product',
+        foreignKey: 'product_id'
+    });
+};
+
+module.exports = ProductImage;

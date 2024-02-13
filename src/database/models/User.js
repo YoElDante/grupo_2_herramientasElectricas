@@ -1,63 +1,59 @@
-module.exports = (sequelize, dataTypes) => {
-  let alias = 'User';
-  let cols = {
-    id: {
-      type: dataTypes.INT(10).UNSIGNED,
-      primaryKey: true,
-      allowNull: false,
-      autoIncrement: true
-    },
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/config.js');
 
+const alias = 'User';
+const cols = {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
     firtsname: {
-      type: dataTypes.STRING(20),
-      allowNull: false
+        type: DataTypes.STRING(20),
+        allowNull: false
     },
     lastname: {
-      type: dataTypes.STRING(20),
-      allowNull: false
+        type: DataTypes.STRING(20),
+        allowNull: false
     },
-
     birthday: {
-      type: dataTypes.DATE(),
-      allowNull: false
+        type: DataTypes.DATEONLY,
+        allowNull: false
     },
     phone: {
-      type: dataTypes.STRING(20),
-      allowNull: false
+        type: DataTypes.STRING(20),
+        allowNull: false
     },
     street: {
-      type: dataTypes.STRING(20),
-      allowNull: false
+        type: DataTypes.STRING(20),
+        allowNull: false
     },
     city: {
-      type: dataTypes.STRING(20),
-      allowNull: false
+        type: DataTypes.STRING(20),
+        allowNull: false
     },
     country: {
-      type: dataTypes.STRING(20),
-      allowNull: false
+        type: DataTypes.STRING(20),
+        allowNull: false
     },
     zipcode: {
-      type: dataTypes.STRING(10),
-      allowNull: false
-    },
-
-
-  };
-  let config = {
-    timestamps: true,
-  }
-
-  const User = sequelize.define(alias, cols, config);
-
-  User.associate = function (models) {
-    User.belongsTo(models.Account, {
-      // models.Account -> User es el valor de alias en Account.js
-      as: "account",
-      foreignKey: "user_id"
-    })
-
-  }
-
-  return User 
+        type: DataTypes.STRING(10),
+        allowNull: false
+    }
 };
+
+const config = {
+    tableName: 'users',
+    timestamps: true
+};
+
+const User = sequelize.define(alias, cols, config);
+
+User.associate = models => {
+  User.hasOne(models.Account, {
+      as: 'account',
+      foreignKey: 'user_id'
+  });
+};
+
+module.exports = User;

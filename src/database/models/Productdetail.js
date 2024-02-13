@@ -1,51 +1,51 @@
-module.exports = (sequelize, dataTypes)=>{
-    const alias = 'ProductDetail';
-    const colums = { // Cristian: Columnas de la base de datos.
-        id: {
-            type: dataTypes.INTEGER(10),
-            primaryKey: true,
-            autoIncrement: true
-        },
-        /*createAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },
-        updateAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },*/
-        product_id: {
-            type: dataTypes.INTEGER(10),
-            //foreignKey: true
-        },
-        voltage: {
-            type: dataTypes.STRING(10)
-        },
-        frequency: {
-            type: dataTypes.STRING(10)
-        },
-        power: {
-            type: dataTypes.STRING(10)
-        },
-        extras: {
-            type: dataTypes.TEXT
-        },
-        manual: {
-            type: dataTypes.STRING(255)
-        }
-    };
-    const config = { // Cristian: Configuraciones opcionales.
-        tableName: 'productdetails',
-        timestamps: true
-    };
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/config.js');
 
-    const ProductDetail = sequelize.define(alias, colums, config);
+const alias = 'ProductDetail';
+const cols = {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    product_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+    },
+    voltage: {
+        type: DataTypes.STRING(10),
+        allowNull: false
+    },
+    frequency: {
+        type: DataTypes.STRING(10),
+        allowNull: false
+    },
+    power: {
+        type: DataTypes.STRING(10),
+        allowNull: false
+    },
+    extras: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    manual: {
+        type: DataTypes.STRING(255),
+        allowNull: true
+    }
+};
 
-    // Cristian: Asociaciones.
-    ProductDetail.associate = (models)=>{
-        ProductDetail.belongsTo(models.Product, {
-            as: "product",
-            foreignKey: "product_id"
-        })
-    };
-    
-    return ProductDetail;
-}
+const config = {
+    tableName: 'productdetails',
+    timestamps: true
+};
+
+const ProductDetail = sequelize.define(alias, cols, config);
+
+ProductDetail.associate = models => {
+    ProductDetail.belongsTo(models.Product, {
+        as: 'product',
+        foreignKey: 'product_id'
+    });
+};
+
+module.exports = ProductDetail;

@@ -1,49 +1,45 @@
-module.exports = (sequelize, dataTypes)=>{
-    const alias = 'OrderDetail';
-    const colums = { // Cristian: Columnas de la base de datos.
-        id: {
-            type: dataTypes.INTEGER(10),
-            primaryKey: true,
-            autoIncrement: true
-        },
-        /*createAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },
-        updateAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },*/
-        order_id: {
-            type: dataTypes.INTEGER(10),
-            //foreignKey: true
-        },
-        product_id: {
-            type: dataTypes.INTEGER(10),
-            //foreignKey: true
-        },
-        quantity: {
-            type: dataTypes.INTEGER(10)
-        }
-    };
-    const config = { // Cristian: Configuraciones opcionales.
-        tableName: 'orderdetails',
-        timestamps: true
-    };
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/config.js');
 
-    const OrderDetail = sequelize.define(alias, colums, config);
+const alias = 'OrderDetail';
+const cols = {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    order_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+    },
+    product_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+    },
+    quantity: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false,
+        defaultValue: 1
+    }
+};
 
-    // Cristian: Asociaciones.
-    OrderDetail.associate = (models)=>{
-        OrderDetail.belongsTo(models.Order, {
-            as: "order",
-            foreignKey: "order_id"
-        })
-    };
-    OrderDetail.associate = (models)=>{
-        OrderDetail.belongsTo(models.Product, { // Cristian: ¿?
-            as: "product",
-            foreignKey: "product_id"
-        })
-    };
-    
-    return OrderDetail;
-}
+const config = {
+    tableName: 'orderdetails',
+    timestamps: true
+};
+
+const OrderDetail = sequelize.define(alias, cols, config);
+
+OrderDetail.associate = models => {
+    OrderDetail.belongsTo(models.Order, {
+        as: 'order',
+        foreignKey: 'order_id'
+    });
+
+    OrderDetail.belongsTo(models.Product, {
+        as: 'product',
+        foreignKey: 'product_id'
+    });
+};
+
+module.exports = OrderDetail;

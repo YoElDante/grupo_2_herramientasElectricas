@@ -1,55 +1,43 @@
-module.exports = (sequelize, dataTypes) => {
-  let alias = 'Account';
-  let cols = {
-    id: {
-      type: dataTypes.INT(10).UNSIGNED,
-      primaryKey: true,
-      allowNull: false,
-      autoIncrement: true
-    },
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/config');
 
-    username: {
-      type: dataTypes.STRING(25),
-      allowNull: false
+const alias = 'Account';
+const cols = {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    userName: {
+        type: DataTypes.STRING(25),
+        allowNull: false
     },
     email: {
-      type: dataTypes.STRING(50),
-      allowNull: false
+        type: DataTypes.STRING(50),
+        allowNull: false
     },
     password: {
-      type: dataTypes.STRING(255),
-      allowNull: false
+        type: DataTypes.STRING(255),
+        allowNull: false
     },
     avatar: {
-      type: dataTypes.STRING(255),
-      allowNull: false
-    },
-
-    user_id: {
-      type: dataTypes.INT(10),
-      undefined: true
+        type: DataTypes.STRING(255),
+        allowNull: false
     }
-  };
-  let config = {
-    timestamps: true,
-  }
-
-  const Account = sequelize.define(alias, cols, config);
-
-  Account.associate = function (models) {
-    Account.belongsTo(models.User, {
-      // models.Genre -> User es el valor de alias en User.js
-      as: "user",
-      foreignKey: "user_id"
-    })
-  };
-  
-  Account.associate = (models)=>{
-    Account.hasMany(models.Order, {
-      as: "orders",
-      foreignKey: "account_id"
-    })
-  };
-
-  return Account
 };
+
+const config = {
+    tableName: 'accounts',
+    timestamps: true 
+};
+
+const Account = sequelize.define(alias, cols, config);
+
+Account.associate = models => {
+  Account.belongsTo(models.User, {
+      as: 'user',
+      foreignKey: 'user_id'
+  });
+};
+
+module.exports = Account;

@@ -1,35 +1,31 @@
-module.exports = (sequelize, dataTypes)=>{
-    const alias = 'ProductBrand';
-    const colums = { // Cristian: Columnas de la base de datos.
-        id: {
-            type: dataTypes.INTEGER(10),
-            primaryKey: true,
-            autoIncrement: true
-        },
-        /*createAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },
-        updateAT: { // Cristian: Controlar la ultima "T", con respecto a la base de datos.
-            type: dataTypes.DATE
-        },*/
-        name: {
-            type: dataTypes.STRING(20)
-        }
-    };
-    const config = { // Cristian: Configuraciones opcionales.
-        tableName: 'productbrands',
-        timestamps: true
-    };
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/config.js');
 
-    const ProductBrand = sequelize.define(alias, colums, config);
+const alias = 'ProductBrand';
+const cols = {
+    id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    name: {
+        type: DataTypes.STRING(20),
+        allowNull: false
+    }
+};
 
-    // Cristian: Asociaciones.
-    ProductBrand.associate = (models)=>{
-        ProductBrand.hasMany(models.Product, {
-            as: "products",
-            foreignKey: "productbrand_id"
-        })
-    };
-    
-    return ProductBrand;
-}
+const config = {
+    tableName: 'productbrands',
+    timestamps: false
+};
+
+const ProductBrand = sequelize.define(alias, cols, config);
+
+ProductBrand.associate = models => {
+    ProductBrand.hasMany(models.Product, {
+        as: 'products',
+        foreignKey: 'productbrand_id'
+    });
+};
+
+module.exports = ProductBrand;
