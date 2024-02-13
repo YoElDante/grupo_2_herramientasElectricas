@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/config.js');
 
+module.exports = (sequelize, dataTypes) => {
 const alias = 'ProductDetail';
 const cols = {
     id: {
@@ -48,4 +49,5 @@ ProductDetail.associate = models => {
     });
 };
 
-module.exports = ProductDetail;
+return ProductDetail;
+}

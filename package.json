@@ -4,7 +4,7 @@
   "description": "Trabajo integrador del Curso de DH Desarrollador Web FULLSTACK",
   "main": "app.js",
   "scripts": {
-    "start": "node --watch app.js",
+    "start": "node --trace-warnings --watch --env-file .env app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

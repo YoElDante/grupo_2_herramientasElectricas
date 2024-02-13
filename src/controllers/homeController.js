@@ -1,6 +1,6 @@
 const express = require('express'); 
 const path = require('path'); 
-const products = require('../models/JSONtoArray');
+const products = require('../database/services/productsdataAccessService.js');
 
 const controller = {
     index: (req, res) => {

@@ -7,7 +7,7 @@ const products = require('../database/services/productsdataAccessService.js');
 
 
 const controller = {
-  inder:(req, res) => {
+  index:(req, res) => {
     res.render(path.resolve(__dirname, '../views/products/products.ejs') , {products});
   },
 

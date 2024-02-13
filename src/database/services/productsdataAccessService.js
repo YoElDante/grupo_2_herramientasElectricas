@@ -1,7 +1,7 @@
 const path = require('path'); 
 const fs = require('fs'); 
 
-const productsFilePath = path.join(__dirname, '../database/products.json'); 
+const productsFilePath = path.join(__dirname, '../products.json'); 
 const productsJSON = fs.readFileSync(productsFilePath, 'utf-8'); 
 const products = JSON.parse(productsJSON); 
 
@@ -11,7 +11,7 @@ module.exports = products; // Cristian
 //                  Actualizacion para Sequelize
 // -----------------------------------------------------------------
 
-const path = require('path');
+// const path = require('path');
 const db = require('../models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");

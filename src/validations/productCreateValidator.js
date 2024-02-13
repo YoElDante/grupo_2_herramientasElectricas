@@ -1,0 +1,3 @@
+/*
+Aqui deberian ir las validaciones para el formulario de creacion de producto nuevo
+*/
