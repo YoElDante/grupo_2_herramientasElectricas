@@ -1,6 +1,3 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
-
 module.exports = (sequelize, dataTypes) => {
 
   const alias = 'Account';

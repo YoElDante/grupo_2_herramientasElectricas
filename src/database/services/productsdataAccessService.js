@@ -12,7 +12,7 @@ module.exports = products; // Cristian
 // -----------------------------------------------------------------
 
 // const path = require('path');
-const db = require('../models');
+const db = require('../models/index.js');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
@@ -23,7 +23,7 @@ const Genres = db.Genre;
 const Actors = db.Actor;
 
 
-const moviesController = {
+const productService = {
     'list': (req, res) => {
         db.Movie.findAll({
             include: ['genre']

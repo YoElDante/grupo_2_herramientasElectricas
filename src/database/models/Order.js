@@ -41,5 +41,5 @@ module.exports = (sequelize, dataTypes) => {
 }
 
 /*
-El patrón de "Factory Function" es una práctica común en aplicaciones de Node.js que utilizan Sequelize, ya que proporciona una forma más robusta de definir modelos y asegura que la instancia de Sequelize utilizada sea la misma en todo el proyecto, lo que ayuda a prevenir errores relacionados con instancias de Sequelize diferentes o mal configuradas.
+El patrón de diseño "Factory Function" es una práctica común en aplicaciones de Node.js que utilizan Sequelize, ya que proporciona una forma más robusta de definir modelos y asegura que la instancia de Sequelize utilizada sea la misma en todo el proyecto, lo que ayuda a prevenir errores relacionados con instancias de Sequelize diferentes o mal configuradas.
 */

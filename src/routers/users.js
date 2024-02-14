@@ -15,6 +15,7 @@ const upload = require('../middlewares/multerUsersMiddleware');
 router.get('/login',logouted, usersController.login);
 router.post('/login',userLoginValidations,usersController.loginOk);
 
+//Register
 router.get('/register', logouted, usersController.register);
 router.post('/register',userRegisterValidations, upload.single("image"), usersController.create);
 

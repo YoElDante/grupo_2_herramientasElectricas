@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('node:path');
-const userModel = require('../database/services/userdataAccessService.js');
+const userService = require('../database/services/userdataAccessService.js');
 const bcrypt = require('bcryptjs');
 
 //validaciones
@@ -39,7 +39,6 @@ const controller = {
 
       //creamos un nuevo usuario con los datos recibidos del formulario
       let newUser = {
-        id: null,
 
         //Datos de la Cuenta
         email: req.body.email.trim(),
@@ -62,7 +61,7 @@ const controller = {
 
         //Direccion de la imagen.
         //Si viene de req.file
-        image: (req.file) ?
+        avatar: (req.file) ?
           //la recibe del formulario
           path.resolve(req.file.destination, req.file.filename) :
           //sino manda la img defauld
@@ -71,10 +70,10 @@ const controller = {
       };
 
       //pasamos el usuario al modelo para que lo guarde en la bd
-      userModel.save(newUser);
+      userService.create(newUser);
 
-      //redirigimos al home
-      res.redirect("/");
+      //redirigimos al login
+      res.redirect("/users/login");
 
     } else {
       //Si hay errores
