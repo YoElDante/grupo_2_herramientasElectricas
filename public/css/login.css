@@ -19,7 +19,6 @@
     justify-content: center;
     margin: 2rem;
     width: 90%;
-    height: 70%;
     padding: 20px 10px 20px;
     border-radius: 25px;
     background-color: #dcdcdcde;
@@ -96,6 +95,21 @@
 
 .buttom-imput {
     width: 100%;
+}
+
+div .rememberMe{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+}
+
+
+
+input[type="checkbox"] {
+    width: 1rem; /* ancho */
+    height: 1rem; /* altura */
+    margin-left: 0.125rem;
 }
 
 .texto {

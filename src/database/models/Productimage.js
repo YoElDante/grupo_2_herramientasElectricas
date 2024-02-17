@@ -1,7 +1,4 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/config.js');
-
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
 const alias = 'ProductImage';
 const cols = {
     id: {

@@ -1,18 +1,13 @@
-const db = require('../database/models');
+const db = require('../models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const path = require('path');
 
-//Cargar el array con la base de Datos
-const usersFilePath = path.join(__dirname, '../users.json');
-let usersJSON = fs.readFileSync(usersFilePath, 'utf-8');
-const users = JSON.parse(usersJSON);
-
 
 const userServices = {
     getAll: () => {
-        Users.findAll({
+        db.User.findAll({
             include: ['account']
         })
             .then(users => {
@@ -21,7 +16,7 @@ const userServices = {
     },
 
     getOne: (id) => {
-        Users.findByPk(id,
+        db.Users.findByPk(id,
             {
                 include: ['account']
             })
@@ -47,23 +42,23 @@ const userServices = {
                     country: newUser.country,
                     zipcode: newUser.zipcode,
                 }
-                )
-            const account = await db.Account.create (
-                    {
-                        userName: newUser.userName,
-                        email: newUser.email,
-                        password: newUser.password,
-                        avatar: newUser.avatar,
-                        user_id: user.id
-                    }
-                )
+            )
+            const account = await db.Account.create(
+                {
+                    userName: newUser.userName,
+                    email: newUser.email,
+                    password: newUser.password,
+                    avatar: newUser.avatar,
+                    user_id: user.id
+                }
+            )
             return true;
-        // Si falla lanzamos un error
+            // Si falla lanzamos un error
         } catch (error) {
             console.error(error);
             return false
         }
-        
+
     }
 }
 

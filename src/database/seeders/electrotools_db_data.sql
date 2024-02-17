@@ -111,7 +111,6 @@ INSERT INTO `products` (`id`, `createAt`, `updatedAt`, `name`, `productbrand_id`
 
 INSERT INTO `users` (`id`, `createAt`, `updatedAt`, `firtsname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
 (1, '2024-02-09 04:11:54', '2024-02-09 04:13:24', 'dante', 'delprato', '1987-02-05', '3516115500', 'la habana 1955', 'cordoba', 'argentina', '5000'),
-(2, '2024-02-09 04:16:58', '2024-02-09 04:17:26', 'pepito', 'juarez', '1982-08-13', '3834568741', 'catartica 123', 'catalunia', 'españa', '7840');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

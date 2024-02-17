@@ -23,7 +23,7 @@ const Genres = db.Genre;
 const Actors = db.Actor;
 
 
-const productService = {
+const productServices = {
     'list': (req, res) => {
         db.Movie.findAll({
             include: ['genre']
@@ -77,7 +77,12 @@ const productService = {
             return res.render(path.resolve(__dirname, '..', 'views',  'moviesAdd'), {allGenres,allActors})})
         .catch(error => res.send(error))
     },
-    create: function (req,res) {
+
+    create: console.log('create del product SQL')
+    
+    
+    
+    /*function (req,res) {
         Movies
         .create(
             {
@@ -145,4 +150,7 @@ const productService = {
     }
 }
 
-module.exports = moviesController;
+*/
+
+}
+module.exports = productServices;

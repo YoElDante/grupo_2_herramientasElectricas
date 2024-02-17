@@ -116,7 +116,7 @@ header {
 }
 
 .searchBar input::placeholder {
-  color: #11111f;
+  color: rgba(17, 17, 31, 0.5);
   font-size: 1rem;
 }
 

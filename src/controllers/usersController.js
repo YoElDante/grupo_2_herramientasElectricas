@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('node:path');
-const userService = require('../database/services/userdataAccessService.js');
 const bcrypt = require('bcryptjs');
 
 //validaciones
 const { validationResult } = require('express-validator');
 
+// Solicitamos el Servicio
+const userService = require('../database/services/userdataAccessService.js');
 
 const controller = {
 
