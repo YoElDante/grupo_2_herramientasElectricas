@@ -2,7 +2,7 @@
 
 // Hay que ordenar la información de manera Descendente
 ### **Reunion Sabado 14/02/24:** 
-> Postergación d  e la entrega del Sprint lo que permite poder llegar con algunas tareas pendientes. 
+> Postergación de la entrega del Sprint lo que permite poder llegar con algunas tareas pendientes. 
 > Poco tiempo de la reunión por temas personales. 
 > Empezar a escribir las weekly en el archivo MD. (se estaban realizando en un word y luego se pasaban en limpio)
 > Proxima reunión el Lunes
