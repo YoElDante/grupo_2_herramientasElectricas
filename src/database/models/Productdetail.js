@@ -1,50 +1,50 @@
 module.exports = (sequelize, DataTypes) => {
-const alias = 'ProductDetail';
-const cols = {
+  const alias = 'ProductDetail';
+  const cols = {
     id: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        primaryKey: true,
-        autoIncrement: true
+      type: DataTypes.INTEGER.UNSIGNED,
+      primaryKey: true,
+      autoIncrement: true
     },
     product_id: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false
+      type: DataTypes.INTEGER.UNSIGNED,
+      allowNull: false
     },
     voltage: {
-        type: DataTypes.STRING(10),
-        allowNull: false
+      type: DataTypes.STRING(10),
+      allowNull: false
     },
     frequency: {
-        type: DataTypes.STRING(10),
-        allowNull: false
+      type: DataTypes.STRING(10),
+      allowNull: false
     },
     power: {
-        type: DataTypes.STRING(10),
-        allowNull: false
+      type: DataTypes.STRING(10),
+      allowNull: false
     },
     extras: {
-        type: DataTypes.TEXT,
-        allowNull: false
+      type: DataTypes.TEXT,
+      allowNull: false
     },
     manual: {
-        type: DataTypes.STRING(255),
-        allowNull: true
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
-};
+  };
 
-const config = {
+  const config = {
     tableName: 'productdetails',
     timestamps: true
-};
+  };
 
-const ProductDetail = sequelize.define(alias, cols, config);
+  const ProductDetail = sequelize.define(alias, cols, config);
 
-ProductDetail.associate = models => {
+  ProductDetail.associate = models => {
     ProductDetail.belongsTo(models.Product, {
-        as: 'product',
-        foreignKey: 'product_id'
+      as: 'product',
+      foreignKey: 'product_id'
     });
-};
+  };
 
-return ProductDetail;
+  return ProductDetail;
 }

@@ -37,9 +37,9 @@ const controller = {
         // confirmamos el ingreso del usuario con req.session.logined
         req.session.logined = true;
 
-        // guardamos el userName del usuario en req.session.userName
+        // guardamos el username del usuario en req.session.userName
         // pasamos el username para que lo saluden en el header personalizadamente
-        req.session.userName = accountSearched.userName;
+        req.session.username = accountSearched.username;
 
         // Verificamos checkbox de recuérdame
         if (rememberMe) {
@@ -61,7 +61,7 @@ const controller = {
 
     } catch {
       // no encuentra) 
-      //   informamos que el usuario no se ha encontrado
+      // informamos que el usuario no se ha encontrado
       // enviamos el valor del campo account para llenar el campo del usuario
       res.render(path.resolve(__dirname, '../views/users/login.ejs'), { error: error.message })
 
@@ -78,17 +78,12 @@ const controller = {
   },
 
   //POST
-  createNewUser: (req, res) => {
+  createNewUser: async (req, res) => {
 
     //creamos una variable con los errores recibidos
-    //! Siempre se llena de errores pese a que se completen todos los campos, se suspenden las validaciojnes de express
-    // let errors = validationResult(req);
-    let errors = [];
-    console.log(req.body);
+    let errors = validationResult(req);
 
-    // preguntamos si hay errores
-    if (errors.isEmpty()) {
-      //si no hay errores
+    try {
 
       //creamos un nuevo usuario con los datos recibidos del formulario
       let newUser = {
@@ -99,7 +94,7 @@ const controller = {
         password: bcrypt.hashSync(req.body.password, 10),
 
         //Datos personales
-        firtsname: req.body.firtsname.trim(),
+        firstname: req.body.firstname.trim(),
         lastname: req.body.lastname.trim(),
         birthday: req.body.birthday.trim(),
 
@@ -108,7 +103,7 @@ const controller = {
         street: req.body.street.trim(),
         city: req.body.city.trim(),
         country: req.body.country.trim(),
-        cp: req.body.cp.trim(),
+        zipcode: req.body.zipcode.trim(),
 
         //Direccion de la imagen.
         //Si viene de req.file
@@ -122,21 +117,26 @@ const controller = {
 
       console.log(`asi quedo el nuevo usuario creado: ${newUser}`);
       //pasamos el usuario al modelo para que lo guarde en la bd
-      userService.create(newUser);
+
+      await userService.create(newUser);
 
       //redirigimos al login
       res.redirect("/users/login");
 
-    } else {
-      //Si hay errores
+    } catch (error) {
+
+      // Manejo de errores
+      console.error("Error al procesar la solicitud:", error);
+
+      let errors = validationResult(req)
 
       //Imprimimos por consola lo que le vamos a pasar a la vista
-      console.log(`pase por el "else" ${JSON.stringify(errors.array())}`)
+      console.log(`Lista de errores: ${JSON.stringify(errors.array())}`)
 
       // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
       res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
-    }
 
+    }
   },
 
   // *****************

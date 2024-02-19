@@ -31,7 +31,7 @@ CREATE TABLE `accounts` (
   `id` int(10) UNSIGNED NOT NULL,
   `createAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `userName` varchar(25) NOT NULL,
+  `username` varchar(25) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE `accounts` (
 -- Volcado de datos para la tabla `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `createAt`, `updatedAt`, `userName`, `email`, `password`, `avatar`, `user_id`) VALUES
+INSERT INTO `accounts` (`id`, `createAt`, `updatedAt`, `username`, `email`, `password`, `avatar`, `user_id`) VALUES
 (1, '2024-02-09 04:15:18', '2024-02-09 06:05:14', 'yoeldante', 'dante@mail.com', 'dddd', 'users/default.jpg', 1);
 
 -- --------------------------------------------------------
@@ -224,7 +224,7 @@ CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `createAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `firtsname` varchar(20) NOT NULL,
+  `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   `birthday` date NOT NULL,
   `phone` varchar(20) NOT NULL,
@@ -238,7 +238,7 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `createAt`, `updatedAt`, `firtsname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
+INSERT INTO `users` (`id`, `createAt`, `updatedAt`, `firstname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
 (1, '2024-02-09 04:11:54', '2024-02-09 04:13:24', 'dante', 'delprato', '1987-02-05', '3516115500', 'la habana 1955', 'cordoba', 'argentina', '5000');
 
 --

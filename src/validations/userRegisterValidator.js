@@ -29,8 +29,8 @@ const validations = [
       return true;
     }),
 
-  //input type="text" name="firtsname" placeholder="Nombre" id="firtsname" required>
-  body("firtsname")
+  //input type="text" name="firstname" placeholder="Nombre" id="firstname" required>
+  body("firstname")
     .notEmpty().withMessage("Ingrese su nombre por favor ❗").bail(),
 
   //input type="text" name="lastname" placeholder="Apellido" id="lastname" required>
@@ -58,8 +58,8 @@ const validations = [
   body("country")
     .notEmpty().withMessage("Ingrese su País por favor ❗").bail(),
 
-  //input type="text" name="cp" placeholder="Código Postal" id="cp" required>
-  body("cp")
+  //input type="text" name="zipcode" placeholder="Código Postal" id="zipcode" required>
+  body("zipcode")
     .notEmpty().withMessage("Ingrese su Código Postal por favor ❗").bail(),
 
   // input type="file" name="image" placeholder="Imagen de Perfil" id="image" required>

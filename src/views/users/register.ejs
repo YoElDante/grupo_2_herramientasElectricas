@@ -32,7 +32,7 @@
     <%- include('../partials/header.ejs')%>
   </header>
 
-  <main>
+  <main id="main">
     <!-- principal -->
     <div class="conteiner">
       <section class="form-conteiner">
@@ -79,11 +79,11 @@
             <h2>Datos de Usuario</h2>
             <div class="div-form" id="firstname">
               <i class="fa-solid fa-user"></i>
-              <input type="text" name="firtsname" placeholder="Nombre" id="firtsname" required
-                value="<%= locals.oldData? oldData.firtsname : null%>">
-              <% if (locals.errors && errors.firtsname) { %>
+              <input type="text" name="firstname" placeholder="Nombre" id="firstname" required
+                value="<%= locals.oldData? oldData.firstname : null%>">
+              <% if (locals.errors && errors.firstname) { %>
                 <p class="error">
-                  <%= errors.firtsname.msg %>
+                  <%= errors.firstname.msg %>
                 </p>
                 <% } %>
             </div>
@@ -154,13 +154,13 @@
                 <% } %>
             </div>
 
-            <div class="div-form" id="cp">
+            <div class="div-form" id="zipcode">
               <i class="fa-solid fa-location-dot"></i>
-              <input type="text" name="cp" placeholder="Código Postal" id="cp" required
-                value="<%= locals.oldData? oldData.cp : null%>">
-              <% if (locals.errors && errors.cp) { %>
+              <input type="text" name="zipcode" placeholder="Código Postal" id="zipcode" required
+                value="<%= locals.oldData? oldData.zipcode : null%>">
+              <% if (locals.errors && errors.zipcode) { %>
                 <p class="error">
-                  <%= errors.cp.msg %>
+                  <%= errors.zipcode.msg %>
                 </p>
                 <% } %>
             </div>

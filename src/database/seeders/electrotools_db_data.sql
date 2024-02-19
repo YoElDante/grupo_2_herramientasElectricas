@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- Volcado de datos para la tabla `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `createdAt`, `updatedAt`, `userName`, `email`, `password`, `avatar`, `user_id`) VALUES
+INSERT INTO `accounts` (`id`, `createdAt`, `updatedAt`, `username`, `email`, `password`, `avatar`, `user_id`) VALUES
 (1, '2024-02-09 04:15:18', '2024-02-09 06:05:14', 'yoeldante', 'dante@mail.com', 'dddd', 'users/default.jpg', 1);
 
 --
@@ -109,7 +109,7 @@ INSERT INTO `products` (`id`, `createdAt`, `updatedAt`, `name`, `productbrand_id
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `createdAt`, `updatedAt`, `firtsname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
+INSERT INTO `users` (`id`, `createdAt`, `updatedAt`, `firstname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
 (1, '2024-02-09 04:11:54', '2024-02-09 04:13:24', 'dante', 'delprato', '1987-02-05', '3516115500', 'la habana 1955', 'cordoba', 'argentina', '5000'),
 COMMIT;
 

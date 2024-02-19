@@ -40,13 +40,14 @@ const userServices = {
 
     // Iniciamos una transacción para acumular las operaciones
     let transaction;
+
     try {
       transaction = await db.sequelize.transaction();
 
       // Creamos el registro de un usuario
       const user = await db.User.create(
         {
-          firtsname: newUser.firtsname,
+          firstname: newUser.firstname,
           lastname: newUser.lastname,
           birthday: newUser.birthday,
           phone: newUser.phone,
@@ -61,7 +62,7 @@ const userServices = {
       // Creamos el registro de la cuenta asociada al usuario
       const account = await db.Account.create(
         {
-          userName: newUser.userName,
+          username: newUser.username,
           email: newUser.email,
           password: newUser.password,
           avatar: newUser.avatar,
