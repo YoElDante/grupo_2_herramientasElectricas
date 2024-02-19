@@ -52,7 +52,11 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = models => {
     User.hasOne(models.Account, {
       as: 'account',
-      foreignKey: 'user_id'
+      foreignKey: {
+        name: 'user_id',
+        allowNull: false,
+        onDelete: 'CASCADE' // Eliminación en cascada
+      }
     });
   };
 

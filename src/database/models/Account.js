@@ -9,11 +9,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     userName: {
       type: DataTypes.STRING(25),
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     email: {
       type: DataTypes.STRING(50),
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     password: {
       type: DataTypes.STRING(255),
@@ -35,7 +37,11 @@ module.exports = (sequelize, DataTypes) => {
   Account.associate = models => {
     Account.belongsTo(models.User, {
       as: 'user',
-      foreignKey: 'user_id'
+      foreignKey: {
+        name: 'user_id',
+        allowNull: false,
+        onDelete: 'CASCADE' // Eliminación en cascada
+      }
     });
   };
 
