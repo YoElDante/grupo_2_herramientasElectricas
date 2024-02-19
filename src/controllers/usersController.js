@@ -82,6 +82,7 @@ const controller = {
 
     //creamos una variable con los errores recibidos
     let errors = validationResult(req);
+    console.log(`Estos son los errores en validationResult(req): ${validationResult(req)} `);
 
     // preguntamos si hay errores
     if (errors.isEmpty()) {
@@ -94,34 +95,33 @@ const controller = {
       let newUser = {
 
         //Datos de la Cuenta
-        email: req.body.email.trim(),
-        username: req.body.username,
+        email: req.body.email.trim().toLowerCase(),
+        username: req.body.username.trim(),
         password: bcrypt.hashSync(req.body.password, 10),
 
         //Datos personales
-        firtsname: req.body.firtsname,
-        lastname: req.body.lastname,
-        birthday: req.body.birthday,
+        firtsname: req.body.firtsname.trim(),
+        lastname: req.body.lastname.trim(),
+        birthday: req.body.birthday.trim(),
 
         //Datos de Contacto
-        phone: req.body.phone,
-        address: {
-          street: req.body.street,
-          city: req.body.city,
-          country: req.body.country,
-          cp: req.body.cp
-        },
+        phone: req.body.phone.trim(),
+        street: req.body.street.trim(),
+        city: req.body.city.trim(),
+        country: req.body.country.trim(),
+        cp: req.body.cp.trim(),
 
         //Direccion de la imagen.
         //Si viene de req.file
         avatar: (req.file) ?
           //la recibe del formulario
-          path.resolve(req.file.destination, req.file.filename) :
+          path.resolve("./img/users/", req.file.filename) :
           //sino manda la img defauld
-          path.resolve(__dirname, "../../public/img/users/default.jpg")
+          "./img/users/default.jpg"
 
       };
 
+      console.log(`asi quedo el nuevo usuario creado: ${newUser}`);
       //pasamos el usuario al modelo para que lo guarde en la bd
       userService.create(newUser);
 

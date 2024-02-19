@@ -18,7 +18,15 @@ const validations = [
 
     //input type="password" name="confirmPassword" placeholder="Confirmar Contraseña" id="confirmPassword" required>
     body("confirmPassword")
-        .notEmpty().withMessage("Ingrese su contraseña nuevamente por favor ❗").bail(),
+        .notEmpty().withMessage("Ingrese su contraseña nuevamente por favor ❗").bail()
+
+     // Validación personalizada para verificar si password y confirmPassword son iguales
+        .custom((value, { req }) => {
+        if (value !== req.body.password) {
+            throw new Error("Las contraseñas no coinciden ❗");
+        }
+        return true;
+    }),
 
     //input type="text" name="firtsname" placeholder="Nombre" id="firtsname" required>
     body("firtsname")
@@ -54,19 +62,19 @@ const validations = [
         .notEmpty().withMessage("Ingrese su Código Postal por favor ❗").bail(),
 
     //input type="file" name="image" placeholder="Imagen de Perfil" id="image" required>
-    body("image").custom((value, { req }) => {
-        // Verificacion de extension de tipo de imagen
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+    // body("image").custom((value, { req }) => {
+    //     // Verificacion de extension de tipo de imagen
+    //     let file = req.file;
+    //     let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
-        if(file){
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')} ❗`);
-            }
-        }
-        return true;
-    })
+    //     if(file){
+    //         let fileExtension = path.extname(file.originalname);
+    //         if (!acceptedExtensions.includes(fileExtension)) {
+    //             throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')} ❗`);
+    //         }
+    //     }
+    //     return true;
+    // })
 
 ]
 
