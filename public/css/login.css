@@ -105,10 +105,9 @@ div .rememberMe{
 }
 
 
-
 input[type="checkbox"] {
-    width: 1rem; /* ancho */
-    height: 1rem; /* altura */
+    width: 1rem;
+    height: 1rem;
     margin-left: 0.125rem;
 }
 

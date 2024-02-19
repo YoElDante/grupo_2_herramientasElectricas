@@ -6,22 +6,27 @@ const usersController = require ('../controllers/usersController.js');
 const userLoginValidations = require ('../validations/userLoginValidator.js')
 const userRegisterValidations = require ('../validations/userRegisterValidator.js')
 
-// middlewares
+//Middlewares
 const logined = require('../middlewares/loginedMiddleware.js');
 const logouted = require('../middlewares/logoutedMiddleware.js');
 const upload = require('../middlewares/multerUsersMiddleware');
 
-// rutas
+//Rutas
+
+//Login
 router.get('/login',logouted, usersController.login);
-router.post('/login',userLoginValidations,usersController.loginOk);
+router.post('/login',userLoginValidations,usersController.loginConfirm);
 
-//Register
+//Register - Crear nuevo usuario
 router.get('/register', logouted, usersController.register);
-router.post('/register',userRegisterValidations, upload.single("image"), usersController.create);
+router.post('/register',userRegisterValidations, upload.single("image"), usersController.createNewUser);
 
+//Edicion de Usuario
 router.get('/edition/:id',logined, usersController.editionForm);
-router.put('/edition/:id', usersController.editionStore);
+router.put('/edition/:id', usersController.editionConfirm);
 
+//Borrar Usuario
 router.delete('/:id',logined, usersController.delete);
+
 
 module.exports = router;

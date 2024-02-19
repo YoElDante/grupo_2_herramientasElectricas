@@ -3,30 +3,82 @@ const path = require('node:path');
 const bcrypt = require('bcryptjs');
 
 //validaciones
-const { validationResult } = require('express-validator');
+const { validationResult, cookie } = require('express-validator');
 
 // Solicitamos el Servicio
 const userService = require('../database/services/userdataAccessService.js');
 
 const controller = {
 
+  // *****************
+  //      Login
+  // *****************
+
+  //GET
   login: (req, res) => {
     res.render(path.resolve(__dirname, '../views/users/login.ejs'));
   },
 
-  loginOk: (req, res) => {
-    console.log(req.body);
-    req.session.logined = true;
-    res.redirect('/');
+  //POST
+  loginConfirm: async (req, res) => {
+    try {
+
+      //Recibimos los datos del form con req.body
+      let { email, password, rememberMe } = req.body
+
+      //Pedimos al servicio la cuenta
+      const accountSearched = await userService.findAccount(email);
+
+      // comparamos la contraseña de la cuenta con la que ingreso el cliente por el formulario
+      if (bcrypt.compareSync(password, accountSearched.password)) {
+        // Coinciden?
+        // si) ingresa la cuenta
+        console.log(`usuario ${accountSearched.userName} autorizado`);
+        // confirmamos el ingreso del usuario con req.session.logined
+        req.session.logined = true;
+
+        // guardamos el userName del usuario en req.session.userName
+        // pasamos el username para que lo saluden en el header personalizadamente
+        req.session.userName = accountSearched.userName;
+
+        // Verificamos checkbox de recuérdame
+        if (rememberMe) {
+          // Generamos cookie con tiempo de expiración
+          res.cookie('rememberMe', 'true', { maxAge: 600000 }); // Expira en 10 min, para una semana 604800000
+        } else {
+          // Eliminamos la cookie si no seleccionó recordar
+          res.clearCookie('rememberMe');
+        }
+
+        // redirigimos a la ruta '/'
+        res.redirect('/');
+
+      } else {
+        // la contraseña no coincide
+        // lanzamos un error de que la contraseña no coincide
+        throw new Error('Contraseña incorrecta');
+      }
+
+    } catch {
+      // no encuentra) 
+      //   informamos que el usuario no se ha encontrado
+      // enviamos el valor del campo account para llenar el campo del usuario
+      res.render(path.resolve(__dirname, '../views/users/login.ejs'), { error: error.message })
+
+    }
   },
 
+  // *****************
+  //     Register
+  // *****************
+
+  //GET
   register: (req, res) => {
     res.render(path.resolve(__dirname, '../views/users/register.ejs'));
   },
 
-
-  // Se crea un nuevo usuario por metodo POST
-  create: (req, res) => {
+  //POST
+  createNewUser: (req, res) => {
 
     //creamos una variable con los errores recibidos
     let errors = validationResult(req);
@@ -88,17 +140,26 @@ const controller = {
 
   },
 
-  // pedido GET del formulario de edicion de usuario
+  // *****************
+  //      Editar
+  // *****************
+
+  //GET
   editionForm: (req, res) => {
     res.render(path.resolve(__dirname, '../views/users/edicionRegistro.ejs'));
   },
 
-  // se actualizan los datos del usuario por PUT
-  editionStore: (req, res) => {
+  //PUT
+  editionConfirm: (req, res) => {
     res.send("se actualizan los datos del usuario " + req.params.id)
   },
 
-  // se borrara un usuario de la lista por metodo DELETE
+
+  // *****************
+  //      Borrar
+  // *****************
+
+  //DELETE
   delete: (req, res) => {
     res.send("se borraran los datos del usuario " + req.params.id)
   }
