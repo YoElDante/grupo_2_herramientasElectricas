@@ -1,6 +1,32 @@
 # DAILY  
 
-// Hay que ordenar la información de manera Descendente 
+// Hay que ordenar la información de manera Descendente
+### **Reunion Sabado 14/02/24:** 
+> Postergación d  e la entrega del Sprint lo que permite poder llegar con algunas tareas pendientes. 
+> Poco tiempo de la reunión por temas personales. 
+> Empezar a escribir las weekly en el archivo MD. (se estaban realizando en un word y luego se pasaban en limpio)
+> Proxima reunión el Lunes
+### **Reunion Sabado 07/02/24:** 
+> Por cuestiones de trabajo no se puede cumplir con parte de los compromisos asumidos por algunos de sus miembros por lo que los compañseros mas avanzados colaboran on esas tareas.
+> bloqueos con la tematica del sprint.
+>Proxima reunión el miercoles luego de clases *posible midificación
+### **Reunion Sabado 31/01/24:** 
+> Compañeros ausentes por  trabajo. solo 2 miembros en la reuión.
+> Dificultades de tiempo de uno de sus miembros que está pensando si dejar el curso.
+> Dificultades de algunos de sus miembros con el manejo del tema del Sprint.
+>Proxima reunion la semana etntrante luego de clases.
+### **Reunion Sabado 24/01/24:** 
+> Distribución definitiva de tareas.
+> Dudas sobre los entregables.
+> Puesta en común sobre las fallas del sprint pasado.
+> Proxima Reunión la semana siguiente luego de clases.
+
+### **Reunion Sabado 17/01/24:** 
+> División de tares en el trello.
+> puntuación de las tarjetas.
+> Poco tiempo para la reunión por extensión de la clase.
+> Algunos miembros ya eligieron sus tarjetas, compañeros ausentes deben elegirlas.
+> Proxima reunión el lunes  luego de clases.
 
 ### **Reunion Sabado 11/11/23:** 
 
