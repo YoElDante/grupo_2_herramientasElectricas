@@ -1,8 +1,35 @@
 # Retrospectivas del Equipo
+<!-- Modelo de Retro:
+### RETRO ---- Sprint - --- --/--/2024
+***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+***Lo que podemos hacer para mejorar: ****
+-------------FIN RETRO CUARTO SPRINT-------------
+  -->
 
-
-
-------------------------------------------
+  
+### RETRO Sexto Sprint - --- --/--/2024
+***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+***Lo que podemos hacer para mejorar: ****
+-------------FIN RETRO CUARTO SPRINT-------------
+ 
+### RETRO Quinto Sprint - MARTES 22/01/2024
+***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+-Se etiquetó mejor las tareas para su distribución, y se implementó el uso de comentarios en el código para su explicación de función y autor.
+-La comunicación fue buena entre el grupo a pesar de las dificultades que aparecieron.
+-Los miembros trabajaron cubriendo las falencias de algunos de ellos para cumplir con el sprint entendiendo las dificultades personales de cada uno.
+***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+- La falta de estudio por diversas situaciones de parte de los miembros dificultaba la división de tareas, ya que eran demasiado complejas.
+- Mejorar los plazos para terminar las tareas para tener tiempo de ayuda en caso de bloqueo.
+- Tuvimos lamentablemente la baja de un compañero mas que nos anunció casi al final del sprint sin poder realizar las tareas a las que se había comprometido, lo cual llevó  a que los miembros mas avanzados del grupo se hagan cargo de dichas tareas para poder completar el trabajo, aunque quedaron tareas pendientes para el siguiente Sprint.
+- Algunos de los miembros  por viajes y trabajo no pudieron estar comprometidos al 100% lo que llevó a que se recargue de tareas a unos pocos.
+***Lo que podemos hacer para mejorar: ****
+- Mas estudio personal y realizar las tareas lo antes posible.
+-No comprometerse a realizar tareas que probablemente no se las termine.
+-Avisar con tiempo de los contratiempos para pedir ayuda a los compañeros.
+-------------FIN RETRO CUARTO SPRINT-------------
+ 
 ## RETRO Cuarto Sprint - MARTES 13/12/2023
 Para la retrospectiva del cuarto sprint, se dejó de lado las opiniones personales. En su lugar, se realizó un análisis de manera grupal dejando asentado las conclusiones en forma de tarjetas, separadas por categorías. Las cuales son:
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
@@ -17,14 +44,11 @@ Para la retrospectiva del cuarto sprint, se dejó de lado las opiniones personal
 - Definir tareas centrales y secundarias, y repartirlas de una manera más óptima.
 - Diario de trabajo (daily) por cada participante del equipo en el discord, para motivar la acción de todos y encontrar problemáticas comunes.
 - Agregar comentarios de autor a las líneas de código como hace Cristian para saber quién lo hizo, al igual que agregar comentarios descriptivos de lo que hacen esas líneas.
-## FIN RETRO CUARTO SPRINT
---------------------------
-
-
-
+-------------FIN RETRO CUARTO SPRINT-------------
+ 
 ## RETRO Tercer Sprint - MIERCOLES 06/11/2023
 
-### Opiniones de los integrantes 
+ Opiniones de los integrantes 
 
 🙎‍♂️ **Cristian Godoy:** 
 
@@ -98,11 +122,11 @@ Florencia resalta la productividad del equipo durante el tercer sprint y aboga p
 
 - En este Sprint el equipo mostro un compromiso con la mejora continua, identificando áreas de fortaleza y oportunidades de crecimiento. La comunicación efectiva, la distribución equitativa de tareas, y la planificación personal surgieron como aspectos cruciales para el éxito del equipo. La confianza en las habilidades de los compañeros y el respeto hacia el trabajo individual son piedras angulares en la construcción de un ambiente de trabajo positivo y eficiente. La reflexión colectiva demuestra la madurez del equipo para reconocer áreas de mejora y la disposición para implementar cambios que beneficien a todos.
 
-
-
+-------------FIN RETRO CUARTO SPRINT-------------
+ 
 ## RETRO Segundo Sprint - SABADO 25/11/2023
 
-### Opiniones de los integrantes 
+ Opiniones de los integrantes 
 
 🙎‍♂️ **Cristian Godoy:** 
 > ***Comenzar a hacer:*** Respetar una rutina para las reuniones. Es decir, un dia y horario fijo, consensuado y respetado.
@@ -177,7 +201,8 @@ Llegar tarde a las reuniones, posponer el horario la Reunión en el mismo día o
 
 - Se puede concluir que hay consenso en la importancia de mejorar la organización, la gestión del tiempo y la comunicación dentro del equipo. La necesidad de autonomía en las tareas individuales, el uso efectivo de herramientas colaborativas y el compromiso con la puntualidad son aspectos resaltados de manera consistente. En general, parece existir una disposición positiva hacia el trabajo en equipo y el progreso conjunto, con sugerencias específicas para optimizar ciertos aspectos de la dinámica grupal. La reflexión individual de cada miembro brinda información valiosa para fortalecer el funcionamiento del equipo y mejorar la productividad en futuros proyectos.
 
-
+-------------FIN RETRO CUARTO SPRINT-------------
+ 
 ## RETRO Primer Sprint - Sábado 28/10/2023
 
 ### Opiniones de los integrantes
@@ -238,3 +263,5 @@ He disfrutado mucho haciendo el trabajo que me tocó. Me gusta organizar y gener
 > - Dejar 1 imagen al realizar el trabajo.
 > - Hacer la lista de "En Revisión" para que los compañeros puedan dar feedback sobre la tarea antes de darla por terminada.
 > - Solo el dueño de la tarea puede moverla hacia la derecha y solo los compañeros pueden moverla a "completada".
+-------------FIN RETRO CUARTO SPRINT-------------
+ 
