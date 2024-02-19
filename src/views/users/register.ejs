@@ -43,7 +43,7 @@
             <h2>Datos de la Cuenta</h2>
             <div class="div-form" id="email">
               <i class="fa-solid fa-envelope"></i>
-              <input type="email" name="email" id="email" placeholder="Correo Electrónico"
+              <input required type="email" name="email" id="email" placeholder="Correo Electrónico"
                 value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
               <% if (locals.errors && errors.email) { %>
                 <p class="error">
@@ -54,7 +54,7 @@
 
             <div class="div-form" id="username">
               <i class="fa-solid fa-user"></i>
-              <input type="text" name="username" placeholder="Nombre de Usuario" id="username" required
+              <input required type="text" name="username" placeholder="Nombre de Usuario" id="username"
                 value="<%= locals.oldData? oldData.username : null%>">
               <% if (locals.errors && errors.username) { %>
                 <p class="error">

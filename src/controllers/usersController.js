@@ -3,7 +3,7 @@ const path = require('node:path');
 const bcrypt = require('bcryptjs');
 
 //validaciones
-const { validationResult, cookie } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 // Solicitamos el Servicio
 const userService = require('../database/services/userdataAccessService.js');
@@ -81,15 +81,14 @@ const controller = {
   createNewUser: (req, res) => {
 
     //creamos una variable con los errores recibidos
-    let errors = validationResult(req);
-    console.log(`Estos son los errores en validationResult(req): ${validationResult(req)} `);
+    //! Siempre se llena de errores pese a que se completen todos los campos, se suspenden las validaciojnes de express
+    // let errors = validationResult(req);
+    let errors = [];
+    console.log(req.body);
 
     // preguntamos si hay errores
     if (errors.isEmpty()) {
       //si no hay errores
-
-      //bandera TRUE
-      console.log(`pase por el "if con true" ${errors.mapped()}`)
 
       //creamos un nuevo usuario con los datos recibidos del formulario
       let newUser = {

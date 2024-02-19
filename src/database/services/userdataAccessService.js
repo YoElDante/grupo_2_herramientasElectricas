@@ -37,11 +37,13 @@ const userServices = {
   },
 
   create: async (newUser) => {
-    //Genera Un nuevo Usuario con su Correspondiente Cuenta
-    // Intentamos escribir en la base de datos
+
+    // Iniciamos una transacción para acumular las operaciones
+    let transaction;
     try {
-      // generamos el registro en la tabla de Accounts
-      // generamos el registro en la tabla de Users
+      transaction = await db.sequelize.transaction();
+
+      // Creamos el registro de un usuario
       const user = await db.User.create(
         {
           firtsname: newUser.firtsname,
@@ -52,8 +54,11 @@ const userServices = {
           city: newUser.city,
           country: newUser.country,
           zipcode: newUser.zipcode,
-        }
-      )
+        },
+        { transaction }
+      );
+
+      // Creamos el registro de la cuenta asociada al usuario
       const account = await db.Account.create(
         {
           userName: newUser.userName,
@@ -61,16 +66,25 @@ const userServices = {
           password: newUser.password,
           avatar: newUser.avatar,
           user_id: user.id
-        }
-      )
+        },
+        { transaction }
+      );
+
+      // Comprometemos/Commit de la transacción si todo fue exitoso
+      await transaction.commit();
+
+      // Retornamos true para indicar que el usuario fue creado exitosamente
       return true;
-
     } catch (error) {
-      // Si falla lanzamos un error
-      console.error(error);
-      return false
-    }
 
+      // Deshacemos/Rollback la transacción si hubo algún error
+      // mantiene la integridad de los datos ya que el registro de la cuenta debe ir a la par del de usuario
+      if (transaction) await transaction.rollback();
+
+      // Lanzamos el error nuevamente para que sea manejado por el controlador
+      console.error('Error al crear nuevo usuario:', error);
+      throw error;
+    }
   }
 }
 

@@ -12,7 +12,7 @@ const productsRouter = require('./src/routers/products.js')
 const app = express();
 
 app.use(methodOverride('_method')); // Cristian
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use(session({secret:"Boom, the dinamite"})); // el mensaje explosivo de Cristian (Flor)
