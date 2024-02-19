@@ -22,12 +22,12 @@
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 - La falta de estudio por diversas situaciones de parte de los miembros dificultaba la división de tareas, ya que eran demasiado complejas.
 - Mejorar los plazos para terminar las tareas para tener tiempo de ayuda en caso de bloqueo.
-- Tuvimos lamentablemente la baja de un compañero mas que nos anunció casi al final del sprint sin poder realizar las tareas a las que se había comprometido, lo cual llevó  a que los miembros mas avanzados del grupo se hagan cargo de dichas tareas para poder completar el trabajo, aunque quedaron tareas pendientes para el siguiente Sprint.
-- Algunos de los miembros  por viajes y trabajo no pudieron estar comprometidos al 100% lo que llevó a que se recargue de tareas a unos pocos.
+- Tuvimos lamentablemente la baja de un compañero mas que nos anunció casi al final del sprint sin poder realizar las tareas a las que se había comprometido, lo cual llevó a que los miembros más avanzados del grupo se hagan cargo de dichas tareas para poder completar el trabajo a tiempo; aunque quedaron tareas pendientes para el siguiente Sprint.
+- Algunos de los miembros, por viajes y/o trabajo, no pudieron estar comprometidos al 100%. Esto llevó a que se recargue de tareas a unos pocos.
 ***Lo que podemos hacer para mejorar: ****
-- Mas estudio personal y realizar las tareas lo antes posible.
--No comprometerse a realizar tareas que probablemente no se las termine.
--Avisar con tiempo de los contratiempos para pedir ayuda a los compañeros.
+- Más estudio personal y realizar las tareas lo antes posible.
+- No comprometerse a realizar tareas que probablemente no se las termine.
+- Avisar con tiempo de las dificultades y percanses acontesidos para pedir ayuda a los compañeros.
 -------------FIN RETRO QUINTO SPRINT-------------
  
 ## RETRO Cuarto Sprint - MARTES 13/12/2023
