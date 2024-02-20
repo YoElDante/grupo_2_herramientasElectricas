@@ -37,7 +37,7 @@ const controller = {
         // confirmamos el ingreso del usuario con req.session.logined
         req.session.logined = true;
 
-        // guardamos el username del usuario en req.session.userName
+        // guardamos el username del usuario en req.session.username
         // pasamos el username para que lo saluden en el header personalizadamente
         req.session.username = accountSearched.username;
 

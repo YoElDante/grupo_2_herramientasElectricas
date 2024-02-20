@@ -52,8 +52,8 @@ const productServices = {
                 res.render('newestMovies', {movies});
             });
     },
-    'recomended': (req, res) => {
-        db.Movie.findAll({
+    'recomended': async () => {
+        let movies = await db.Movie.findAll({
             include: ['genre'],
             where: {
                 rating: {[db.Sequelize.Op.gte] : 8}
@@ -62,9 +62,9 @@ const productServices = {
                 ['rating', 'DESC']
             ]
         })
-            .then(movies => {
-                res.render('recommendedMovies.ejs', {movies});
-            });
+
+        return movies;
+
     },
     //Aqui dispongo las rutas para trabajar con el CRUD
     add: function (req, res) {
