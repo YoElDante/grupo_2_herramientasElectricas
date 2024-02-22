@@ -3,6 +3,7 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const path = require('path');
+const { Console } = require('console');
 
 
 const userServices = {
@@ -16,6 +17,10 @@ const userServices = {
 
   },
 
+  //----------------------
+  //   Buscar cuenta
+  //----------------------
+
   findAccount: async (identifier) => {
 
     try {
@@ -25,17 +30,22 @@ const userServices = {
       });
 
       if (!accountFinded) {
-        throw new Error('No se encontró ninguna cuenta con el email proporcionado');
+        throw new Error(`No se encontró cuenta con email ${identifier} ❗`);
       }
 
       return accountFinded;
 
     } catch (error) {
-      console.error('Error al buscar la cuenta:', error);
+
+      console.error(error);
+      //aqui enviamos el error para que lo maneje el controller
       throw error;
     }
   },
 
+  //--------------------------
+  //   Crear Usuario nuevo
+  //--------------------------
   create: async (newUser) => {
 
     // Iniciamos una transacción para acumular las operaciones

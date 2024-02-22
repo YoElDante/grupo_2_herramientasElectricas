@@ -46,6 +46,15 @@ a{
     text-decoration: none;
 }
 
+.error{
+    color: red;
+    font-size: 0.6rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    justify-self: end;
+    align-self: self-end;
+}
+
 /* ----------------- */
 /*       MAIN        */
 /* ----------------- */

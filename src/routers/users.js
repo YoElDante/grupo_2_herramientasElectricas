@@ -22,11 +22,14 @@ router.get('/register', logouted, usersController.register);
 router.post('/register',userRegisterValidations, upload.single("image"), usersController.createNewUser);
 
 //Edicion de Usuario
-router.get('/edition/:id',logined, usersController.editionForm);
+router.get('/userDetails/:id',logined, usersController.editionForm);
 router.put('/edition/:id', usersController.editionConfirm);
 
 //Borrar Usuario
 router.delete('/:id',logined, usersController.delete);
+
+//Logout
+router.get('/logout',logined, usersController.logout);
 
 
 module.exports = router;

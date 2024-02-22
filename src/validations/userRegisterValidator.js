@@ -7,11 +7,13 @@ const validations = [
   body('email')
     .notEmpty().withMessage("Ingrese su email por favor ❗").bail()
     .isEmail().withMessage("Ingrese un email valido por favor ❗"),
+    //! Agregar validacion de que tiene .com
 
 
   //input type="text" name="username" placeholder="Nombre de Usuario" id="username" required>
   body("username")
     .notEmpty().withMessage("Ingrese su nombre de usuario por favor ❗").bail(),
+    //! Agregar que al menos tenga 2 caracteres
 
   //input type="password" name="password" placeholder="Contraseña" id="password" required>
   body("password")

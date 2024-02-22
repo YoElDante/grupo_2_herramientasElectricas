@@ -44,13 +44,6 @@ fieldset{
     text-align: center;
 }
 
-.error{
-    color: red;
-    font-size: 0.75rem;
-    text-align: center;
-    padding-right: 1rem;
-}
-
 .heder-register {
     text-align: center;
     background-color: #dcdcdc00;

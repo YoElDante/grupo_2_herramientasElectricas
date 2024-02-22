@@ -17,6 +17,13 @@ app.use(express.json());
 
 app.use(session({secret:"Boom, the dinamite"})); // el mensaje explosivo de Cristian (Flor)
 
+//Con esto se pasa el objeto session a TODAS las vistas
+//Es un Middleware
+app.use(function(req, res, next) {
+    res.locals.session = req.session;
+    next();
+});
+
 // Indicamos que vamos a trabajar con un motor de plantillas
 app.set('view engine','ejs');
 app.set('views', path.resolve(__dirname,'./src/views')); 

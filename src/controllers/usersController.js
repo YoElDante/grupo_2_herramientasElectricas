@@ -33,12 +33,13 @@ const controller = {
       if (bcrypt.compareSync(password, accountSearched.password)) {
         // Coinciden?
         // si) ingresa la cuenta
-        console.log(`usuario ${accountSearched.userName} autorizado`);
+        console.log(`usuario ${accountSearched.username} autorizado`);
         // confirmamos el ingreso del usuario con req.session.logined
         req.session.logined = true;
 
         // guardamos el username del usuario en req.session.username
         // pasamos el username para que lo saluden en el header personalizadamente
+        req.session.userid = accountSearched.id;
         req.session.username = accountSearched.username;
 
         // Verificamos checkbox de recuérdame
@@ -56,10 +57,10 @@ const controller = {
       } else {
         // la contraseña no coincide
         // lanzamos un error de que la contraseña no coincide
-        throw new Error('Contraseña incorrecta');
+        throw new Error('Contraseña incorrecta ❗');
       }
 
-    } catch {
+    } catch (error) {
       // no encuentra) 
       // informamos que el usuario no se ha encontrado
       // enviamos el valor del campo account para llenar el campo del usuario
@@ -161,6 +162,20 @@ const controller = {
   //DELETE
   delete: (req, res) => {
     res.send("se borraran los datos del usuario " + req.params.id)
+  },
+
+  // *****************
+  //      Logout
+  // *****************
+
+  //GET
+  logout: (req,res) => {
+    req.session.logined = false;
+    req.session.userid = '';
+    req.session.username = '';
+    res.clearCookie('rememberMe');
+
+    res.redirect('/')
   }
 
 };
