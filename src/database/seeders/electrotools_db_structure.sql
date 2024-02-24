@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `electrotools_db`.`accounts` (
   CONSTRAINT `fk_accounts_users1`
     FOREIGN KEY (`user_id`)
     REFERENCES `electrotools_db`.`users` (`id`)
-    ON DELETE CASCADE  -- Esta línea se ha modificado para usar ON DELETE CASCADE
+    ON DELETE CASCADE  -- Esta línea hace que tambien se borren los otros registros relacionados
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1

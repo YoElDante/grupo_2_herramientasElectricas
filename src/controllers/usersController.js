@@ -145,13 +145,77 @@ const controller = {
   // *****************
 
   //GET
-  editionForm: (req, res) => {
-    res.render(path.resolve(__dirname, '../views/users/edicionRegistro.ejs'));
+  editionForm: async (req, res) => {
+
+    let accountFinded = await userService.findAccount(req.params.id)
+    console.log(accountFinded.username);
+    console.log(accountFinded.user.firstname);
+
+    res.render(path.resolve(__dirname, '../views/users/profile.ejs'), { account: accountFinded });
+
+
   },
 
   //PUT
-  editionConfirm: (req, res) => {
-    res.send("se actualizan los datos del usuario " + req.params.id)
+  editionConfirm: async (req, res) => {
+
+    let errors = validationResult(req);
+
+    try {
+
+      //Recolectamos los datos del usuario recibidos del formulario
+      let dataUser = {
+
+        //Datos de la Cuenta
+        email: req.body.email.trim().toLowerCase(),
+        username: req.body.username.trim(),
+        password: bcrypt.hashSync(req.body.password, 10),
+
+        //Datos personales
+        firstname: req.body.firstname.trim(),
+        lastname: req.body.lastname.trim(),
+        birthday: req.body.birthday.trim(),
+
+        //Datos de Contacto
+        phone: req.body.phone.trim(),
+        street: req.body.street.trim(),
+        city: req.body.city.trim(),
+        country: req.body.country.trim(),
+        zipcode: req.body.zipcode.trim(),
+
+        //Direccion de la imagen.
+        //Si viene de req.file
+        avatar: (req.file) ?
+          //la recibe del formulario
+          path.resolve("./img/users/", req.file.filename) :
+          //sino manda la img defauld
+          "./img/users/default.jpg"
+
+      };
+
+      console.log(`asi quedo el nuevo usuario creado: ${dataUser}`);
+      //pasamos el usuario al modelo para que lo guarde en la bd
+
+      await userService.updateAccount(dataUser);
+
+      //redirigimos al login
+      res.redirect("/");
+
+    } catch (error) {
+
+      // Manejo de errores
+      console.error("Error al procesar la solicitud:", error);
+
+      let errors = validationResult(req)
+
+      //Imprimimos por consola lo que le vamos a pasar a la vista
+      console.log(`Lista de errores: ${JSON.stringify(errors.array())}`)
+
+      // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
+      res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
+
+    }
+
   },
 
 
@@ -160,8 +224,11 @@ const controller = {
   // *****************
 
   //DELETE
-  delete: (req, res) => {
-    res.send("se borraran los datos del usuario " + req.params.id)
+  delete: async (req, res) => {
+
+    await userService.deleteAccount(req.params.id);
+
+    this.logout;
   },
 
   // *****************
@@ -169,7 +236,7 @@ const controller = {
   // *****************
 
   //GET
-  logout: (req,res) => {
+  logout: (req, res) => {
     req.session.logined = false;
     req.session.userid = '';
     req.session.username = '';

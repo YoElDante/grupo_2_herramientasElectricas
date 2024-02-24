@@ -165,7 +165,7 @@
     <% if (session.logined) { %>
       <!-- Cuando estas logueado, el boton que dice register debe mostrar tu nombre abajo -->
       <!-- Al presionarlo debe enviarte al detalle del Usuario -->
-      <a href="/users/userDetails/<%=session.userid %>" title="Ir a Datos Personales">
+      <a href="/users/profile/<%=session.userid %>" title="Ir a Datos Personales">
         <span>Hola <%=session.username %></span>
         <i class="fa-solid fa-user"></i>
       </a>
@@ -174,7 +174,6 @@
           <span>Desloguearse</span>
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
-
 
       <% } else { %>
         <!-- Menu de usuarios Sin Loguear-->
