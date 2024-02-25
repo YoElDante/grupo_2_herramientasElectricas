@@ -63,93 +63,41 @@
       </div>
     </section>
 
+    <!-- Cristian: Elimine esto porque me parece feo. En un futuro me gustaria que el carrusel sea automatico.
     <div class="botones-carrusel">
       <a href="#item1" title="item1"><i class="fa-regular fa-circle-dot"></i></a>
       <a href="#item2" title="item2"><i class="fa-regular fa-circle-dot"></i></a>
       <a href="#item3" title="item3"><i class="fa-regular fa-circle-dot"></i></a>
-    </div>
+    </div>-->
 
 
-    <!-- Novedades -->
+    <!-- Productos -->
 
     <section class="novedades productos" id="novedades">
       <div class="recomendaciones">
-        <h3 class="titulo">Novedades</h3>
+        <h3 class="titulo">Productos</h3>
+        <a href="/products/create">Agregar</a><!-- Cristian: Hay que encontrar un lugar para esto -->
+        
 
         <section class="tarjetas">
-
-          <%- include("./partials/productCard.ejs", {product: products[0]}) %>
-
-          <%- include("./partials/productCard.ejs", {product: products[1]}) %>
-
-            <div class="next">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-
+          <% for(let product of products) { %>
+          <%- include('../partials/productCard.ejs', {product}) %>
+          <% } %>
+          <div class="next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
         </section>
       </div>
-    </section>
-
-    <!-- Caja de Herramientas -->
-
-    <section class="caja-de-herramientas" id="cajaherramientas">
-
-      <h2>CAJA DE HERRAMIENTAS</h2>
-      <h3>Hemos separado para usted los principales articulos para ayudarle en su rutina de trabajo</h3>
-
-      <div class="tarjetas-contenedor">
-        <div class="tarjetas">
-          <img src="/img/imgCajaDeHerramientas/madera.jpg" alt="Madera">
-          <h4>MADERA</h4>
-          <a href="#">Ver coleccion ></a>
-        </div>
-        <div class="tarjetas">
-          <img src="/img/imgCajaDeHerramientas/mamposteria.jpg" alt="Madera">
-          <h4>MAMPOSTERIA</h4>
-          <a href="#">Ver coleccion ></a>
-        </div>
-        <div class="tarjetas">
-          <img src="/img/imgCajaDeHerramientas/metal.jpg" alt="Madera">
-          <h4>METAL</h4>
-          <a href="#">Ver coleccion ></a>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Ofertas -->
-
-    <section class="productos" id="ofertas">
-
-      <div class="recomendaciones ofertas">
-        <h3 class="titulo">OFERTAS</h3>
-
-          <section class="tarjetas">
-
-            <%- include('./partials/productCardSale.ejs', {product:products[4]}) %>
-
-            <%- include('./partials/productCardSale.ejs', {product:products[5]}) %>
-
-            <div class="next">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-
-          </section>
-
-      </div>
-
     </section>
 
   </main>
 
   <footer>
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
   </footer>
 
   <!-- Scrips -->
   <script src="https://kit.fontawesome.com/30f2e17de6.js" crossorigin="anonymous"></script>
 
-
 </body>
-
 </html>
