@@ -1,0 +1,19 @@
+div#buttom-imput {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.confirmChanges{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.deleteAccount {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 80%;
+    background-color: #11111f;
+    color: #ffb81c;
+}

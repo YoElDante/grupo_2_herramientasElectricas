@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-02-2024 a las 06:16:41
+-- Tiempo de generación: 25-02-2024 a las 06:22:51
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 
 INSERT INTO `accounts` (`id`, `createdAt`, `updatedAt`, `username`, `email`, `password`, `avatar`, `user_id`) VALUES
-(1, '2024-02-09 04:15:18', '2024-02-09 06:05:14', 'yoeldante', 'dante@mail.com', 'dddd', 'users/default.jpg', 1);
+(1, '2024-02-25 01:13:22', '2024-02-25 01:16:00', 'YoElDante', 'dante@mail.com', '$2a$10$YJl1tOPDJmbbnxXwUe1RS.V6iUsav0nuvKem9InkiYu/Zgoqs/Rd2', 'C:\\workspace\\DigitalHouse\\Dante\\grupo_2_herramientasElectricas\\img\\users\\user1708823601908.jpg', 1);
 
 --
 -- Volcado de datos para la tabla `productbrands`
@@ -43,14 +43,14 @@ INSERT INTO `productbrands` (`id`, `createdAt`, `updatedAt`, `name`) VALUES
 -- Volcado de datos para la tabla `productdetails`
 --
 
-INSERT INTO `productdetails` (`id`, `createdAt`, `updatedAt`, `product_id`, `voltage`, `frequency`, `power`, `extras`, `manual`) VALUES
-(1, '2024-02-09 04:22:45', '2024-02-09 05:04:08', 1, '220V', '1650rpm', '800W', 'Con función reversa.\r\nCuenta con función destornillador.\r\nIncluye función percutor.\r\nVelocidad máxima de rotación: 1650rpm.\r\nPosee control de torque.\r\nTiene luz led.\r\nDimensiones: 7.5\'\' de ancho, 7.9\'\' de alto y 6.9\'\' de largo.', 'https://www.manual.ar/dewalt/dcd709/manual'),
-(2, '2024-02-09 04:34:58', '2024-02-09 05:04:32', 2, '220V', '3200rpm', '710W', 'Con función reversa.\r\nViene con caja de cartón.\r\nCuenta con función destornillador.\r\nIncluye función percutor.\r\nEjecuta 5500 golpes por minuto.\r\nVelocidad máxima de rotación: 3200rpm.\r\nDimensiones: 75mm de ancho, 204mm de alto y 296mm de largo.', 'https://www.manual.ar/makita/hp1630/manual'),
-(3, '2024-02-09 05:06:53', '2024-02-09 05:06:53', 3, '220V', '220rpm', '3.6W', 'Destornillador eléctrico compacto\r\nEs inalámbrico\r\nPotencia de 3.6W\r\nVelocidad de rotación de entre 220rpm\r\nTorque máximo: 6Nm\r\nIncluye adaptador de ca.\r\nMandril de 3.6mm\r\nIluminación LED para mejor visibilidad', 'https://www.manual.ar/makita/df001dw/manual'),
-(4, '2024-02-09 05:12:37', '2024-02-09 05:12:37', 4, '220V', '8500rpm', '2200W', 'Apta para un disco de 180 mm de diámetro.\r\nTrae interruptor gatillo.\r\nSu potencia es de 2200 W.\r\nVelocidad máxima de rotación de 8500 rpm.\r\nEs antipolvo y protege al motor de la suciedad entrante.\r\nCuenta con protección contra sobrecarga.\r\nPosee freno automático por atascamiento.\r\nTiene botón de bloqueo de disco.\r\nEl largo del cable es de 1.95 m.\r\nPesa 5.5 kg.\r\nIncluye: llave.', 'https://www.manual.ar/makita/ga7020/manual'),
-(5, '2024-02-09 05:12:37', '2024-02-09 05:12:37', 5, '220V', '50Hz', '2200W', 'Permite taladrar sin percusión, taladrar con percusión y cincelar.\r\nRota a una velocidad mínima de 0rpm y una velocidad máxima de 1500rpm.\r\nCon 2.6J de impacto, ideal para trabajos de perforación en el hogar.\r\nPerfora hormigón de hasta 26mm, metal de 13mm y madera de 30mm.\r\nEjecuta 5500 golpes por minuto.\r\nUtiliza encastre SDS Plus de 10mm de diámetro.\r\nTiene embrague de seguridad para mayor protección.\r\nPesa 2.6 kg.\r\nDiseño ergonómico con encastre SDS Plus y embrague de seguridad para un manejo seguro y cómodo.', 'https://www.manual.ar/dewalt/d25133k/manual'),
-(6, '2024-02-09 05:17:55', '2024-02-09 05:17:55', 6, '220V', '4000rpm', '2200W', 'Permite taladrar sin percusión, taladrar con percusión y cincelar.\r\nRota a una velocidad mínima de 0rpm y una velocidad máxima de 4000rpm.\r\nCon 3.2J de impacto, ideal para trabajos de perforación en el hogar.\r\nPerfora hormigón de hasta 28mm, metal de 13mm y madera de 30mm.\r\nEjecuta 4000 golpes por minuto.\r\nUtiliza encastre SDS Plus de 10mm de diámetro.\r\nTiene embrague de seguridad para mayor protección.\r\nPesa 2.8 kg.\r\nIncluye maletín.', 'https://www.manual.ar/bosch/gbh-2-28-d-professional/manual'),
-(7, '2024-02-09 05:17:55', '2024-02-09 05:17:55', 7, '220V', '12000rpm', '710W', 'Apta para un disco de 115 mm de diámetro.\r\nAlcanza una profundidad de corte de 65 mm.\r\nTrae interruptor tecla.\r\nSu potencia es de 710 W.\r\nVelocidad máxima de rotación de 12000 rpm.\r\nTiene botón de bloqueo de disco.\r\nEl largo del cable es de 2 m.\r\nPesa 1.8 kg.\r\nProtector de disco incorporado.', 'https://www.manual.ar/bosch/gws-700-professional/manual');
+INSERT INTO `productdetails` (`id`, `createdAt`, `updatedAt`, `voltage`, `frequency`, `power`, `extras`, `manual`, `product_id`) VALUES
+(1, '2024-02-09 04:22:45', '2024-02-09 05:04:08', '220V', '1650rpm', '800W', 'Con función reversa.\r\nCuenta con función destornillador.\r\nIncluye función percutor.\r\nVelocidad máxima de rotación: 1650rpm.\r\nPosee control de torque.\r\nTiene luz led.\r\nDimensiones: 7.5\'\' de ancho, 7.9\'\' de alto y 6.9\'\' de largo.', 'https://www.manual.ar/dewalt/dcd709/manual', 1),
+(2, '2024-02-09 04:34:58', '2024-02-09 05:04:32', '220V', '3200rpm', '710W', 'Con función reversa.\r\nViene con caja de cartón.\r\nCuenta con función destornillador.\r\nIncluye función percutor.\r\nEjecuta 5500 golpes por minuto.\r\nVelocidad máxima de rotación: 3200rpm.\r\nDimensiones: 75mm de ancho, 204mm de alto y 296mm de largo.', 'https://www.manual.ar/makita/hp1630/manual', 2),
+(3, '2024-02-09 05:06:53', '2024-02-09 05:06:53', '220V', '220rpm', '3.6W', 'Destornillador eléctrico compacto\r\nEs inalámbrico\r\nPotencia de 3.6W\r\nVelocidad de rotación de entre 220rpm\r\nTorque máximo: 6Nm\r\nIncluye adaptador de ca.\r\nMandril de 3.6mm\r\nIluminación LED para mejor visibilidad', 'https://www.manual.ar/makita/df001dw/manual', 3),
+(4, '2024-02-09 05:12:37', '2024-02-09 05:12:37', '220V', '8500rpm', '2200W', 'Apta para un disco de 180 mm de diámetro.\r\nTrae interruptor gatillo.\r\nSu potencia es de 2200 W.\r\nVelocidad máxima de rotación de 8500 rpm.\r\nEs antipolvo y protege al motor de la suciedad entrante.\r\nCuenta con protección contra sobrecarga.\r\nPosee freno automático por atascamiento.\r\nTiene botón de bloqueo de disco.\r\nEl largo del cable es de 1.95 m.\r\nPesa 5.5 kg.\r\nIncluye: llave.', 'https://www.manual.ar/makita/ga7020/manual', 4),
+(5, '2024-02-09 05:12:37', '2024-02-09 05:12:37', '220V', '50Hz', '2200W', 'Permite taladrar sin percusión, taladrar con percusión y cincelar.\r\nRota a una velocidad mínima de 0rpm y una velocidad máxima de 1500rpm.\r\nCon 2.6J de impacto, ideal para trabajos de perforación en el hogar.\r\nPerfora hormigón de hasta 26mm, metal de 13mm y madera de 30mm.\r\nEjecuta 5500 golpes por minuto.\r\nUtiliza encastre SDS Plus de 10mm de diámetro.\r\nTiene embrague de seguridad para mayor protección.\r\nPesa 2.6 kg.\r\nDiseño ergonómico con encastre SDS Plus y embrague de seguridad para un manejo seguro y cómodo.', 'https://www.manual.ar/dewalt/d25133k/manual', 5),
+(6, '2024-02-09 05:17:55', '2024-02-09 05:17:55', '220V', '4000rpm', '2200W', 'Permite taladrar sin percusión, taladrar con percusión y cincelar.\r\nRota a una velocidad mínima de 0rpm y una velocidad máxima de 4000rpm.\r\nCon 3.2J de impacto, ideal para trabajos de perforación en el hogar.\r\nPerfora hormigón de hasta 28mm, metal de 13mm y madera de 30mm.\r\nEjecuta 4000 golpes por minuto.\r\nUtiliza encastre SDS Plus de 10mm de diámetro.\r\nTiene embrague de seguridad para mayor protección.\r\nPesa 2.8 kg.\r\nIncluye maletín.', 'https://www.manual.ar/bosch/gbh-2-28-d-professional/manual', 6),
+(7, '2024-02-09 05:17:55', '2024-02-09 05:17:55', '220V', '12000rpm', '710W', 'Apta para un disco de 115 mm de diámetro.\r\nAlcanza una profundidad de corte de 65 mm.\r\nTrae interruptor tecla.\r\nSu potencia es de 710 W.\r\nVelocidad máxima de rotación de 12000 rpm.\r\nTiene botón de bloqueo de disco.\r\nEl largo del cable es de 2 m.\r\nPesa 1.8 kg.\r\nProtector de disco incorporado.', 'https://www.manual.ar/bosch/gws-700-professional/manual', 7);
 
 --
 -- Volcado de datos para la tabla `productimages`
@@ -110,7 +110,7 @@ INSERT INTO `products` (`id`, `createdAt`, `updatedAt`, `name`, `productbrand_id
 --
 
 INSERT INTO `users` (`id`, `createdAt`, `updatedAt`, `firstname`, `lastname`, `birthday`, `phone`, `street`, `city`, `country`, `zipcode`) VALUES
-(1, '2024-02-09 04:11:54', '2024-02-09 04:13:24', 'dante', 'delprato', '1987-02-05', '3516115500', 'la habana 1955', 'cordoba', 'argentina', '5000'),
+(1, '2024-02-25 01:13:22', '2024-02-25 01:13:22', 'Dante', 'Delprato', '1987-02-05', '3516115500', 'Francisca Graneros d', 'Catamarca', 'Argentina', '4700');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
