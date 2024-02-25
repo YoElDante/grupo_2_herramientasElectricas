@@ -42,24 +42,34 @@
 
           <fieldset name="accountData">
             <h2>Datos de la Cuenta</h2>
-            <div class="div-form" id="email">
+            <div class="div-form">
               <i class="fa-solid fa-envelope"></i>
               <input required type="email" name="email" id="email" placeholder="Correo Electrónico"
-                value="<%= account.email %>">
+                value="<%= locals.oldData && oldData.email ? oldData.email : account.email %>">
+              <% if (locals.errors && errors.email) { %>
+                <p class="error">
+                  <%= errors.email.msg %>
+                </p>
+                <% } %>
             </div>
 
-            <div class="div-form" id="username">
+            <div class="div-form">
               <i class="fa-solid fa-user"></i>
               <input required type="text" name="username" placeholder="Nombre de Usuario" id="username"
-                value="<%= account.username %>">
+                value="<%= locals.oldData? oldData.username : account.username %>">
+                <% if (locals.errors && errors.username) { %>
+                  <p class="error">
+                    <%= errors.username.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="password">
+            <div class="div-form">
               <i class="fa-solid fa-eye-slash"></i>
               <input type="password" name="password" placeholder="Contraseña" id="password" required>
             </div>
 
-            <div class="div-form" id="confirmPassword">
+            <div class="div-form">
               <i class="fa-solid fa-eye-slash"></i>
               <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña" id="confirmPassword"
                 required>
@@ -71,48 +81,89 @@
             <div class="div-form" id="firstname">
               <i class="fa-solid fa-user"></i>
               <input type="text" name="firstname" placeholder="Nombre" id="firstname" required
-                value="<%= account.user.firstname %>">
+                value="<%= locals.oldData? oldData.firstname : account.user.firstname %>">
+                <% if (locals.errors && errors.firstname) { %>
+                  <p class="error">
+                    <%= errors.firstname.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="lastname">
+            <div class="div-form">
               <i class="fa-solid fa-user"></i>
               <input type="text" name="lastname" placeholder="Apellido" id="lastname" required
-                value="<%= account.user.lastname %>">
+                value="<%= locals.oldData? oldData.lastname : account.user.lastname %>">
+                <% if (locals.errors && errors.lastname) { %>
+                  <p class="error">
+                    <%= errors.lastname.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="birthday">
+            <div class="div-form">
               <i class="fa-solid fa-calendar-days"></i>
               <input type="date" name="birthday" placeholder="Fecha de nacimiento" id="birthday" required
-                value="<%= account.user.birthday %>">
+                value="<%= locals.oldData? oldData.birthday : account.user.birthday%>">
+                <% if (locals.errors && errors.birthday) { %>
+                  <p class="error">
+                    <%= errors.birthday.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="phone">
+            <div class="div-form">
               <i class="fa-solid fa-phone"></i>
               <input type="text" name="phone" placeholder="Teléfono" id="phone" required
-                value="<%= account.user.phone %>">
+                value="<%= locals.oldData? oldData.phone : account.user.phone %>">
+                <% if (locals.errors && errors.phone) { %>
+                  <p class="error">
+                    <%= errors.phone.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="street">
+            <div class="div-form">
               <i class="fa-solid fa-location-dot"></i>
               <input type="text" name="street" placeholder="Calle y Altura" id="street" required
-                value="<%= account.user.street %>">
+                value="<%= locals.oldData? oldData.street : account.user.street%>">
+                <% if (locals.errors && errors.street) { %>
+                  <p class="error">
+                    <%= errors.street.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="city">
+            <div class="div-form">
               <i class="fa-solid fa-location-dot"></i>
-              <input type="text" name="city" placeholder="Ciudad" id="city" required value="<%= account.user.city %>">
+              <input type="text" name="city" placeholder="Ciudad" id="city" required 
+              value="<%= locals.oldData? oldData.city : account.user.city %>">
+              <% if (locals.errors && errors.city) { %>
+                <p class="error">
+                  <%= errors.city.msg %>
+                </p>
+                <% } %>
             </div>
 
-            <div class="div-form" id="country">
+            <div class="div-form">
               <i class="fa-solid fa-location-dot"></i>
               <input type="text" name="country" placeholder="País" id="country" required
-                value="<%= account.user.country %>">
+                value="<%= locals.oldData? oldData.country : account.user.country %>">
+                <% if (locals.errors && errors.country) { %>
+                  <p class="error">
+                    <%= errors.country.msg %>
+                  </p>
+                  <% } %>
             </div>
 
-            <div class="div-form" id="zipcode">
+            <div class="div-form">
               <i class="fa-solid fa-location-dot"></i>
               <input type="text" name="zipcode" placeholder="Código Postal" id="zipcode" required
-                value="<%= account.user.zipcode %>">
+                value="<%= locals.oldData? oldData.zipcode : account.user.zipcode %>">
+                <% if (locals.errors && errors.zipcode) { %>
+                  <p class="error">
+                    <%= errors.zipcode.msg %>
+                  </p>
+                  <% } %>
             </div>
 
             <h3>Tu avatar</h3>

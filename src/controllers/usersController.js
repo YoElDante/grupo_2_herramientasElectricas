@@ -193,7 +193,7 @@ const controller = {
 
       };
 
-      console.log(`asi quedo el nuevo usuario creado: ${dataUser}`);
+      console.log(`asi quedo el nuevo usuario creado: ${JSON.stringify.dataUser}`);
       //pasamos el usuario al modelo para que lo guarde en la bd
 
       await userService.updateAccount(dataUser);
@@ -212,7 +212,7 @@ const controller = {
       console.log(`Lista de errores: ${JSON.stringify(errors.array())}`)
 
       // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
-      res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
+      res.render('../views/users/profile.ejs', { errors: errors.mapped(), oldData: req.body });
 
     }
 
