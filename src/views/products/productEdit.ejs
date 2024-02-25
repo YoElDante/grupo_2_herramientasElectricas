@@ -35,83 +35,115 @@
           <h1 class="title">EDICION DE PRODUCTOS</h1>
           <form action="/products/edit/<%= product.id %>?_method=put" method="post" enctype="multipart/form-data">
           
-            <label for="name">Ingrese el nombre del producto</label>
+            <label for="name">Nombre del producto</label>
             <div class="divInput">
               <input type="text" name="name" id="name" value="<%= product.name %>">
             </div>
                     
-            <label for="brand">Ingrese la marca del producto</label>
+            <label for="brand">Marca del producto</label>
             <div class="divInput">
-              <input type="text" name="brand" id="brand" value="<%= product.brand %>">
+              <!--<input type="text" name="brand" id="brand" value="<%= product.brand %>">-->
+              <select name="brand" id="brand" class="file">
+                <% for(let brand of brands) { %>
+                  <% if(product.productBrand.id === brand.id) { %>
+                    <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                  <% } else { %>
+                    <option value="<%= brand.id %>"><%= brand.name %></option>
+                  <% } %>
+                <% } %>
+              </select>
             </div>
                     
-            <label for="model">Ingrese el modelo del producto</label>
+            <label for="model">Modelo del producto</label>
             <div class="divInput">
               <input type="text" name="model" id="model" value="<%= product.model %>">
             </div>
 
-            <label for="description">Ingrese la descripcion del producto</label>
+            <label for="description">Descripcion del producto</label>
             <div class="">
               <textarea name="description" id="description" class="description"><%= product.description %></textarea>
             </div>
 
-            <label for="price">Ingrese el precio del producto</label>
+            <label for="price">Precio del producto</label>
             <div class="divInput">
               <input type="text" name="price" id="price" value="<%= product.price %>">
             </div>
+
+            <label for="units">Cantidad disponible del producto</label>
+            <div class="divInput">
+              <input type="text" name="units" id="units" value="<%= product.units %>">
+            </div>
                     
-            <label for="discount">Ingrese el descuento del producto</label>
+            <!--<label for="discount">Descuento del producto</label>
             <div class="divInput">
               <input type="text" name="discount" id="discount" value="<%= product.discount %>">
-            </div>
+            </div>-->
                     
-            <label for="interest">Ingrese el interes del producto</label>
+            <!--<label for="interest">Interes del producto</label>
             <div class="divInput">
               <input type="text" name="interest" id="interest" value="<%= product.interest %>">
-            </div>
+            </div>-->
 
-            <label for="plan">Ingrese las cuotas del producto</label>
+            <!--<label for="plan">Cuotas del producto</label>
             <div class="divInput">
               <input type="text" name="plan" id="plan" value="<%= product.plan %>">
-            </div>
+            </div>-->
 
-            <label for="color">Ingrese el color del producto</label>
+            <!--<label for="color">Color del producto</label>
             <div class="divInput">
               <input type="text" name="color" id="color" value="<%= product.color %>">
+            </div>-->
+
+            <label for="voltage">Voltage del producto</label>
+            <div class="divInput">
+              <input type="text" name="voltage" id="voltage" value="<%= product.productDetail.voltage %>">
             </div>
 
-            <label for="voltage">Ingrese el voltage del producto</label>
+            <label for="frequency">Frecuencia del producto</label>
             <div class="divInput">
-              <input type="text" name="voltage" id="voltage" value="<%= product.voltage %>">
+              <input type="text" name="frequency" id="frequency" value="<%= product.productDetail.frequency %>">
             </div>
 
-            <label for="frequency">Ingrese la frecuencia del producto</label>
+            <label for="power">Potencia del producto</label>
             <div class="divInput">
-                <input type="text" name="frequency" id="frequency" value="<%= product.frequency %>">
+              <input type="text" name="power" id="power" value="<%= product.productDetail.power %>">
             </div>
 
-            <label for="power">Ingrese la potencia del producto</label>
+            <label for="extras">Informacion extra</label>
             <div class="divInput">
-                <input type="text" name="power" id="power" value="<%= product.power %>">
+              <input type="text" name="extras" id="extras" value="<%= product.productDetail.extras %>">
             </div>
             
             <!--<label for="generalCharacteristics">Ingrese las caracteristicas del producto</label>
             <div class="divInput">
-                <input type="text" name="generalCharacteristics" id="generalCharacteristics" value="<%= product.generalCharacteristics %>">
+              <input type="text" name="generalCharacteristics" id="generalCharacteristics" value="<%= product.generalCharacteristics %>">
             </div>-->
             
-            <label for="userManual">Ingrese el manual del producto</label>
+            <label for="userManual">Manual del producto</label>
             <div class="divInput">
-                <input type="text" name="userManual" id="userManual" value="<%= product.userManual %>">
+              <input type="text" name="userManual" id="userManual" value="<%= product.productDetail.manual %>">
             </div>
             
-            <label for="image">Ingrese las imagenes del producto</label>
-            <div class="divInput">                     
-                <input type="file" multiple name="image" id="image" class="file">
+            <label for="image">Agregar imagenes del producto</label>
+            <div class="divInput">
+              <input type="file" multiple name="image" id="image" class="file">
+            </div>
+
+            <!-- Cristian: Trabajo sin terminar. La idea es dar la posibilidad de eliminar las imagenes cargadas. -->
+            <label>Imagenes cargadas</label>
+            <div class="divInput">
+              <% if(product.productImages.length > 0){ %>
+                <% for(let image of product.productImages){ %>
+                  <img src="/img/products/<%= image.image %>" alt="Imagen mini del producto" height="100rem">
+                <% } %>
+              <% }else{ %>
+                <p>No hay imagenes cargadas.</p>
+              <% } %>
+
             </div>
 
             <div>
-                <button type="submit" class="submit">Guardar</button>
+              <button type="submit" class="submit">Actualizar</button>
             </div>
   
           </form>
