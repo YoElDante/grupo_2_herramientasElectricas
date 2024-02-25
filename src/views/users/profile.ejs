@@ -56,13 +56,13 @@
 
             <div class="div-form" id="password">
               <i class="fa-solid fa-eye-slash"></i>
-              <input type="password" name="password" placeholder="Contraseña" id="password" value="****" required>
+              <input type="password" name="password" placeholder="Contraseña" id="password" required>
             </div>
 
             <div class="div-form" id="confirmPassword">
               <i class="fa-solid fa-eye-slash"></i>
               <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña" id="confirmPassword"
-              value="****" required>
+                required>
             </div>
           </fieldset>
 
@@ -100,8 +100,7 @@
 
             <div class="div-form" id="city">
               <i class="fa-solid fa-location-dot"></i>
-              <input type="text" name="city" placeholder="Ciudad" id="city" required
-                value="<%= account.user.city %>">
+              <input type="text" name="city" placeholder="Ciudad" id="city" required value="<%= account.user.city %>">
             </div>
 
             <div class="div-form" id="country">
@@ -126,15 +125,15 @@
 
           <div id="buttom-imput">
             <button type="submit" class="buttom-register confirmChanges">Confirmar Cambios</button>
-          </form>
+        </form>
 
-            <form action="delete/<%= account.id %>?_method=delete" method="post">
-              <button type="submit" class="buttom-register deleteAccount">Borrar Cuenta</button>
-            </form>
+        <form action="delete/<%= account.id %>?_method=delete" method="post">
+          <button type="submit" class="buttom-register deleteAccount">Borrar Cuenta</button>
+        </form>
 
-          </div>
+    </div>
 
-      </section>
+    </section>
     </div>
   </main>
 

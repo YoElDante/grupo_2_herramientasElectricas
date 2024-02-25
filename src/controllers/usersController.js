@@ -228,7 +228,7 @@ const controller = {
 
     await userService.deleteAccount(req.params.id);
 
-    this.logout;
+    this.logout(req,res);
   },
 
   // *****************

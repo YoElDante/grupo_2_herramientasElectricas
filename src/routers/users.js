@@ -5,6 +5,7 @@ const usersController = require ('../controllers/usersController.js');
 //Validations
 const userLoginValidations = require ('../validations/userLoginValidator.js')
 const userRegisterValidations = require ('../validations/userRegisterValidator.js')
+const userUpdateValidations = require ('../validations/userUpdateValidations.js')
 
 //Middlewares
 const logined = require('../middlewares/loginedMiddleware.js');
@@ -23,7 +24,7 @@ router.post('/register',userRegisterValidations, upload.single("image"), usersCo
 
 //Edicion de Usuario
 router.get('/profile/:id',logined, usersController.editionForm);
-router.put('/profile/update/:id',userRegisterValidations ,upload.single("image"), usersController.editionConfirm);
+router.put('/profile/update/:id', userUpdateValidations ,upload.single("image"), usersController.editionConfirm);
 
 //Borrar Usuario
 router.delete('/profile/delete/:id',logined, usersController.delete);

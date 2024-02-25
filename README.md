@@ -84,8 +84,14 @@ El pdf y los scripts de generacion de la base de datos se encuentan en la ruta "
 
 ![Diagrama_Entidad_Relación_DER](./src/database/seeders/DER.jpg)
 
-<a href="./src/database/seeders/DER ElectroTools.pdf" download>📕 Descargar DER en PDF</a>
+<a href="./src/database/seeders/DER.pdf" download>📕 Descargar DER en PDF</a>
 
 <a href="./src/database/seeders/electrotools_db_structure.sql" download>📂 Descargar Script de Estructura</a>
 
 <a href="./src/database/seeders/electrotools_db_data.sql" download>🧾 Descargar Script de Volcado de Datos de la DB</a>
+
+Nota: Se ha comprobado que al colocar la creación completa de cada tabla, campos y Foreigns Keys de una sola vez (como lo entrega MySQL Workbench), ocasiona problemas al ejecutar el script de creación, al cargarlo/importarlo en phpMyAdmin. Estando asi es necesario declarar la creación de las tablas en orden, siguiendo las dependencias y las tablas "padre", como explican los mensajes de error.
+
+Cuando importamos el código de estructura desde MySQL Workbench, los "CREATE TABLE" se ordenan alfabéticamente, lo cual causa conflicto en phpMyAdmin. En su lugar, phpMyAdmin declara todas las tablas de forma independiente y luego, en una sección final, declara las relaciones entre las tablas, evitando estas dependencias.
+
+Por todas estas razones, se dejan expresados los "CREATE TABLE" por un lado, y al final del archivo de estructura de datos se encuentran las relaciones.
