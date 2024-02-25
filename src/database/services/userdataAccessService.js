@@ -109,7 +109,7 @@ const userServices = {
   // Actualizar datos usuario
   //--------------------------
 
-  updateAccount: async (dataUser) => {
+  updateAccount: async (userid, dataUser) => {
     // Iniciamos una transacción para acumular las operaciones
     let transaction;
 
@@ -127,7 +127,7 @@ const userServices = {
         country: dataUser.country,
         zipcode: dataUser.zipcode,
       }, {
-        where: { id: dataUser.id },
+        where: { id: userid },
         transaction: transaction
       });
 
@@ -138,7 +138,7 @@ const userServices = {
         password: dataUser.password,
         avatar: dataUser.avatar,
       }, {
-        where: { id: dataUser.id },
+        where: { id: userid },
         transaction: transaction
       });
 

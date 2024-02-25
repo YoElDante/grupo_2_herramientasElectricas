@@ -38,7 +38,7 @@
     <div class="conteiner">
       <section class="form-conteiner">
         <h1 class="heder-register">DATOS PERSONALES</h1>
-        <form action="update/<%= account.id %>?_method=put" method="post" class="form" enctype="multipart/form-data">
+        <form action="update/<%= session.userid %>?_method=put" method="post" class="form" enctype="multipart/form-data">
 
           <fieldset name="accountData">
             <h2>Datos de la Cuenta</h2>
@@ -178,7 +178,7 @@
             <button type="submit" class="buttom-register confirmChanges">Confirmar Cambios</button>
         </form>
 
-        <form action="delete/<%= account.id %>?_method=delete" method="post">
+        <form action="delete/<%= session.userid %>?_method=delete" method="post">
           <button type="submit" class="buttom-register deleteAccount">Borrar Cuenta</button>
         </form>
 

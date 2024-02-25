@@ -65,7 +65,6 @@ const controller = {
       // informamos que el usuario no se ha encontrado
       // enviamos el valor del campo account para llenar el campo del usuario
       res.render(path.resolve(__dirname, '../views/users/login.ejs'), { error: error.message })
-
     }
   },
 
@@ -129,11 +128,6 @@ const controller = {
       // Manejo de errores
       console.error("Error al procesar la solicitud:", error);
 
-      let errors = validationResult(req)
-
-      //Imprimimos por consola lo que le vamos a pasar a la vista
-      console.log(`Lista de errores: ${JSON.stringify(errors.array())}`)
-
       // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
       res.render('../views/users/register.ejs', { errors: errors.mapped(), oldData: req.body });
 
@@ -196,7 +190,7 @@ const controller = {
       console.log(`asi quedo el nuevo usuario creado: ${JSON.stringify.dataUser}`);
       //pasamos el usuario al modelo para que lo guarde en la bd
 
-      await userService.updateAccount(dataUser);
+      await userService.updateAccount(req.session.userid, dataUser);
 
       //redirigimos al login
       res.redirect("/");
@@ -205,11 +199,6 @@ const controller = {
 
       // Manejo de errores
       console.error("Error al procesar la solicitud:", error);
-
-      let errors = validationResult(req)
-
-      //Imprimimos por consola lo que le vamos a pasar a la vista
-      console.log(`Lista de errores: ${JSON.stringify(errors.array())}`)
 
       // Pasamos los errores mappeados y pasamos la informacion anterior del formulario
       res.render('../views/users/profile.ejs', { errors: errors.mapped(), oldData: req.body });
