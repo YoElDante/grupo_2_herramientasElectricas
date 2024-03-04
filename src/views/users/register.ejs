@@ -19,6 +19,9 @@
       <!--Icons-->
       <script src="https://kit.fontawesome.com/28a6abd58f.js" crossorigin="anonymous"></script>
 
+      <!-- Validaciones con JavaScript -->
+      <script src="/js/registerValidations.js" defer></script>
+
       <!-- Titulo de la Pag -->
       <title>ElectroTools - Registración</title>
 
@@ -45,11 +48,11 @@
               <i class="fa-solid fa-envelope"></i>
               <input required type="email" name="email" id="email" placeholder="Correo Electrónico"
                 value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
-              <% if (locals.errors && errors.email) { %>
-                <p class="error">
+              <p class="error">tengo un error
+                <% if (locals.errors && errors.email) { %>
                   <%= errors.email.msg %>
-                </p>
                 <% } %>
+              </p>
             </div>
 
             <div class="div-form">

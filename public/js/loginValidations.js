@@ -4,8 +4,7 @@
 <input type="checkbox" name="rememberMe" id="rememberMe">
 
 */
-let h1 = document.querySelector('h1');
-h1.style.color = 'red';
+
 
 let emailInput = document.getElementById('email');
 
