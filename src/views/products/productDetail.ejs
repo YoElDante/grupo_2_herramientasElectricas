@@ -5,202 +5,202 @@
   <!-- Metadatos -->
   <%- include('../partials/meta.ejs')%>
 
-  <!--Custom Css-->
-  <link rel="stylesheet" href="/css/productDetail.css" />
-  <%- include('../partials/css.ejs')%>
+    <!--Custom Css-->
+    <link rel="stylesheet" href="/css/productDetail.css" />
+    <%- include('../partials/css.ejs')%>
 
-  <!--FavIcon-->
-  <link rel="shortcut icon" href="/img/electrotools/icons/FavIcoYellow.ico" type="image/x-icon" />
+      <!--FavIcon-->
+      <link rel="shortcut icon" href="/img/electrotools/icons/FavIcoYellow.ico" type="image/x-icon" />
 
-  <!-- Titulo de la Pag -->
-  <title>ElectroTools - Detalles del Producto</title>
+      <!-- Titulo de la Pag -->
+      <title>ElectroTools - Detalles del Producto</title>
 </head>
 
 <body>
   <!-- Cuerpo -->
 
-    <header>
-        <%- include('../partials/header.ejs')%>
-    </header>
+  <header>
+    <%- include('../partials/header.ejs')%>
+  </header>
 
-    <main>
-        <!-- Producto -->
-        <section class="seccion">
+  <main>
+    <!-- Producto -->
+    <section class="seccion">
 
-            <div class="tituloPrincipal">
-                <h2>
-                    <% if(product.name) { %>
-                        <%= product.name %>
-                    <% }else{ %>
-                        <%= "No disponible" %>
-                    <% } %>
-                </h2>
-                <h3>
-                    <% if(product.productBrand.name) { %>
-                        <%= product.productBrand.name %>
-                    <% }else{ %>
-                        <%= "No disponible" %>
-                    <% } %>
-                </h3>
-                <img src="" alt=""> <!-- Cristian: In progres -->
-                <!--<img src="/img/logos Empresas/herramientas/dewalt-logo.png" alt="logo DeWalt">-->
-            </div>
+      <div class="tituloPrincipal">
+        <h2>
+          <% if(product.name) { %>
+            <%= product.name %>
+              <% }else{ %>
+                <%= "No disponible" %>
+                  <% } %>
+        </h2>
+        <h3>
+          <% if(product.productBrand.name) { %>
+            <%= product.productBrand.name %>
+              <% }else{ %>
+                <%= "No disponible" %>
+                  <% } %>
+        </h3>
+        <img src="" alt=""> <!-- Cristian: In progres -->
+        <!--<img src="/img/logos Empresas/herramientas/dewalt-logo.png" alt="logo DeWalt">-->
+      </div>
 
-            <article class="galeria"><!-- Cristian: Falta terminar esto -->
-                <div class="vistasmini">
-                    <% if(product.productImages.length > 0){ %>
-                        <% for(let image of product.productImages){ %>
-                            <img src="/img/products/<%= image.image %>" alt="Imagen mini del producto">
-                        <% } %>
-                    <% }else{ %>
-                        <img src="/img/products/default.png" alt="Imagen por defecto">
-                    <% } %>
+      <article class="galeria"><!-- Cristian: Falta terminar esto -->
+        <div class="vistasmini">
+          <% if(product.productImages.length> 0){ %>
+            <% for(let image of product.productImages){ %>
+              <img src="/img/products/<%= image.image %>" alt="Imagen mini del producto">
+              <% } %>
+                <% }else{ %>
+                  <img src="/img/products/default.png" alt="Imagen por defecto">
+                  <% } %>
 
                     <!--
                     <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt grande 1.webp" alt="Imagen 1">
                     <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt grande 2.webp" alt="Imagen 2">
                     <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt grande 5.webp" alt="Imagen 3">
                     <img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt grande 4.webp" alt="Imagen 4">-->
-                </div>
+        </div>
 
-                <div class="vistagrande"><!-- Cristian: Falta terminar esto -->
-                    <% if(product.productImages.length > 0){ %>
-                        <img src="/img/products/<%= product.productImages[0].image %>" alt="Imagen de <%= product.name %>">
-                    <% }else{ %>
-                        <img src="/img/products/default.png" alt="Imagen por defecto">
-                    <% } %>
+        <div class="vistagrande"><!-- Cristian: Falta terminar esto -->
+          <% if(product.productImages.length> 0){ %>
+            <img src="/img/products/<%= product.productImages[0].image %>" alt="Imagen de <%= product.name %>">
+            <% }else{ %>
+              <img src="/img/products/default.png" alt="Imagen por defecto">
+              <% } %>
 
-                    <!--<img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt grande 2.webp" alt="Imagen Grande">-->
-                </div>
-            </article>
+                <!--<img src="img/herramientas/rotomartillo DeWalt/rotoMartillo DeWalt grande 2.webp" alt="Imagen Grande">-->
+        </div>
+      </article>
 
-            <!-- Main Precios -->
-            <article class="main-precios">
-                <div class="precios">
-                    <div class="precio">
-                        <p>Precio</p>
-                        <p>$ 
-                            <% if(product.price) { %>
-                                <%= product.price %>
-                            <% }else{ %>
-                                <%= "No disponible" %>
-                            <% } %>
-                        </p>
-                    </div>
-                    <div class="cuotas">
-                        <p>Cuotas sin interes</p>
-                        <p>12 x $ 
-                            <% if(product.price) { %>
-                                <%= (product.price)/12 %>.-
-                            <% }else{ %>
-                                <%= "No disponible" %>
-                            <% } %>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="opciones">
-                    <a href="#">ver más opciones de pago</a>
-                    <div class="logosTC">
-                        <img src="/img/logos Empresas/formas de pago/visa.png" alt="visa">
-                        <img src="/img/logos Empresas/formas de pago/mastercard.png" alt="master">
-                        <img src="/img/logos Empresas/formas de pago/Naranja X.png" alt="NaranjaX">
-                    </div>
-                </div>
-            </article>
-
-            <button class="boton-accion" type="submit">Agregar al Carrito<i class="fa-solid fa-cart-shopping"></i></button>
-            
-        </section>
-        
-        <section class="seccion">
-            <h3>Características</h3>
-            <h4>
-                <% if(product.name) { %>
-                    <%= product.name %>
-                <% }else{ %>
+      <!-- Main Precios -->
+      <article class="main-precios">
+        <div class="precios">
+          <div class="precio">
+            <p>Precio</p>
+            <p>$
+              <% if(product.price) { %>
+                <%= product.price %>
+                  <% }else{ %>
                     <%= "No disponible" %>
-                <% } %> - 
-                <% if(product.model) { %>
+                      <% } %>
+            </p>
+          </div>
+          <div class="cuotas">
+            <p>Cuotas sin interes</p>
+            <p>12 x $
+              <% if(product.price) { %>
+                <%= (product.price)/12 %>.-
+                  <% }else{ %>
+                    <%= "No disponible" %>
+                      <% } %>
+            </p>
+          </div>
+        </div>
+
+        <div class="opciones">
+          <a href="#">ver más opciones de pago</a>
+          <div class="logosTC">
+            <img src="/img/logos Empresas/formas de pago/visa.png" alt="visa">
+            <img src="/img/logos Empresas/formas de pago/mastercard.png" alt="master">
+            <img src="/img/logos Empresas/formas de pago/Naranja X.png" alt="NaranjaX">
+          </div>
+        </div>
+      </article>
+
+      <button class="boton-accion" type="submit">Agregar al Carrito<i class="fa-solid fa-cart-shopping"></i></button>
+
+    </section>
+
+    <section class="seccion">
+      <h3>Características</h3>
+      <h4>
+        <% if(product.name) { %>
+          <%= product.name %>
+            <% }else{ %>
+              <%= "No disponible" %>
+                <% } %> -
+                  <% if(product.model) { %>
                     <%= product.model %>
-                <% }else{ %>
-                    <%= "No disponible" %>
-                <% } %>
-            </h4>
-            
-            <article class="saber">
-                <% if(product.description) { %>
-                    <%= product.description %>
-                <% }else{ %>
-                    <%= "No disponible" %>
-                <% } %>
-            </article>
-            
-            <article>
-                <ul>
-                    <li>Marca: 
-                        <% if(product.productBrand.name) { %>
-                            <%= product.productBrand.name %>
-                        <% }else{ %>
-                            <%= "No disponible" %>
-                        <% } %>
-                    </li>
-                    <li>Modelo: 
-                        <% if(product.model) { %>
-                            <%= product.model %>
-                        <% }else{ %>
-                            <%= "No disponible" %>
-                        <% } %>
-                    </li>
-                    <li>Voltaje:
-                        <% if(product.productDetail.voltage) { %>
-                            <%= product.productDetail.voltage %>
-                        <% }else{ %>
-                            <%= "No disponible" %>
-                        <% } %>
-                    </li>
-                    <li>Frecuencia:
-                        <% if(product.productDetail.frequency) { %>
-                            <%= product.productDetail.frequency %>
-                        <% }else{ %>
-                            <%= "No disponible" %>
-                        <% } %>
-                    </li>
-                    <li>Potencia:
-                        <% if(product.productDetail.power) { %>
-                            <%= product.productDetail.power %>
-                        <% }else{ %>
-                            <%= "No disponible" %>
-                        <% } %>
-                    </li>
-                    <li>Extras:
-                        <% if(product.productDetail.extras) { %>
-                            <%= product.productDetail.extras %>
-                        <% }else{ %>
-                            <%= "No disponible" %>
-                        <% } %>
-                    </li>
-                </ul>
-            </article>
-            
-            <button class="boton-accion">Descargar Manual <i class="fa-solid fa-file-pdf"></i></button>
-            <form action="/products/edit/<%= product.id %>">
-                <button class="boton-accion" type="submit">Editar</button>
-            </form>
-            <form action="/products/<%= product.id %>?_method=delete" method="post" enctype="multipart/form-data">
-                <button class="boton-accion" type="submit">Eliminar</button>
-            </form>
-            
-        </section>
-    
-    </main>
+                      <% }else{ %>
+                        <%= "No disponible" %>
+                          <% } %>
+      </h4>
 
-    <footer>
-        <%- include('../partials/footer.ejs') %>
-    </footer>
+      <article class="saber">
+        <% if(product.description) { %>
+          <%= product.description %>
+            <% }else{ %>
+              <%= "No disponible" %>
+                <% } %>
+      </article>
 
-    <!-- Scrips -->
-    <script src="https://kit.fontawesome.com/30f2e17de6.js" crossorigin="anonymous"></script>
+      <article>
+        <ul>
+          <li>Marca:
+            <% if(product.productBrand.name) { %>
+              <%= product.productBrand.name %>
+                <% }else{ %>
+                  <%= "No disponible" %>
+                    <% } %>
+          </li>
+          <li>Modelo:
+            <% if(product.model) { %>
+              <%= product.model %>
+                <% }else{ %>
+                  <%= "No disponible" %>
+                    <% } %>
+          </li>
+          <li>Voltaje:
+            <% if(product.productDetail.voltage) { %>
+              <%= product.productDetail.voltage %>
+                <% }else{ %>
+                  <%= "No disponible" %>
+                    <% } %>
+          </li>
+          <li>Frecuencia:
+            <% if(product.productDetail.frequency) { %>
+              <%= product.productDetail.frequency %>
+                <% }else{ %>
+                  <%= "No disponible" %>
+                    <% } %>
+          </li>
+          <li>Potencia:
+            <% if(product.productDetail.power) { %>
+              <%= product.productDetail.power %>
+                <% }else{ %>
+                  <%= "No disponible" %>
+                    <% } %>
+          </li>
+          <li>Extras:
+            <% if(product.productDetail.extras) { %>
+              <%= product.productDetail.extras %>
+                <% }else{ %>
+                  <%= "No disponible" %>
+                    <% } %>
+          </li>
+        </ul>
+      </article>
+
+      <button class="boton-accion">Descargar Manual <i class="fa-solid fa-file-pdf"></i></button>
+      <form action="/products/edit/<%= product.id %>">
+        <button class="boton-accion" type="submit">Editar</button>
+      </form>
+      <form action="/products/<%= product.id %>?_method=delete" method="post" enctype="multipart/form-data">
+        <button class="boton-accion" type="submit">Eliminar</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+
+  <!-- Scrips -->
+  <script src="https://kit.fontawesome.com/30f2e17de6.js" crossorigin="anonymous"></script>
 
 </body>
 
