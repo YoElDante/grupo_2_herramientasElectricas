@@ -75,7 +75,8 @@
     resize: none;
     width: 100%;
     height: 100%;
-    margin: 0.3125rem 0 0.6rem 0;
+    margin-bottom: 0.5rem;
+    /*margin: 0.3125rem 0 0.6rem 0;*/
     /*background-color: #00000000;*/
     background: none;
 }
