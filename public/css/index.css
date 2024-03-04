@@ -54,13 +54,6 @@ div.botones-carrusel a {
   text-decoration: none;
 }
 
-div.botones-carrusel {
-  display: flex;
-  justify-content: space-around;
-  margin: 0% 40%;
-  margin-top: 0.5rem;
-}
-
 /* --- FIN CARRUSEL --- */
 
 /* --- CAJA DE HERRAMIENTAS --- */

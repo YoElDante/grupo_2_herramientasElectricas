@@ -8,6 +8,10 @@ const productsService = require('../database/services/productsdataAccessService.
 const db = require('../database/models');
 
 const controller = {
+
+  //*********************
+  //        HOME
+  //*********************
   index:(req, res) => { // Cristian
     db.Product.findAll({
       include: [
@@ -20,11 +24,18 @@ const controller = {
     })
   },
 
+  //*********************
+  //       ORDERS
+  //*********************
+  
   cart: (req, res) => {
     //Esto se debe mover al controller de Orders
     res.render(path.resolve(__dirname, '../views/products/productCart.ejs') , {products});
   },
-
+  
+  //*********************
+  //   Product Detail
+  //*********************
   detail: (req, res) => { // Cristian
     //Esto se debe mover al controller de Orders // Cristian: ¿Seguro? Este es el detalle de un "producto".
     db.Product.findByPk(req.params.id, {
