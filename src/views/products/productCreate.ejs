@@ -20,9 +20,9 @@
     <div class="mainConteiner">
       <section class="formConteiner">
         <h1 class="title">REGISTRO DE PRODUCTOS</h1>
-        <form action="/products/create" method="post" enctype="multipart/form-data">
+        <form action="/products/create" method="post" enctype="multipart/form-data" id="form">
 
-          <label for="name">Nombre del producto</label>
+          <label for="name" id="labelName">Nombre del producto (requerido)</label>
           <div class="divInput">
             <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w">
           </div>
@@ -44,7 +44,7 @@
             <input type="text" name="model" id="model" placeholder="Ej: SDS DCH133hd 20V">
           </div>
 
-          <label for="description">Descripcion del producto</label>
+          <label for="description" id="labelDescription">Descripcion del producto (requerido)</label>
           <div class="">
             <textarea name="description" id="description" placeholder="Escriba una descripcion..."
               class="description"></textarea>
@@ -105,13 +105,13 @@
             <input type="text" name="userManual" id="userManual" placeholder="Ej: http://manual.com">
           </div>
 
-          <label for="image">Imagenes del producto</label>
+          <label for="image" id="labelImage">Imagen del producto (requerido)</label>
           <div class="divInput">
             <input type="file" multiple name="image" id="image" class="file">
           </div>
 
           <div>
-            <button type="submit" class="submit">Guardar</button>
+            <button type="submit" class="submit" id="formButton">Guardar</button>
           </div>
 
         </form>
@@ -122,6 +122,7 @@
   <footer>
     <%- include('../partials/footer.ejs') %>
   </footer>
+  <script src="/js/productCreate.js"></script>
 </body>
 
 </html>
