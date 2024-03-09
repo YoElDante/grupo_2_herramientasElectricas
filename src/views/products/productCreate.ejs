@@ -22,9 +22,13 @@
         <h1 class="title">REGISTRO DE PRODUCTOS</h1>
         <form action="/products/create" method="post" enctype="multipart/form-data" id="form">
 
-          <label for="name" id="labelName">Nombre del producto (requerido)</label>
+          <label for="name" id="labelName">Nombre del producto (requerido)
+            <% if(locals.errors && errors.name){ %>
+              <span class="attention"><%= errors.name.msg %></span>
+            <% } %>
+          </label>
           <div class="divInput">
-            <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w">
+            <input type="text" name="name" id="name" placeholder="Ej: Taladro 13mm 750w" value="<%= locals.old && old.name %>">
           </div>
 
           <label for="brand">Marca del producto</label>
@@ -44,10 +48,14 @@
             <input type="text" name="model" id="model" placeholder="Ej: SDS DCH133hd 20V">
           </div>
 
-          <label for="description" id="labelDescription">Descripcion del producto (requerido)</label>
-          <div class="">
+          <label for="description" id="labelDescription">Descripcion del producto (requerido)
+            <% if(locals.errors && errors.description){ %>
+              <span class="attention"><%= errors.description.msg %></span>
+            <% } %>
+          </label>
+          <div class="divInput">
             <textarea name="description" id="description" placeholder="Escriba una descripcion..."
-              class="description"></textarea>
+            class="description"><%= locals.old && old.description %></textarea>
           </div>
 
           <label for="price">Precio del producto</label>
@@ -105,9 +113,14 @@
             <input type="text" name="userManual" id="userManual" placeholder="Ej: http://manual.com">
           </div>
 
-          <label for="image" id="labelImage">Imagen del producto (requerido)</label>
+          <label for="image" id="labelImage">Imagen del producto (requerido)
+            <% if(locals.errors && errors.image){ %>
+              <span class="attention"><%= errors.image.msg %></span>
+            <% } %>
+          </label>
           <div class="divInput">
-            <input type="file" multiple name="image" id="image" class="file">
+            <!-- Cristian: Todavia no se como precargar las imagenes -->
+            <input type="file" multiple name="image" id="image" class="">
           </div>
 
           <div>
