@@ -2,14 +2,15 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const productsController = require('../controllers/productsController.js');
-const imgUpload = require('../middlewares/multerMiddleware.js')
+const imgUpload = require('../middlewares/multerMiddleware.js');
 const logined = require ('../middlewares/loginedMiddleware.js');
+const productCreateValidator = require('../validations/productCreateValidator.js');
 
 // rutas
 router.get('/',productsController.index);
 
 router.get('/create', logined, productsController.create);
-router.post('/create', imgUpload.array('image'), productsController.createOk); // Cristian: 20-02-24 Le puse comillas a (image).
+router.post('/create', imgUpload.array('image'), productCreateValidator, productsController.createOk); // Cristian: 20-02-24 Le puse comillas a (image).
 
 router.get('/edit/:id', logined, productsController.edit);
 router.put('/edit/:id', imgUpload.array('image'), productsController.editOk); // Cristian: 20-02-24 Le puse comillas a (image).
