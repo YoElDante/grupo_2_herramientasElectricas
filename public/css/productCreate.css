@@ -58,27 +58,33 @@
 
 .divInput input {
     text-align: center;
-    width: 90%;
-    height: 1rem;
-    background: transparent;
+    width: 100%;
+    height: 100%;
+    background: none;
     outline: none;
     color: #11111f;
     font-size: 0.6rem;
-    border: transparent;
+    border: none;
 }
 
 .description {
-    font-size: 0.6rem;
-    padding: 0.125rem 0.8125rem;
-    border: #11111f5d solid 3px;
-    border-radius: 25px;
-    resize: none;
     width: 100%;
     height: 100%;
-    margin-bottom: 0.5rem;
+    background: none;
+    outline: none;
+    font-size: 0.6rem;
+    border: none;
+    resize: none;
+    /*padding: 0.125rem 0.8125rem;*/
+    /*border: #11111f5d solid 3px;*/
+    /*border-radius: 25px;*/
+    /*margin-bottom: 0.5rem;*/
     /*margin: 0.3125rem 0 0.6rem 0;*/
     /*background-color: #00000000;*/
-    background: none;
+}
+
+.attention {
+    color: red;
 }
 
 .category {
