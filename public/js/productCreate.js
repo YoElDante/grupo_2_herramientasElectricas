@@ -30,26 +30,26 @@ window.addEventListener('load', function(){
     // Validaciones del input "name"
     name.addEventListener('input', function(){
         if(name.value.length < 5){
-            labelName.innerHTML = 'Nombre del producto: Deber tener un minimo de 5 caracteres';
-            name.style.background='none';
+            labelName.innerHTML = 'Nombre del producto: <span style="color: #ce9416">Minimo 5 caracteres</span>';
+            name.style.background = 'none';
         }else{
             labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-check" style="color: green"></i>';
-            name.style.background='lightgreen';
+            name.style.background = 'lightgreen';
         };
     });
     name.addEventListener('blur', function(){
         if(name.value == ""){ // Error
             labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            name.style.background='pink';
+            name.style.background = 'pink';
             name.placeholder = 'Este campo es obligatorio';
-            errors.name= 'error';
+            errors.name = 'error';
         }else if(name.value.length < 5){ // Error
             labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            name.style.background='pink';
-            errors.name= 'error';
+            name.style.background = 'pink';
+            errors.name = 'error';
         }else{ // Sin error
             labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-check" style="color: green"></i>';
-            name.style.background='lightgreen';
+            name.style.background = 'lightgreen';
             delete errors.name;
         }
     });
@@ -57,26 +57,26 @@ window.addEventListener('load', function(){
     // Validaciones del input "description"
     description.addEventListener('input', function(){
         if(description.value.length < 20){
-            labelDescription.innerHTML = 'Descripcion del producto: Deber tener un minimo de 20 caracteres';
-            description.style.background='none';
+            labelDescription.innerHTML = 'Descripcion del producto: <span style="color: #ce9416">Minimo 20 caracteres</span>';
+            description.style.background = 'none';
         }else{
             labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-check" style="color: green"></i>';
-            description.style.background='lightgreen';
+            description.style.background = 'lightgreen';
         };
     });
     description.addEventListener('blur', function(){
         if(description.value == ""){ // Error
             labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            description.style.background='pink';
+            description.style.background = 'pink';
             description.placeholder = 'Este campo es obligatorio';
-            errors.description= 'error';
+            errors.description = 'error';
         }else if(description.value.length < 20){ // Error
             labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            description.style.background='pink';
-            errors.description= 'error';
+            description.style.background = 'pink';
+            errors.description = 'error';
         }else{ // Sin error
             labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-check" style="color: green"></i>';
-            description.style.background='lightgreen';
+            description.style.background = 'lightgreen';
             delete errors.description;
         }
     });
@@ -85,14 +85,14 @@ window.addEventListener('load', function(){
     image.addEventListener('click', function(){
         if(image.files.length === 0){ // Error
             labelImage.innerHTML = 'Imagen del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            image.style.background='pink';
+            image.style.background = 'pink';
         };
     });
     image.addEventListener('change', function(){
         if(image.files.length === 0){ // Error: No hay archivo cargado
             labelImage.innerHTML = 'Imagen del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            image.style.background='pink';
-            errors.image= 'error';
+            image.style.background = 'pink';
+            errors.image = 'error';
         }else{ // Hay por lo menos un archivo cargado
             const permitted = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
             const errorsAux = [];
@@ -102,12 +102,12 @@ window.addEventListener('load', function(){
                 };
             };
             if(errorsAux.length > 0){ // Error de extension
-                labelImage.innerHTML = 'Imagen del producto: Las extensiones validas son (.jpg) - (.jpeg) - (.png) - (.gif)';
-                    image.style.background='pink';
-                    errors.image= 'error';
+                labelImage.innerHTML = 'Imagen del producto: <span style="color: #ce9416">Admite (.jpg) - (.jpeg) - (.png) - (.gif)</span>';
+                    image.style.background = 'pink';
+                    errors.image = 'error';
             }else{ // Sin error de extension
                 labelImage.innerHTML = 'Imagen del producto ' + '<i class="fa-solid fa-check" style="color: green"></i>';
-                    image.style.background='lightgreen';
+                    image.style.background = 'lightgreen';
                     delete errors.image;
             };
         };
@@ -117,6 +117,9 @@ window.addEventListener('load', function(){
     form.addEventListener('submit', function(event){
         if(Object.keys(errors).length > 0){ // Error
             event.preventDefault();
+            labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
+            labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
+            labelImage.innerHTML = 'Imagen del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
             alert('El formulario no cumple los requisitos de envio');
         }; // Sin error
     });
