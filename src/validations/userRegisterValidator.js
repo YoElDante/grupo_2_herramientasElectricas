@@ -6,14 +6,19 @@ const validations = [
   // input type="email" name="email" placeholder="Correo Electrónico" id="email"
   body('email')
     .notEmpty().withMessage("Ingrese su email por favor ❗").bail()
-    .isEmail().withMessage("Ingrese un email valido por favor ❗"),
-    //! Agregar validacion de que tiene .com
+    .isEmail().withMessage("Ingrese un email valido por favor ❗")
+    .custom((value, { req }) => {
+      if (!value.endsWith('.com')) {
+          throw new Error('El correo electrónico debe terminar en .com ❗');
+      }
+      return true;
+  }),
 
 
   //input type="text" name="username" placeholder="Nombre de Usuario" id="username" required>
   body("username")
-    .notEmpty().withMessage("Ingrese su nombre de usuario por favor ❗").bail(),
-    //! Agregar que al menos tenga 2 caracteres
+    .notEmpty().withMessage("Ingrese su nombre de usuario por favor ❗").bail()
+    .isLength({ min: 2 }).withMessage('El nombre de usuario debe tener al menos 2 caracteres'),
 
   //input type="password" name="password" placeholder="Contraseña" id="password" required>
   body("password")
@@ -68,7 +73,7 @@ const validations = [
   body("image").custom((value, { req }) => {
       // Verificacion de extension de tipo de imagen
       let file = req.file;
-      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+      let acceptedExtensions = ['.jpg', 'jpeg', '.png', '.gif'];
 
       if(file){
           let fileExtension = path.extname(file.originalname);

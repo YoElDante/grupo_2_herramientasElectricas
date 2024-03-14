@@ -102,6 +102,7 @@ input::placeholder {
 .div-form i {
     background: transparent;
     margin: auto;
+    margin-left: 0.5rem;
     justify-content: flex-start;
     align-self: stretch;
     cursor: pointer;

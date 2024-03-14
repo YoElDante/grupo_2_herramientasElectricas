@@ -84,10 +84,10 @@ CREATE TABLE `users` (
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   `birthday` date NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `street` varchar(20) NOT NULL,
-  `city` varchar(20) NOT NULL,
-  `country` varchar(20) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `street` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
   `zipcode` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
