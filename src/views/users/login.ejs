@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-  
-  <head>
-    <!-- Metadatos -->
-    <%- include('../partials/meta.ejs')%>
-    
+
+<head>
+  <!-- Metadatos -->
+  <%- include('../partials/meta.ejs')%>
+
     <!-- links -->
-    
+
     <!--Custom Css-->
+    <link rel="stylesheet" href="/css/register.css" />
     <link rel="stylesheet" href="/css/login.css" />
     <%- include('../partials/css.ejs')%>
-    
-    <!-- Font -->
+
+      <!-- Font -->
       <link rel="" href="" />
-      
+
       <!--FavIcon-->
       <link rel="shortcut icon" href="/img/electroTools/icons/FavIcoYellow.ico" type="image/x-icon" />
       <!--Icons-->
-      
+
       <script src="https://kit.fontawesome.com/28a6abd58f.js" crossorigin="anonymous"></script>
-      
+
       <!-- Titulo de la Pag -->
       <title>ElectroTools - Login</title>
 
 
       <script src="/js/loginValidations.js" defer></script>
-    </head>
-    
-    <body>
+</head>
+
+<body>
   <!-- Cuerpo -->
 
   <header>
@@ -45,26 +46,25 @@
           <div class="div-form">
             <i class="fa-solid fa-envelope"></i>
             <input type="email" name="email" placeholder="Su Email" id="email" required>
-            <!-- verifica si hay error en el mail -->
+            <p class="error">
+              <% if (locals.errors && errors.email) { %>
+                <%= errors.email.msg %>
+                  <% } %>
+            </p>
           </div>
 
-          <div id="emailErrors">
-            <!-- Validacion desde el Back-end -->
-            <% if (locals.error) { %>
-              <p class="error">
-                <%= error %>
-              </p>
-              <% } %>
-              <!-- Validacion desde el Front-end -->
-            </div>
-              
-              <div class="div-form">
-                <i class="fa-solid fa-eye-slash"></i>
+          <div class="div-form">
+            <i class="fa-solid fa-eye-slash"></i>
             <input type="password" name="password" placeholder="Contraseña" id="password" required>
+            <p class="error">
+              <% if (locals.error) { %>
+                <%= error %>
+                  <% } %>
+            </p>
           </div>
 
           <div class="buttom-imput">
-            <button type="submit" class="buttom-register">Ingresar</button>
+            <button type="submit" class="buttom-register-login">Ingresar</button>
           </div>
 
           <div class="rememberMe">

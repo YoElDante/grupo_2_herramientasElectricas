@@ -2,38 +2,38 @@
 <input type="email" name="email" placeholder="Su Email" id="correo-electronico" required>
 <input type="password" name="password" placeholder="Contraseña" id="password" required>
 <input type="checkbox" name="rememberMe" id="rememberMe">
-
 */
 
+const elEmailInput = document.getElementById('email');
 
-let emailInput = document.getElementById('email');
+// ------------------------
+//   Funcion Validacion
+// ------------------------
+function validation(inputElement, regex, errMsg = 'Campo obligatorio') {
 
-console.log(emailInput);
+  // Sanitizamos el campo
+  inputElement.value = inputElement.value.trim();
+  inputElement.value = inputElement.value.charAt(0).toUpperCase() + inputElement.value.slice(1);
 
-let emailError = document.getElementById('emailErrors');
+  if (regex.test(inputElement.value)) {
+
+    inputElement.nextElementSibling.innerText = '';
+
+    inputElement.isOk = true;
+
+  } else {
+    inputElement.nextElementSibling.innerText = errMsg;
+    inputElement.nextElementSibling.style.color = "red"
+    inputElement.isOk = false;
+  }
+}
+
+// ------------
+//    Email
+// ------------
 
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+\.com$/;
-
-emailInput.addEventListener('focus', (event) => {
-  console.log('se selecciono el input');
-})
-
-emailInput.addEventListener('blur', function () {
-
-  this.value = this.value.trim();
-
-  if (!emailRegex.test(emailInput.value)) {
-    emailError.innerHTML = `
-    <p class="error">
-    Correo electrónico inválido ❗
-    </p> 
-    `
-  }
-  console.log("El valor del campo de correo electrónico es: " + emailInput.value);
-});
-
-//! Si hay errores en el campo, evitar el evento submit!
 
 
 

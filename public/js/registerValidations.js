@@ -13,12 +13,12 @@ const elInputZipcode = document.getElementById('zipcode');
 const elInputImage = document.getElementById('image');
 const elBtnSubmit = document.getElementById('buttom-imput');
 
-//------------------------
+// ------------------------
 //   Funcion Validacion
-//------------------------
+// ------------------------
 function validation(inputElement, regex, errMsg = 'Campo obligatorio') {
 
-  //Sanitizamos el campo
+  // Sanitizamos el campo
   inputElement.value = inputElement.value.trim();
   inputElement.value = inputElement.value.charAt(0).toUpperCase() + inputElement.value.slice(1);
 
