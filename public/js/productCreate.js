@@ -117,9 +117,15 @@ window.addEventListener('load', function(){
     form.addEventListener('submit', function(event){
         if(Object.keys(errors).length > 0){ // Error
             event.preventDefault();
-            labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
-            labelImage.innerHTML = 'Imagen del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
+            if(errors.name){
+                labelName.innerHTML = 'Nombre del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
+            };
+            if(errors.description){
+                labelDescription.innerHTML = 'Descripcion del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
+            };
+            if(errors.image){
+                labelImage.innerHTML = 'Imagen del producto ' + '<i class="fa-solid fa-xmark" style="color: red"></i>';
+            };
             alert('El formulario no cumple los requisitos de envio');
         }; // Sin error
     });
