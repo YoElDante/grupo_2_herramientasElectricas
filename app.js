@@ -7,6 +7,7 @@ const session = require('express-session'); // Flor
 const homeRouter = require('./src/routers/home.js')
 const usersRouter = require('./src/routers/users.js')
 const productsRouter = require('./src/routers/products.js')
+const apiProductsRouter = require('./src/routers/apiProducts.js');
 
 
 const app = express();
@@ -46,3 +47,5 @@ app.use('/users',usersRouter)
 // Seccion PRODUCTS
 app.use('/products',productsRouter)
 
+// Seccion API
+app.use('/api', apiProductsRouter);
