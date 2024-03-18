@@ -6,6 +6,8 @@
 
 const elEmailInput = document.getElementById('email');
 
+
+
 // ------------------------
 //   Funcion Validacion
 // ------------------------
@@ -28,13 +30,17 @@ function validation(inputElement, regex, errMsg = 'Campo obligatorio') {
   }
 }
 
+
 // ------------
 //    Email
 // ------------
+elEmailInput.addEventListener('input', function (event) {
+  validation(this, /^[^\s@]{2,}@[^@\s]{2,}\.com$/, 'Correo electrónico inválido');
+  console.log("input")
+  if(inputElement.isOk == false){
+    event.preventDefault();
+  }
+});
 
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+\.com$/;
-
-
-
-
+//Solo implementé lo que ya hizo Dante!

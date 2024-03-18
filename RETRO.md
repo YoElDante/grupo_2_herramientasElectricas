@@ -6,12 +6,28 @@
 ***Lo que podemos hacer para mejorar: ****
 -------------FIN RETRO CORRIENTE SPRINT-------------
   -->
-
-  
-### RETRO Sexto Sprint - --- --/--/2024
+### RETRO septimo Sprint - 
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+-
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+-
 ***Lo que podemos hacer para mejorar: ****
+-
+-------------FIN RETRO CORRIENTE SPRINT-------------
+  
+### RETRO Sexto Sprint - 
+***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+- Hay mas fluides en la relización de las tareas por parte de Dante y Cristian.  Buen uso del trello.
+***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+- Gustavo y Flor estan un poco atrasados con el contenido y les dificulta poder estar al nivel de Dante y Cristian para realizar por igual las tares. Poca diponibilidad de tiempo por trabajo y estudios.
+-Se hizo una mala división de tareas, sobrecargo a algunos miembros.
+-Se perdió un poco la comunicación al principio del Sprint, pero se mejoró al fianl.
+-El diseño de la base de datos supuso un reto dificil de afrontar.
+***Lo que podemos hacer para mejorar: ****
+- organizarnos mejor para no sobrecargar a los miembros del equipo.
+- Distribuir las tareas sencillas para los que no pueden hacer las mas complejas.
+- Pedir ayuda con mas tiempo.
+
 -------------FIN RETRO SEXTO SPRINT-------------
  
 ### RETRO Quinto Sprint - MARTES 22/01/2024

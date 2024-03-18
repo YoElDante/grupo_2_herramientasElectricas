@@ -2,6 +2,12 @@
 
 // Hay que ordenar la información de manera Descendente
 
+### **Reunión  11/03/24:**
+Como dividir el sprint, terminar el PG, como van las tareas sin cumplir .
+
+### **Reunión  26/02/24:**
+Como trabajar en el tablero de Trello (cuando agregarse a una tarjeta). Como poner la descripción del Commit. Como va el avance de cada responsabilidad.  Fechas de entregas del Sprint. 
+
 ### **Reunion  19/02/24:** 
 > Distribución de las tareas a terminar.
 > Explicación del avance de cada uno.
