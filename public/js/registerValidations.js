@@ -67,6 +67,7 @@ y que no haya espacios en blanco en la cadena. Además, garantiza que la cadena 
 const textPasswordRequires = 'La contraseña debe tener al menos 8 caracteres\n' +
   'Debe poseer al menos una letra Mayúscula\n' +
   'Debe poseer al menos una letra Minúscula\n' +
+  'Debe poseer al menos un número\n' +
   'Debe poseer al menos un caracter especial\n' +
   'Lista de caracteres especiales: !@#$%^&*()-_=+{};:,<.>'
 
