@@ -35,12 +35,16 @@
           <h1 class="title">EDICION DE PRODUCTOS</h1>
           <form action="/products/edit/<%= product.id %>?_method=put" method="post" enctype="multipart/form-data">
           
-            <label for="name">Nombre del producto</label>
+            <label for="name">Nombre (requerido)
+              <% if(locals.errors && errors.name){ %>
+                <span class="attention"><%= errors.name.msg %></span>
+              <% } %>
+            </label>
             <div class="divInput">
               <input type="text" name="name" id="name" value="<%= product.name %>">
             </div>
                     
-            <label for="brand">Marca del producto</label>
+            <label for="brand">Marca</label>
             <div class="divInput">
               <!--<input type="text" name="brand" id="brand" value="<%= product.brand %>">-->
               <select name="brand" id="brand" class="file">
@@ -54,22 +58,26 @@
               </select>
             </div>
                     
-            <label for="model">Modelo del producto</label>
+            <label for="model">Modelo</label>
             <div class="divInput">
               <input type="text" name="model" id="model" value="<%= product.model %>">
             </div>
 
-            <label for="description">Descripcion del producto</label>
-            <div class="">
+            <label for="description">Descripcion (requerido)
+              <% if(locals.errors && errors.description){ %>
+                <span class="attention"><%= errors.description.msg %></span>
+              <% } %>
+            </label>
+            <div class="divInput">
               <textarea name="description" id="description" class="description"><%= product.description %></textarea>
             </div>
 
-            <label for="price">Precio del producto</label>
+            <label for="price">Precio</label>
             <div class="divInput">
               <input type="text" name="price" id="price" value="<%= product.price %>">
             </div>
 
-            <label for="units">Cantidad disponible del producto</label>
+            <label for="units">Cantidad</label>
             <div class="divInput">
               <input type="text" name="units" id="units" value="<%= product.units %>">
             </div>
@@ -94,17 +102,17 @@
               <input type="text" name="color" id="color" value="<%= product.color %>">
             </div>-->
 
-            <label for="voltage">Voltage del producto</label>
+            <label for="voltage">Voltage</label>
             <div class="divInput">
               <input type="text" name="voltage" id="voltage" value="<%= product.productDetail.voltage %>">
             </div>
 
-            <label for="frequency">Frecuencia del producto</label>
+            <label for="frequency">Frecuencia</label>
             <div class="divInput">
               <input type="text" name="frequency" id="frequency" value="<%= product.productDetail.frequency %>">
             </div>
 
-            <label for="power">Potencia del producto</label>
+            <label for="power">Potencia</label>
             <div class="divInput">
               <input type="text" name="power" id="power" value="<%= product.productDetail.power %>">
             </div>
@@ -119,20 +127,25 @@
               <input type="text" name="generalCharacteristics" id="generalCharacteristics" value="<%= product.generalCharacteristics %>">
             </div>-->
             
-            <label for="userManual">Manual del producto</label>
+            <label for="userManual">Manual</label>
             <div class="divInput">
               <input type="text" name="userManual" id="userManual" value="<%= product.productDetail.manual %>">
             </div>
             
-            <label for="image">Agregar imagenes del producto</label>
+            <label for="image">Imagenes (requerido)
+              <% if(locals.errors && errors.image && product.productImages.length == 0){ %>
+                <span class="attention"><%= errors.image.msg %></span>
+              <% } %>
+            </label>
             <div class="divInput">
-              <input type="file" multiple name="image" id="image" class="file">
+              <input type="file" multiple name="image" id="image" class="">
             </div>
 
             <!-- Cristian: Trabajo sin terminar. La idea es dar la posibilidad de eliminar las imagenes cargadas. -->
             <label>Imagenes cargadas</label>
             <div class="divInput">
               <% if(product.productImages.length > 0){ %>
+                <input type="radio" name="imageOk" checked style="display: none">
                 <% for(let image of product.productImages){ %>
                   <img src="/img/products/<%= image.image %>" alt="Imagen mini del producto" height="100rem">
                 <% } %>
