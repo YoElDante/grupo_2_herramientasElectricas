@@ -183,39 +183,66 @@ const controller = {
       }
     }*/
 
-    const productUpdated = db.Product.update({
-      name: req.body.name,
-      productbrand_id: req.body.brand,
-      model: req.body.model,
-      description: req.body.description,
-      price: req.body.price,
-      units: req.body.units
-    },{where: {id: req.params.id}})
-    const productDetailUpdated = db.ProductDetail.update({
-      voltage: req.body.voltage,
-      frequency: req.body.frequency,
-      power: req.body.power,
-      extras: req.body.extras,
-      manual: req.body.manual,
-      product_id: req.params.id
-    },{where: {product_id: req.params.id}});
+    let errors = validationResult(req);
+    if(req.body.imageOk){ // Hay imagenes cargadas. Debo eliminar el error de image.
+      //console.log('\x1b[31m', errors);
+      errors.errors = errors.errors.filter(objet => objet.path !== 'image');
+      //console.log('\x1b[32m', errors);
+    }
 
-    Promise.all([productUpdated, productDetailUpdated])
-    .then(()=>{
-      for(let file of req.files){
-        db.ProductImage.create({
-          image: file.filename,
-          product_id: req.params.id
-        })
-      }
-    })
-    .then(()=>{
-      res.redirect('/products/detail/' + req.params.id);
-      res.status(200)
-    })
-    .catch((error)=>{
-      res.status(500)
-    })
+    if(!errors.isEmpty()){ // Si hay errores
+      const promiseOne = db.Product.findByPk(req.params.id, {
+        include: [
+          {association: "productBrand"},
+          {association: "productImages"},
+          {association: "productDetail"}
+        ]
+      });
+      const promiseTwo = db.ProductBrand.findAll();
+  
+      Promise.all([promiseOne, promiseTwo])
+      .then(([product, brands])=>{ //console.log('Lo que hay en product es: ' + JSON.stringify(product, null, 2));
+        res.render(path.resolve(__dirname, '../views/products/productEdit.ejs'), {product, brands, errors: errors.mapped()});
+        res.status(200)
+      })
+      .catch((error)=>{
+        res.status(500)
+      })
+    }else{ // No hay errores
+      const productUpdated = db.Product.update({
+        name: req.body.name,
+        productbrand_id: req.body.brand,
+        model: req.body.model,
+        description: req.body.description,
+        price: req.body.price,
+        units: req.body.units
+      },{where: {id: req.params.id}})
+      const productDetailUpdated = db.ProductDetail.update({
+        voltage: req.body.voltage,
+        frequency: req.body.frequency,
+        power: req.body.power,
+        extras: req.body.extras,
+        manual: req.body.manual,
+        product_id: req.params.id
+      },{where: {product_id: req.params.id}});
+  
+      Promise.all([productUpdated, productDetailUpdated])
+      .then(()=>{
+        for(let file of req.files){
+          db.ProductImage.create({
+            image: file.filename,
+            product_id: req.params.id
+          })
+        }
+      })
+      .then(()=>{
+        res.redirect('/products/detail/' + req.params.id);
+        res.status(200)
+      })
+      .catch((error)=>{
+        res.status(500)
+      })
+    }
   },
 
   delete: (req, res) => { // Cristian
