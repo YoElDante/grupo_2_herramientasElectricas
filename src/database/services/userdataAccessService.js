@@ -9,9 +9,7 @@ const { Console } = require('console');
 const userServices = {
   getAll: async () => {
 
-    let allAccounts = await db.Account.findAll({
-      include: ['user']
-    })
+    let allAccounts = await db.Account.findAll( {include: ['user']} )
 
     return allAccounts
 

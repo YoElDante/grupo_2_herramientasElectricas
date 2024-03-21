@@ -49,6 +49,5 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 
 // Seccion API
-
 app.use('/api/users', apiUsersRouter);
 app.use('/api/products', apiProductsRouter); //Cristian
