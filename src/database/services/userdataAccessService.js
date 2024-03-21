@@ -7,11 +7,28 @@ const { Console } = require('console');
 
 
 const userServices = {
-  getAll: async () => {
+  getAll: async (page = 1, pageSize = 5) => {
 
-    let allAccounts = await db.Account.findAll( {include: ['user']} )
+    try {
 
-    return allAccounts
+      const offset = (page - 1) * pageSize;
+      
+      //Metodo que nos da Sequelize
+      let allAccounts = await db.Account.findAll(
+        { 
+          include: ['user'],
+          offset: offset,
+          limit: pageSize
+        }
+      
+      );
+      return allAccounts;
+
+    } catch (error) {
+
+      console.error('Error al obtener todas las cuentas:', error);
+      throw new Error('No se pudieron obtener todas las cuentas');
+    }
 
   },
 

@@ -107,12 +107,9 @@ const controller = {
 
         //Direccion de la imagen.
         //Si viene de req.file
-        avatar: (req.file) ?
+        avatar: (req.file) ? req.file.filename : "default.jpg"
           //la recibe del formulario
-          path.resolve("./img/users/", req.file.filename) :
           //sino manda la img defauld
-          "./img/users/default.jpg"
-
       };
 
       console.log(`asi quedo el nuevo usuario creado: ${newUser}`);
