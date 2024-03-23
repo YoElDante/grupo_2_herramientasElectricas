@@ -12,17 +12,26 @@ const userServices = {
     try {
 
       const offset = (page - 1) * pageSize;
-      
+
+      // Usa count() para obtener el total de usuarios
+      const totalAccounts = await db.Account.count();
+
       //Metodo que nos da Sequelize
-      let allAccounts = await db.Account.findAll(
-        { 
+      const allAccounts = await db.Account.findAll(
+        {
           include: ['user'],
           offset: offset,
           limit: pageSize
         }
-      
       );
-      return allAccounts;
+
+      // Calculamos si hay más cuentas después de la página actual
+      const totalPages = Math.ceil(totalAccounts / pageSize);
+      const hasNext = page < totalPages;
+
+      // Devuelve tanto los usuarios de la página actual como el indicador hasNext
+      return { totalAccounts, totalPages, allAccounts, hasNext };
+
 
     } catch (error) {
 
