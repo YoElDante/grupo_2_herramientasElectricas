@@ -41,35 +41,39 @@ const userServices = {
 
   },
 
-  //----------------------
-  //   Buscar cuenta
-  //----------------------
-
+  //----------------------------------
+  //   Buscar cuenta por id || mail
+  //----------------------------------
   findAccount: async (identifier) => {
-
     try {
-
       let accountFinded;
-
-      if (identifier.includes('@')) {
+      let hasNext = false;
+  
+      if (!isNaN(identifier)) { // Verifica si el identificador es un número (id)
+        accountFinded = await db.Account.findByPk(identifier, { include: ['user'] });
+        // Verificar si hay registros "siguientes"
+        const nextAccount = await db.Account.findOne({
+          where: { id: { [Op.gt]: identifier } },
+          attributes: ['id'],
+          raw: true
+        });
+        hasNext = !!nextAccount;
+      } else { // Si no es un número, asume que es un email
         accountFinded = await db.Account.findOne({
           where: { email: identifier },
           include: ['user']
         });
-      } else {
-        accountFinded = await db.Account.findByPk(identifier, { include: ['user'] });
       }
-
+  
       if (!accountFinded) {
-        throw new Error(`No se encontró cuenta con email ${identifier} ❗`);
+        throw new Error(`No se encontró cuenta con el identificador ${identifier} ❗`);
       }
-
-      return accountFinded;
-
+  
+      return { accountFinded, hasNext };
+  
     } catch (error) {
-
       console.error(error);
-      //aqui enviamos el error para que lo maneje el controller
+      // Aquí enviamos el error para que lo maneje el controller
       throw error;
     }
   },
