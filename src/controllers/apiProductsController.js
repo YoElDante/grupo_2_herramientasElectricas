@@ -20,8 +20,8 @@ const apiProductsController = {
           id: product.id,
           name: product.name,
           description: product.description,
-          images: product.productImages.map((image)=>(image.image)), // Cristian: Relacion 1:M
-          detail: "localhost:3000/api/products/" + product.id
+          images: product.productImages.map((image)=>('/img/products/'+image.image)), // Cristian: Relacion 1:M
+          detail: "/api/products/" + product.id
         }))
       })
     })
@@ -50,7 +50,7 @@ const apiProductsController = {
           createdAt: product.createdAt,
           updatedAt: product.updatedAt,
           brand: product.productBrand.name,
-          images: product.productImages.map((image)=>(image.image)), // Cristian: Relacion 1:M
+          images: product.productImages.map((image)=>('/img/products/'+image.image)), // Cristian: Relacion 1:M
           voltage: product.productDetail.voltage,
           frequency: product.productDetail.frequency,
           power: product.productDetail.power,

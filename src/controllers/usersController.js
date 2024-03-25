@@ -27,20 +27,20 @@ const controller = {
       let { email, password, rememberMe } = req.body
 
       //Pedimos al servicio la cuenta
-      const accountSearched = await userService.findAccount(email);
+      const { accountFinded } = await userService.findAccount(email)
 
       // comparamos la contraseña de la cuenta con la que ingreso el cliente por el formulario
-      if (bcrypt.compareSync(password, accountSearched.password)) {
+      if (bcrypt.compareSync(password, accountFinded.password)) {
         // Coinciden?
         // si) ingresa la cuenta
-        console.log(`usuario ${accountSearched.username} autorizado`);
+        console.log(`usuario ${accountFinded.username} autorizado`);
         // confirmamos el ingreso del usuario con req.session.logined
         req.session.logined = true;
 
         // guardamos el username del usuario en req.session.username
         // pasamos el username para que lo saluden en el header personalizadamente
-        req.session.userid = accountSearched.id;
-        req.session.username = accountSearched.username;
+        req.session.userid = accountFinded.id;
+        req.session.username = accountFinded.username;
 
         // Verificamos checkbox de recuérdame
         if (rememberMe) {
@@ -64,6 +64,7 @@ const controller = {
       // no encuentra) 
       // informamos que el usuario no se ha encontrado
       // enviamos el valor del campo account para llenar el campo del usuario
+      error.message = 'El error es de toda la validacion\n' + error.message;
       res.render(path.resolve(__dirname, '../views/users/login.ejs'), { error: error.message })
     }
   },
@@ -138,7 +139,7 @@ const controller = {
   //GET
   editionForm: async (req, res) => {
 
-    let accountFinded = await userService.findAccount(req.params.id)
+    let {accountFinded} = await userService.findAccount(req.params.id)
     console.log(accountFinded.username);
     console.log(accountFinded.user.firstname);
 

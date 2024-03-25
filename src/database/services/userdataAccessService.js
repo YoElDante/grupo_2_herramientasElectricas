@@ -46,19 +46,25 @@ const userServices = {
   //----------------------------------
   findAccount: async (identifier) => {
     try {
+
       let accountFinded;
       let hasNext = false;
   
-      if (!isNaN(identifier)) { // Verifica si el identificador es un número (id)
+      if (!isNaN(identifier)) { 
+        // Verificamos si el identificador es un número (id)
+
         accountFinded = await db.Account.findByPk(identifier, { include: ['user'] });
+
         // Verificar si hay registros "siguientes"
         const nextAccount = await db.Account.findOne({
           where: { id: { [Op.gt]: identifier } },
           attributes: ['id'],
           raw: true
         });
+
         hasNext = !!nextAccount;
-      } else { // Si no es un número, asume que es un email
+      } else { 
+        // Si no es un número, asumimos que es un email
         accountFinded = await db.Account.findOne({
           where: { email: identifier },
           include: ['user']
@@ -66,7 +72,7 @@ const userServices = {
       }
   
       if (!accountFinded) {
-        throw new Error(`No se encontró cuenta con el identificador ${identifier} ❗`);
+        throw new Error(`No se encontró cuenta con el identificador ${identifier}❗`);
       }
   
       return { accountFinded, hasNext };
