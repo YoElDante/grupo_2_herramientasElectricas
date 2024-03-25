@@ -38,7 +38,7 @@ function validation(inputElement, regex, errMsg = 'Campo obligatorio') {
 //---------------------
 //        Email
 //---------------------
-elInputEmail.addEventListener('blur', function () {
+elInputEmail.addEventListener('input', function () {
   validation(this, /^[^\s@]{2,}@[^@\s]{2,}\.com$/, 'Correo electrónico inválido');
 });
 /*
@@ -76,7 +76,7 @@ elInputPassword.addEventListener('focus', function () {
   this.nextElementSibling.style.color = '#11115f'
 })
 
-elInputPassword.addEventListener('blur', function () {
+elInputPassword.addEventListener('input', function () {
   const regex = /^(?=.*[!@#$%^&*()-_=+{};:,<.>])(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$/
   if (regex.test(this.value)) {
     //Si el campo SI pasa el test
@@ -98,7 +98,7 @@ elInputPassword.addEventListener('blur', function () {
 
 })
 
-elInputConfirmPassword.addEventListener('blur', function () {
+elInputConfirmPassword.addEventListener('input', function () {
   if (this.value === elInputPassword.value) {
     //Si el campo SI pasa el test
     // Si hay un mensaje de error anterior, lo queremos borrar

@@ -2,6 +2,9 @@
 
 // Hay que ordenar la información de manera Descendente
 
+### **Reunión  20/03/24:**
+-
+
 ### **Reunión  11/03/24:**
 Como dividir el sprint, terminar el PG, como van las tareas sin cumplir .
 
