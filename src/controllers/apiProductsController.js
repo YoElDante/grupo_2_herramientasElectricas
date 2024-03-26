@@ -5,7 +5,7 @@ const apiProductsController = {
   products:(req, res) => {
     db.Product.findAll({
       include: [
-        //{association: "productBrand"},
+        {association: "productBrand"},
         {association: "productImages"}
       ]
     })
@@ -19,6 +19,7 @@ const apiProductsController = {
         products: products.map((product) => ({
           id: product.id,
           name: product.name,
+          brand:product.productBrand.name, // Dante: Perdon, me hacia falta para el REACT
           description: product.description,
           images: product.productImages.map((image)=>('/img/products/'+image.image)), // Cristian: Relacion 1:M
           detail: "/api/products/" + product.id
