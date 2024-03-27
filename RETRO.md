@@ -6,13 +6,24 @@
 ***Lo que podemos hacer para mejorar: ****
 -------------FIN RETRO CORRIENTE SPRINT-------------
   -->
-### RETRO septimo Sprint - 
+### RETRO octavo Sprint - 
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
 -
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 -
 ***Lo que podemos hacer para mejorar: ****
 -
+-------------FIN RETRO CORRIENTE SPRINT-------------
+  -->
+### RETRO septimo Sprint - 
+
+***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
+- Se mantuvo un ritmo dinámico, buena comunicación y se llevaron las actividades casi al día, pocos sobresaltos a diferencia de otros sprint.
+***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+- Los contenidos retrasados por parte de algunos miembros no permitían que se avance a la misma velocidad por todos a la hora de elegir las tareas, pero esto también es propio de la diferencia en los conocimientos previos de los miembros.
+***Lo que podemos hacer para mejorar: ****
+- Ponernos al día, pedir ayuda a los compañeros, hacerse cargo de tarjetas mas complejas aunque sean mas cortas para subir el nivel de complejidad de los atrasados.
+
 -------------FIN RETRO CORRIENTE SPRINT-------------
   
 ### RETRO Sexto Sprint - 
