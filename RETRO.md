@@ -4,6 +4,7 @@
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 ***Lo que podemos hacer para mejorar: ****
+
 -------------FIN RETRO CORRIENTE SPRINT-------------
   -->
 ### RETRO octavo Sprint - 
