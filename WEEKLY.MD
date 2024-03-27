@@ -2,8 +2,15 @@
 
 // Hay que ordenar la información de manera Descendente
 
+### **Reunión  25/03/24:**
+- Se observo errores del login y la solucion. Se organizó las Tareas a realizar para la entrega final.
+- fecha de entrega de nuestro proyecto el dia 3/4. 
+- Gustavo solucionó el error de validación del register. 
+- se comentó y vimos algunos detalles de un curso de vsc en youtube. 
+- agregaron  link  a Apis.
+
 ### **Reunión  20/03/24:**
--
+- Se hablo de la organización para la ultima parte del proyecto y se pacto reunion para el 25/03/24.
 
 ### **Reunión  11/03/24:**
 Como dividir el sprint, terminar el PG, como van las tareas sin cumplir .
