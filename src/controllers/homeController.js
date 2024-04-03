@@ -14,8 +14,12 @@ const controller = {
         .then((products)=>{
             res.render(path.resolve(__dirname, '../views/home.ejs'),
                 {
+                    // Cristian: Se que no es lo optimo, es una salida improvisada
                     novedad1: products[products.length - 1],
-                    novedad2: products[products.length - 2]
+                    novedad2: products[products.length - 2],
+                    // Aqui lo ideal, es agregar el campo "discount" a la base de datos. Y con ello trabajar, para mostrar los productos con descuento.
+                    oferta1: products[0],
+                    oferta2: products[1]
                 }
             );
         })
