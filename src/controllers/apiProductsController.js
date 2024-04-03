@@ -27,6 +27,7 @@ const apiProductsController = {
             id: product.id,
             name: product.name,
             brand: product.productBrand.name, // Dante: Perdon, me hacia falta para el REACT
+            model: product.model,
             description: product.description,
             images: product.productImages.map((image) => ('/img/products/' + image.image)), // Cristian: Relacion 1:M
             detail: "/api/products/" + product.id
