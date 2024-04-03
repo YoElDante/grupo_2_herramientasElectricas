@@ -2,6 +2,10 @@
 
 // Hay que ordenar la información de manera Descendente
 
+### **Reunión  02/04/24:**
+- se coordinó todo lo referente a la presentación del proyecto para la pagina web Electro Tools.
+- Se realizó la separación de partes que la presentación sea fluida y rapida.
+
 ### **Reunión  25/03/24:**
 - Se observo errores del login y la solucion. Se organizó las Tareas a realizar para la entrega final.
 - fecha de entrega de nuestro proyecto el dia 3/4. 
