@@ -8,12 +8,18 @@
 -------------FIN RETRO CORRIENTE SPRINT-------------
   -->
 ### RETRO octavo Sprint - 
+
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
--
+- Se completaron diversas tareas relacionadas con el desarrollo del proyecto, como la creación de la API de productos, la corrección de errores en las vistas y las validaciones tanto en el frontend como en el backend.
+- Se observa un compromiso con el avance del proyecto, ya que se realizaron tareas planificadas y se cumplió con los objetivos establecidos para el día.
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
--
+- Se encontraron dificultades técnicas, como la integración de iconos de FontAwesome sin modificar archivos importantes y la necesidad de mayor detalle en la realización de algunas tareas.
+- Algunos miembros del equipo podrían haber aprovechado mejor su tiempo, ya que se menciona la sensación de que podrían haber hecho más durante el día.
 ***Lo que podemos hacer para mejorar: ****
--
+- Explorar soluciones alternativas o buscar asistencia técnica para resolver los problemas técnicos encontrados, como la integración de iconos de FontAwesome.
+- Establecer una comunicación más clara sobre las expectativas y prioridades del proyecto para garantizar que todos los miembros del equipo estén alineados y puedan maximizar su productividad.
+- Fomentar una cultura de revisión y mejora continua, donde los miembros del equipo compartan abiertamente los desafíos que enfrentan y trabajen juntos para encontrar soluciones efectivas.
+
 -------------FIN RETRO CORRIENTE SPRINT-------------
   -->
 ### RETRO septimo Sprint - 
