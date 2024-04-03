@@ -31,7 +31,7 @@ const controller = {
   
   cart: (req, res) => {
     //Esto se debe mover al controller de Orders
-    res.render(path.resolve(__dirname, '../views/products/productCart.ejs') , {products});
+    res.render(path.resolve(__dirname, '../views/orders/productCart.ejs') , {products});
   },
   
   //*********************

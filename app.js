@@ -2,6 +2,7 @@ const express = require('express');
 const path = require("node:path");
 const methodOverride = require('method-override'); // Cristian
 const session = require('express-session'); // Flor
+const cors = require('cors');
 
 // Routers
 const homeRouter = require('./src/routers/home.js')
@@ -30,9 +31,13 @@ app.use(function (req, res, next) {
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './src/views'));
 
-// Habilitar la capeta Public
+// Habilitamos la capeta Public
 const publicFolderPath = path.resolve(__dirname, './public');
 app.use(express.static(publicFolderPath));
+
+// Habilitamos el pedido de info desde cualquier dominio a nuestra api
+app.use(cors());
+
 
 // Subir servidor
 app.listen(3000, () => {
