@@ -5,24 +5,37 @@
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 ***Lo que podemos hacer para mejorar: ****
 
--------------FIN RETRO CORRIENTE SPRINT-------------
-  -->
+-------------FIN RETRO CORRIENTE SPRINT--------------->
 ### RETRO octavo Sprint - 
+
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
--
+
+- Se completaron diversas tareas relacionadas con el desarrollo del proyecto, como la creación de la API de productos, la corrección de errores en las vistas y las validaciones tanto en el frontend como en el backend.
+- Se observa un compromiso con el avance del proyecto, ya que se realizaron tareas planificadas y se cumplió con los objetivos establecidos para el día.
+
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
--
-***Lo que podemos hacer para mejorar: ****
--
+
+- Se encontraron dificultades técnicas, como la integración de iconos de FontAwesome sin modificar archivos importantes y la necesidad de mayor detalle en la realización de algunas tareas.
+- Algunos miembros del equipo podrían haber aprovechado mejor su tiempo, ya que se menciona la sensación de que podrían haber hecho más durante el día.
+
+***Lo que podemos hacer para mejorar:***
+  
+- Explorar soluciones alternativas o buscar asistencia técnica para resolver los problemas técnicos encontrados, como la integración de iconos de FontAwesome.
+- Establecer una comunicación más clara sobre las expectativas y prioridades del proyecto para garantizar que todos los miembros del equipo estén alineados y puedan maximizar su productividad.
+- Fomentar una cultura de revisión y mejora continua, donde los miembros del equipo compartan abiertamente los desafíos que enfrentan y trabajen juntos para encontrar soluciones efectivas.
+
 -------------FIN RETRO CORRIENTE SPRINT-------------
   -->
 ### RETRO septimo Sprint - 
 
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
 - Se mantuvo un ritmo dinámico, buena comunicación y se llevaron las actividades casi al día, pocos sobresaltos a diferencia de otros sprint.
+
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
+  
 - Los contenidos retrasados por parte de algunos miembros no permitían que se avance a la misma velocidad por todos a la hora de elegir las tareas, pero esto también es propio de la diferencia en los conocimientos previos de los miembros.
-***Lo que podemos hacer para mejorar: ****
+ 
+***Lo que podemos hacer para mejorar:***
 - Ponernos al día, pedir ayuda a los compañeros, hacerse cargo de tarjetas mas complejas aunque sean mas cortas para subir el nivel de complejidad de los atrasados.
 
 -------------FIN RETRO CORRIENTE SPRINT-------------
@@ -30,12 +43,14 @@
 ### RETRO Sexto Sprint - 
 ***Lo bueno. Lo que se hizo bien y se debe seguir haciendo:***
 - Hay mas fluides en la relización de las tareas por parte de Dante y Cristian.  Buen uso del trello.
+ 
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 - Gustavo y Flor estan un poco atrasados con el contenido y les dificulta poder estar al nivel de Dante y Cristian para realizar por igual las tares. Poca diponibilidad de tiempo por trabajo y estudios.
 -Se hizo una mala división de tareas, sobrecargo a algunos miembros.
 -Se perdió un poco la comunicación al principio del Sprint, pero se mejoró al fianl.
 -El diseño de la base de datos supuso un reto dificil de afrontar.
-***Lo que podemos hacer para mejorar: ****
+
+***Lo que podemos hacer para mejorar:***
 - organizarnos mejor para no sobrecargar a los miembros del equipo.
 - Distribuir las tareas sencillas para los que no pueden hacer las mas complejas.
 - Pedir ayuda con mas tiempo.
@@ -47,12 +62,14 @@
 -Se etiquetó mejor las tareas para su distribución, y se implementó el uso de comentarios en el código para su explicación de función y autor.
 -La comunicación fue buena entre el grupo a pesar de las dificultades que aparecieron.
 -Los miembros trabajaron cubriendo las falencias de algunos de ellos para cumplir con el sprint entendiendo las dificultades personales de cada uno.
+
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 - La falta de estudio por diversas situaciones de parte de los miembros dificultaba la división de tareas, ya que eran demasiado complejas.
 - Mejorar los plazos para terminar las tareas para tener tiempo de ayuda en caso de bloqueo.
 - Tuvimos lamentablemente la baja de un compañero mas que nos anunció casi al final del sprint sin poder realizar las tareas a las que se había comprometido, lo cual llevó a que los miembros más avanzados del grupo se hagan cargo de dichas tareas para poder completar el trabajo a tiempo; aunque quedaron tareas pendientes para el siguiente Sprint.
 - Algunos de los miembros, por viajes y/o trabajo, no pudieron estar comprometidos al 100%. Esto llevó a que se recargue de tareas a unos pocos.
-***Lo que podemos hacer para mejorar: ****
+- 
+***Lo que podemos hacer para mejorar:***
 - Más estudio personal y realizar las tareas lo antes posible.
 - No comprometerse a realizar tareas que probablemente no se las termine.
 - Avisar con tiempo de las dificultades y percanses acontesidos para pedir ayuda a los compañeros.
@@ -64,10 +81,12 @@ Para la retrospectiva del cuarto sprint, se dejó de lado las opiniones personal
 - Mejor comunicación intergrupal entre los miembros del equipo en cuanto a las actividades diarias y tareas en proceso y concluidas.
 - Plataformas de comunicación y organización más limpias y llenas. Mejor coordinación.
 - Le hemos puesto más compromiso y estudio. Todos estamos más cerca en conocimiento.
+- 
 ***Lo no tan bueno. Lo que da lugar a seguir mejorando:***
 - Ayudar a los compañeros a poder incorporarse en las tareas.
 - Poder distribuir mejor la dificultad de las tareas.
 - Estilos y capturas de CSS.
+- 
 ***Lo que podemos hacer para mejorar:***
 - Definir tareas centrales y secundarias, y repartirlas de una manera más óptima.
 - Diario de trabajo (daily) por cada participante del equipo en el discord, para motivar la acción de todos y encontrar problemáticas comunes.
