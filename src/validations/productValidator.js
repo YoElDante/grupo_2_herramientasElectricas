@@ -19,7 +19,7 @@ const productValidator = [
             };
         }).bail()
         .custom((value, {req})=>{
-            const permitted = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'];
+            const permitted = ['image/jpg', 'image/jpeg', 'image/png', 'image/gif', 'image/webp'];
             const errorsAux = [];
             for(let file of req.files){
                 if(!permitted.includes(file.mimetype)){ // Archivo no permitido

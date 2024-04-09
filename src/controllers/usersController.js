@@ -45,7 +45,8 @@ const controller = {
         // Verificamos checkbox de recuérdame
         if (rememberMe) {
           // Generamos cookie con tiempo de expiración
-          res.cookie('rememberMe', 'true', { maxAge: 600000 }); // Expira en 10 min, para una semana 604800000
+          res.cookie('rememberMe', 'true', { maxAge: 6000000 }); // Expira en 100 min, para una semana 604800000
+          res.cookie('username',req.session.userid, { maxAge: 6000000 })
         } else {
           // Eliminamos la cookie si no seleccionó recordar
           res.clearCookie('rememberMe');
@@ -215,7 +216,7 @@ const controller = {
 
     await userService.deleteAccount(req.params.id);
 
-    this.logout(req,res);
+    controller.logout(req,res);
   },
 
   // *****************

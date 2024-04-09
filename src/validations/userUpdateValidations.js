@@ -73,7 +73,7 @@ const validations = [
   body("image").custom((value, { req }) => {
       // Verificacion de extension de tipo de imagen
       let file = req.file;
-      let acceptedExtensions = ['.jpg', 'jpeg', '.png', '.gif'];
+      let acceptedExtensions = ['.jpg', 'jpeg', '.png', '.gif', 'webp'];
 
       if(file){
           let fileExtension = path.extname(file.originalname);
