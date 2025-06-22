@@ -9,7 +9,7 @@
     padding: 0;
 }
 
-fieldset{
+fieldset {
     width: 90%;
     margin-top: 0.5rem;
     border-radius: 0.5rem;
@@ -40,8 +40,8 @@ fieldset{
     margin-bottom: 20px;
     border-radius: 25px;
     background-color: #dcdcdcde;
-    box-shadow: #000000 0px 0.1875rem 0.3125rem;
-    border: #000000 solid 3px;
+    box-shadow: #11111f 0px 0.1875rem 0.3125rem;
+    border: #11111f solid 3px;
     text-align: center;
 }
 
@@ -50,7 +50,8 @@ fieldset{
     background-color: #dcdcdc00;
     font-size: 20px;
     margin: auto;
-    color: #ce9416;
+    color: #ffb81c;
+    text-shadow: 2px 2px 3px #11111f;
 
 }
 
@@ -66,7 +67,7 @@ fieldset{
     margin: 10px 0px;
     align-items: center;
     overflow: hidden;
-    border: #11111f5d solid 3px;
+    border: #11111f solid 3px;
     border-radius: 25px;
     justify-content: right;
 }
@@ -111,17 +112,18 @@ input::placeholder {
 
 }
 
-div[id=buttom-imput]{
+div[id=buttom-imput] {
     display: flex;
-    position:relative;
+    position: relative;
     width: 60%;
     justify-self: center;
     margin-top: 1rem;
 }
+
 .buttom-register {
     display: flex;
     align-items: center;
-    background-color: #d19617;
+    background-color: #ffb81c;
     justify-content: center;
     width: 100%;
     border-radius: 25px;
